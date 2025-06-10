@@ -1,3 +1,6 @@
 /db.sqlite3
 /venv/
 /helen/static/js/
+/helen/static/images/
+/helen/migrations/
+/helen/admin/
