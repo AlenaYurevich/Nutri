@@ -46,6 +46,7 @@
 <!-- logo -->
 <div id="logo">
 <a href="index.html#top">
+
 <span data-double="EM">EM</span></a>
 <!--<a href="index.html#top"><img class="logo_def" src="images/logo.png" width="154" height="64" alt="НУТРИЦИОЛОГ ЕЛЕНА МИШУТА" /><img class="logo_retina" height="154" width="64" alt="EVINA-STYLE" src="images/retina/logo.png"/></a>-->
 <div class="vertical-group">
@@ -57,7 +58,7 @@
 <nav class="navmenu">
 <ul>
 <li class="scrollable"><a href="index.html">Главная</a></li>
-<li class="scrollable"><a href="makeup.html">Калькулятор ИМТ</a></li>
+<li class="scrollable"><a href="makeup.html">Расчет ИМТ</a></li>
 <li class="scrollable"><a href="makeup.html#hairstyle">Услуги</a></li>
 <li class="scrollable"><a href="podarochnyj-sertificat.html">Обо мне</a></li>
 <li class="scrollable"><a href="fotosessija-minsk.html">Контакты</a></li>
@@ -80,30 +81,9 @@
 <a class="btn btn-primary" href ="#contact">Записаться</a>
 </div><!-- end .container -->
 </header>
-<!-- //section header -->
-<!-- home content -->
-<!--<div class="container">-->
-<!--<div class="promo_text_block">-->
-<!--<div class="row">-->
-<!--<div class="col-md-6">-->
-<!--<div class="person_01">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="col-md-6">-->
-<!--<h2>Свадебный макияж и прически в Минске</h2>-->
-<!--<p class="justify">Рада приветствовать Вас в моем мире красоты и вдохновения! Меня зовут <b>Евгения Зайцева</b>. Я дипломированный визажист-парикмахер. Преподавала курсы «Визажист 4 разряда» и «Макияж для себя» в учебном центре «Времена года». Имею большой опыт работы, посещаю мастер-классы, семинары и постоянно совершенствую свой профессиональный уровень. В своей работе я использую профессиональную косметику мирового качества, такую как: <b>Make up Atelier Paris, Make up for life, Inglot, Make up forever, Cinecitta, MAC</b> и др. Все рабочие инструменты обрабатываются дезинфицирующим средством.</p>-->
-<!--<p class="justify">Визажист – это человек, который не просто умеет делать макияж, он — профессионал в своем деле. Это художник, который при помощи кистей и косметики создает красивый образ, подчеркивая при этом все достоинства Вашей внешности. Макияж должен быть комфортным для Вас, вызывать только положительные эмоции и уверенность. Я подберу макияж и прическу, которые подходят <b>именно Вам</b>, подчеркну Вашу индивидуальность, создам великолепный образ в важный для Вас день.</p>-->
-<!--<div class="indent">-->
-<!--<p>Записаться на макияж и прическу сейчас</p>-->
-<!--<a class="btn btn-primary" href ="#contact">Записаться</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>&lt;!&ndash;//promo text&ndash;&gt;-->
-<!--</div>&lt;!&ndash;//container//&ndash;&gt;-->
-<!--<header>-->
+
 <div class="content_section container">
-<div class="row">
+<div class="row indent">
 <h2 class="center main_color1 animate-on-scroll delay-1">Ваши проблемы</h2>
 
 <div class="col-md-4">
@@ -132,26 +112,26 @@
 <section id="advantages">
 <header>
 <div class="content_section container">
-<div class="row">
+<div class="row indent">
 <h2 class="center shadow animate-on-scroll delay-1">Мои преимущества</h2>
 
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2">
-<img src="{% static 'images/gallery/01.png' %}" alt="Консультация нутрициолога онлайн" />
-<span class="service_title">Конфеденциальная<br>консультация</span>
+<img src="{% static 'images/gallery/bgmu.jpg' %}" alt="Консультация нутрициолога онлайн" />
+<span class="service_title">Медицинское образование<br>и опыт работы</span>
 </div>
 </div>
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-3">
-<img src="{% static 'images/gallery/02.jpeg' %}" alt="Консультация нутрициолога онлайн" />
-<span class="service_title">Возможность консультации<br>онлайн</span>
+<img src="{% static 'images/gallery/call.png' %}" alt="Консультация нутрициолога онлайн" />
+<span class="service_title">Экономия времени<br>и конфеденциальность</span>
 </div>
 </div>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-4">
-<img src="{% static 'images/gallery/03.png' %}" alt="Консультация нутрициолога онлайн" />
+<img src="{% static 'images/gallery/06.png' %}" alt="Консультация нутрициолога онлайн" />
 <span class="service_title">Гарантия результата<br>за 3 месяца</span>
 </div>
 </div>
@@ -163,20 +143,24 @@
 </header><!-- //section header -->
 
 </section>
-<div class="clear"></div>
+<!--<div class="clear"></div>-->
 
 
 <div class="content_section container featured_items">
-<h3 class="title">Сообщите желаемую дату, время, виды услуг</h3>
+    <h2 class="center main_color1 animate-on-scroll delay-1">Обо мне</h2>
 <div class="row">
 <div class="col-md-6">
-<p class="justify">Самое большое удовлетворение от своей работы я получаю тогда, когда вижу блеск в глазах клиента и радостную улыбку на лице.</p>
-<div class="indent">
+<p class="justify">Я закончила БГМУ по специальности ..., повышала образование в ... и в .... . Опыт работы в медицине - более 12 лет.</p>
+<p class="justify"> Самое большое удовлетворение от своей работы я получаю тогда, когда вижу блеск в глазах клиента и радостную улыбку на лице!</p>
+<p class="justify">Сертификат</p>
+<p class="justify">Видеообращение (до 30 секунд)</p>
+    <div class="indent">
 <p class="center">Записаться на консультацию</p>
-  <a class="btn btn-primary" href="viber://chat?number=%2B375295170962"
-   onclick="window.open('viber://chat?number=%2B375295170962', '_blank'); return false;">
-   Viber
-</a>
+<!--  <a class="btn btn-primary" href="viber://chat?number=%2B375295170962"-->
+<!--   onclick="window.open('viber://chat?number=%2B375295170962', '_blank'); return false;">-->
+<!--   Viber-->
+<!--</a>-->
+<a class="btn btn-primary"  href="https://t.me/helenmishuta" rel="nofollow">Телеграм</a>
 </div>
 </div>
 <div class="col-md-6">
