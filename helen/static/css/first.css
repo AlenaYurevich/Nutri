@@ -103,7 +103,7 @@ text-decoration: none
 }
 }
 .page_section header div.container{z-index:900;position:relative;}
-.page_section header div.container h1,.page_section header div.container h2{font-size:60px;letter-spacing:2px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:30px;text-transform:uppercase;}
+.page_section header div.container h1,.page_section header div.container h2{font-size:60px;letter-spacing:2px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:20px;text-transform:uppercase;}
 
 /* Добавляем анимацию */
 @keyframes slideUp {

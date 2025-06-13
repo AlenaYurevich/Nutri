@@ -1973,7 +1973,7 @@ cursor: pointer;
 -ms-user-select: none;
 -o-user-select: none;
 user-select: none;
-background: #EE19EE;
+background: #C7A491;
 border-radius: 30px;
 border:0px;
 }
@@ -1986,7 +1986,7 @@ outline-offset: -2px;
 .btn:focus {
 color:#fff;
 text-decoration: none;
-background: #8B008B;
+background: #C7A491;
 }
 .btn:active,
 .btn.active {
@@ -2048,8 +2048,8 @@ background-color: #333;
 }
 .btn-primary {
 color: #fff;
-background-color: #428bca;
-border-color: #357ebd;
+background-color: #C7A491;
+border-color: #C7A491;
 }
 .btn-primary:hover,
 .btn-primary:focus,
