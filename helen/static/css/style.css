@@ -58,7 +58,7 @@ p{padding:0;margin:0 0 10px 0;}
 #home header{background-image:url("../images/slide_bg/slide1_bg.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;padding-top:40px;padding-bottom:70px;}
 .action{background-image:url("../images/slide_bg/action_01.jpg");background-position:center center;background-size:cover;background-repeat:no-repeat;padding-top:70px;padding-bottom:70px;font-size:20px;color:#fff}
 .service{line-height:18px;margin-top:2px;color:#000;text-align:center;background:#fff;border-radius:6px;-webkit-border-radius:6px;box-shadow:0 0 4px rgba(0, 0, 0, 0.13);padding:20px 20px 29px 20px;}
-.service p{font-size:13px !important;color:#000 !important;font-family:Arial !important;line-height:18px !important;padding:0 0 10px 0 !important;margin:0 !important;}
+.service p{font-size:18px;font-weight:300; line-height:18px ;padding:10px 0 10px 0 !important;}
 .service_icon{width:76px;height:76px;line-height:76px;display:block;margin:0 auto 28px auto;border:0;font-size:33px;color:#ffffff;font-family:'FontAwesome';padding:0;text-align:center;transition:all 500ms;-webkit-transition:all 500ms;border-radius:50%;-webkit-border-radius:50%;background-color:#919682;}
 .service:hover .service_icon{background-color:#EE19EE;}
 .service_title{line-height:21px;padding-top:10px;font-weight:300; display:block;text-align:center;}
@@ -66,8 +66,8 @@ p{padding:0;margin:0 0 10px 0;}
 
 #gallery{}
 #gallery header{background-image:url("../images/slide_bg/slide2_bg_min.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
-#advantages header{background-image:url("../images/slide_bg/02.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
-#advantages h2{color:#fff; font-size:50px}
+.advantages header{background-image:url("../images/slide_bg/02.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
+.advantages h2{color:#fff; font-size:50px}
 .content_section{padding-top:77px;padding-bottom:116px;}
 .bottom_null{padding-bottom:0;}
 .empty_section{padding-top:30px !important;}
@@ -728,7 +728,5 @@ a.menu_toggler:before{background-image:url("../images/retina/btn_menu.png");back
 @media only screen and (max-width: 990px){
  .pricingTable{ margin-bottom: 30px; }
 }
-
-
 
 
