@@ -37,7 +37,7 @@ header #logo img.logo_retina{display:none;}
     flex-flow: column;
     justify-content: center;
     /*background: radial-gradient(ellipse at center, #515F3B 0%,#000000 100%);*/
-    background: #515F3B;
+    background: var(--main-color1);
     display: flex;
     }
 .gold span {
@@ -84,6 +84,7 @@ text-decoration: none
     -webkit-text-fill-color: transparent;
     text-shadow: none;
 }
+
 .vertical-group {
   padding: 10px 10px 8px 20px;
   display: flex;
@@ -129,7 +130,7 @@ text-decoration: none
   margin: 0;
   text-align: left;
   color: #fff;
-  line-height: 70px;
+  line-height: 50px;
 }
 .page_section header div.container h3
  {
