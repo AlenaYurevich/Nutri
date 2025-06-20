@@ -1,8 +1,20 @@
 body {
-    font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
 }
+.gold {
+    background: var(--main-color1);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    }
 .page_section header,
-.page_section header #contact {background-image:url("../images/slide_bg/breadcrumbs-min.webp");background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;-webkit-background-size:cover;
+.page_section header #contact {background-image:url("../images/slide_bg/breadcrumbs-min.jpg");background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;
 position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */}
 .page_section header::before {
@@ -22,24 +34,18 @@ position: relative; /* Добавляем относительное позиц�
     z-index: 2; /* Убедитесь, что контент находится поверх затемнения */
 }
 .page_section header{color:#fff;width:100%;overflow:hidden;padding-top:420px;padding-bottom:370px;}
-body{background:linear-gradient(to top, #fff0f0, #fff);margin:0;padding:0;overflow-x:hidden !important; font-size: 18px;
-line-height: 1.5; color: #333;}
+body{background: linear-gradient(to bottom, var(--main-color1-light), #fff);
+ margin:0;padding:0;overflow-x:hidden !important; font-size: 18px;
+ line-height: 1.5; color: #333;}
 .page_section header div.container{z-index:900;position:relative;}
 .page_section header div.container h1,.page_section header div.container h2{font-size:30px;letter-spacing:1px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:30px;text-transform:uppercase;}
-.page_section header div.container p{color:#fff;font-weight:300;text-align:center;font-size:24px;letter-spacing:1px;font-family:'GloberSemiBoldFree', sans-serif;line-height:22px;padding:0 20px 10px 20px;margin-bottom:0;text-shadow: 0 1px 4px rgba(0,0,0,.5)}
+.page_section header div.container p{color:#fff;font-weight:300;text-align:center;font-size:24px;letter-spacing:1px; sans-serif;line-height:22px;padding:0 20px 10px 20px;margin-bottom:0;text-shadow: 0 1px 4px rgba(0,0,0,.5)}
 header #logo img.logo_retina{display:none;}
 #top header{height:82px;padding:0; background:#ffffff;border:none;position:absolute;left:0;top:0;width:100%!important;z-index:9999;box-shadow:0 2px 2px rgba(0, 0, 0, 0.06);}
 
 #logo {float:left;padding:12px 10px 0 0;vertical-align:top;  display: flex; /* Горизонтальное расположение */ align-items: flex-start; /* Ключевое свойство для выравнивания по верху */}
 .logo_def{margin-bottom:7px;width:90px }
-.gold {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    /*background: radial-gradient(ellipse at center, #515F3B 0%,#000000 100%);*/
-    background: var(--main-color1);
-    display: flex;
-    }
+
 .gold span {
     color: #cfc09f;
     font-family: "MonteCarlo", cursive;
@@ -93,20 +99,18 @@ text-decoration: none
 
 @media (min-width:800px){
 .page_section header {
-    background-image: url("../images/slide_bg/10.jpeg");
+    background-image: url("../images/slide_bg/10.jpeg?width=1200");
     background-position: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-background-size: cover;
     position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */
 }
 }
-.page_section header div.container{z-index:900;position:relative;}
 .page_section header div.container h1,.page_section header div.container h2{font-size:60px;letter-spacing:2px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:20px;text-transform:uppercase;}
 
-/* Добавляем анимацию */
+/* Добавляем анимацию кнопке*/
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -181,23 +185,21 @@ text-decoration: none
     -webkit-text-fill-color: transparent;}
 .navmenu ul li{list-style:none;margin:0; position:relative;}
 @media only screen and (max-width:990px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
-#top header,
 #top header{height:62px !important;position:relative;width:100%;z-index:999;padding:0;}
-/*#page1{padding-top:0;}*/
 #top header #logo{padding:5px 10px 5px 0;}
 #top header #logo img{height:52px !important;width:auto !important;}
 #top header .container{position:relative;}
 #home{margin-top:0;}
-a.menu_toggler{display:inline-block;float:right;margin:-17px 20px 0px 0;border:none;border-radius:0;box-shadow:none;width:34px;height:34px; position:absolute;overflow:hidden; right:0; top:50%; background-color:#ffffff;}
+a.menu_toggler{display:inline-block;float:right;margin:-17px 20px 0px 0;border:none;border-radius:0;box-shadow:none;width:34px;height:34px; position:absolute;overflow:hidden; right:0; top:50%; background-color:var(--main-color2)}
 a.menu_toggler:hover{background-color:#ffffff;}
 a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7px;width:20px;height:20px;background-repeat:no-repeat;background:url("../images/btn_menu.png") no-repeat 0 0;}
 .fixed-menu,
 .fixed-menu:before,
 .fixed-menu:after{display:none!important;}
-.mobile_menu_wrapper{font-family:'Roboto Condensed'; display:block;background:#8B008B;width:100%;padding:15px 40px 20px 10px;}
+.mobile_menu_wrapper{display:block;background:var(--main-color2);width:100%;padding:15px 40px 20px 10px;}
 .mobile_menu_wrapper li{padding:10px 0;}
 .mobile_menu_wrapper a{color:#fff}
-.mobile_menu_wrapper a:hover{color:#EE19EE}
+.mobile_menu_wrapper a:hover{color:var(--main-color1-light)}
 .fixed-menu{display:none!important}
 #top header nav{display:none!important;}
 }
@@ -207,6 +209,3 @@ padding-left: 15px;
 margin-right: auto;
 margin-left: auto;
 }
-
-
-

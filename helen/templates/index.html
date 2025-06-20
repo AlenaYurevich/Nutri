@@ -8,15 +8,14 @@
     <meta name="description" content="Запишись онлайн   ★ ">
     <meta name="keywords" content="" />
     <meta name="robots" content="" />
+
     <link rel="canonical" href="#"/>
     <!-- Favicon && Apple touch -->
 <link rel="shortcut icon" href="images/icons/favicon1.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="images/icons/apple_icons_57x57.png">
 <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple_icons_72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple_icons_114x114.png">
-<!-- // IE  // -->
-<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<link rel="apple-touch-icon" sizes="192x192" href="images/icons/apple_icons_192x192.png">
     <link href="{% static 'css/first.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
@@ -30,8 +29,8 @@
 
 <meta property="og:url" content="">
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="">
-<meta property="og:image" content="" />
+<meta property="og:title" content="Нутрициолог Елена Мишута">
+<meta property="og:image" content="{% static 'images/lenamishuta.jpg' %}" />
 <meta property="og:site_name" content=""/>
 <meta property="og:description" content=""/>
 </head>
@@ -55,12 +54,11 @@
 </div>
 <nav class="navmenu">
     <ul>
-    <li class="scrollable"><a href="index.html">Главная</a></li>
-    <li class="scrollable"><a href="makeup.html">Расчет ИМТ</a></li>
-    <li class="scrollable"><a href="podarochnyj-sertificat.html">Обо мне</a></li>
-    <li class="scrollable"><a href="makeup.html">Расчет ИМТ</a></li>
-    <li class="scrollable"><a href="makeup.html#hairstyle">Услуги</a></li>
-    <li class="scrollable"><a href="fotosessija-minsk.html">Контакты</a></li>
+    <li class="scrollable"><a href="#">Главная</a></li>
+    <li class="scrollable"><a href="#">Обо мне</a></li>
+    <li class="scrollable"><a href="#">Расчет ИМТ</a></li>
+    <li class="scrollable"><a href="#">Услуги</a></li>
+    <li class="scrollable"><a href="#">Контакты</a></li>
     </ul>
 </nav><!-- end nav -->
 
@@ -88,19 +86,19 @@
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2">
-<img src="{% static 'images/gallery/01.png' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/01.png' %}" alt="Консультация нутрициолога онлайн" />
 <span class="service_title">Не знаете, как совместить питание и работу</span>
 </div>
 </div>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-3">
-<img src="{% static 'images/gallery/02.jpeg' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/02.jpeg' %}" alt="Консультация нутрициолога онлайн" />
 <span class="service_title">Устали от диет, которые не работают</span>
 </div>
 </div>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-4">
-<img src="{% static 'images/gallery/03.png' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/03.png' %}" alt="Консультация нутрициолога онлайн" />
 <span class="service_title">Хотите сохранить здоровье без таблеток</span>
 </div>
 </div>
@@ -118,20 +116,20 @@
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2">
-<img src="{% static 'images/gallery/bgmu.jpg' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/bgmu.jpg' %}" alt="Консультация нутрициолога онлайн" />
 <span class="service_title">Медицинское образование<br>и опыт работы</span>
 </div>
 </div>
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-3">
-<img src="{% static 'images/gallery/call.png' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/call.png' %}" alt="Консультация нутрициолога онлайн" />
 <span class="service_title">Экономия времени<br>и конфеденциальность</span>
 </div>
 </div>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-4">
-<img src="{% static 'images/gallery/06.png' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/06.png' %}" alt="Консультация нутрициолога онлайн" />
 <span class="service_title">Гарантия результата<br>за 3 месяца</span>
 </div>
 </div>
@@ -150,7 +148,7 @@
     <h2 class="center animate-on-scroll delay-1">Обо мне</h2>
 <div class="row">
     <div class="col-md-6">
-    <img class="animate-on-scroll delay-2" src="{% static 'images/lenamishuta.jpg' %}" alt="Консультация нутрициолога онлайн" />
+    <img loading="lazy" class="animate-on-scroll delay-2" src="{% static 'images/lenamishuta.jpg' %}" alt="Консультация нутрициолога онлайн" />
     </div>
 <div class="col-md-6 animate-on-scroll delay-3">
     <p class="justify">Я закончила БГМУ по специальности ..., повышала образование в ... и в .... . Опыт работы в медицине - более 12 лет.</p>
@@ -189,13 +187,13 @@
 <h3 >Индивидуальный разбор здоровья</h3>
 <h4>Комплексный анализ вашего состояния, питания и целей с учетом медицинских особенностей</h4>
 <p class="">Что входит:</p>
-<p class="left"><i class="fa fa-check-square-o"></i> Глубокий сбор анамнеза (анализы, диагнозы, симптомы, текущее питание)</p>
-<p class="left"><i class="fa fa-check"></i> Оценка дефицитов витаминов/минералов на основе анализов (если есть)</p>
-<p class="left">✅ Разбор пищевых привычек и их влияния на здоровье</p>
-<p class="left">✅ Рекомендации по коррекции питания с учетом заболеваний (если есть)</p>
-<p class="left">✅ Ответы на вопросы + чек-лист с первыми шагами</p>
-<p>Цена: 95 руб.</p>
-<p>Продолжительность: 60–75 минут</p>
+<p class="justify"><i class="fa fa-check"></i> Глубокий сбор анамнеза (анализы, диагнозы, симптомы, текущее питание)</p>
+<p class="justify"><i class="fa fa-check"></i> Оценка дефицитов витаминов/минералов на основе анализов (если есть)</p>
+<p class="justify"><i class="fa fa-check"></i> Разбор пищевых привычек и их влияния на здоровье</p>
+<p class="justify"><i class="fa fa-check"></i> Рекомендации по коррекции питания с учетом заболеваний (если есть)</p>
+<p class="justify"><i class="fa fa-check"></i> Ответы на вопросы + чек-лист с первыми шагами</p>
+<span>Цена: 95 руб.</span>
+<p>Продолжительность: <br>60–75 минут</p>
 </div>
 </div>
 
@@ -217,89 +215,17 @@
 </div>
 <!-- //section content -->
 </section>
-<section class="page_section" id="blog">
-<header>
-<div class="container">
-<h2 class="shadow">Перед консультацией</h2>
-</div><!-- end .container -->
-</header><!-- //section header -->
-<div class="content_section container">
-<div class="content_section container featured_items">
-<div class="col-lg-12">
-<h3 class="main_color2">Важная информация, чтобы работа со специалистом была быстрой и приятной!</h3>
-<!--<p class="main_color2">Договор невесты</p>-->
-<!--<p>Дорогие невесты! Чтобы быть друг в друге уверенными и не переживать лишний раз по поводу макияжа и прически на свадьбу, я заключаю с вами договор. Бронирование даты и заключение договора осуществляется при личной встрече и после внесения предоплаты.</p>-->
-<!--<p class="main_color2">Предоплата</p>-->
-<!--<p>Предоплата при заключении договора составляет 20% от стоимости услуг.</p>-->
-<!--<p class="main_color2">Ранний выезд</p>-->
-<!--<p>Ранний выезд к клиенту до 7.30 утра и выезд за пределы города оговаривается и оплачивается отдельно.</p>-->
-<!--<p class="main_color2">Ассексуары для прически</p>-->
-<!--<p>Накладные пряди и украшения в волосы - диадемы, броши, цветы и так далее, предоставляются вами.</p>-->
-<!--<p class="main_color2">Рабочее место</p>-->
-<!--<p>Обязательным условием для работы свадебного стилиста является наличие места для косметики и инструментов и хорошее освещение.</p>-->
-<!--<div class="indent">-->
-<!--<p class="center">Записаться на свадебный макияж и прическу по VIBER</p>-->
-<!--<a class="btn btn-primary" href ="viber://chat?number=375295170962" rel="nofollow">VIBER</a>-->
-<!--</div>-->
-<!--<div class="clear"></div>-->
-</div>
-</div>
-<!-- //section content -->
-<div class="row">
-<h3 class="title">Отзывы моих клиентов</h3>
-<div class="post_flex flexslider">
-<ul class="slides">
-<li>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<img src="images/review/review_w01.jpg" width="400" height="750" class="img-responsive" alt="">
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<img src="images/review/review_w02.jpg" width="400" height="750" class="img-responsive" alt="">
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<img src="images/review/review_w03.jpg" width="400" height="750" class="img-responsive" alt="">
-</div>
-</li>
-<li>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<img src="images/review/review_w04.jpg" width="400" height="750" class="img-responsive" alt="">
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<img src="images/review/review_m01.jpg" width="400" height="750" class="img-responsive" alt="">
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-</div>
-</li>
-<li>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<img src="images/review/review_m03.jpg" width="400" height="750" class="img-responsive" alt="">
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<img src="images/review/review_m04.jpg" width="400" height="750" class="img-responsive" alt="">
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<img src="images/review/review_m05.jpg" width="400" height="750" class="img-responsive" alt="">
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<a href="#contact" class="next_section"></a>
-<!-- //section content -->
-</section>
+
 <!-- Contact content -->
 <section class="page_section" id="contact">
-<!-- section header -->
-<!--<header>-->
-<!--<div class="container" >-->
-<!--<h2 class="shadow">Записаться онлайн</h2>-->
-<!--&lt;!&ndash;<p>Укажите желаемую дату и время, я вам перезвоню</p>&ndash;&gt;-->
-<!--</div>&lt;!&ndash; end .container &ndash;&gt;-->
-<!--</header>-->
-<!-- //section header -->
-<!-- section content -->
+
+<header>
+<div class="container" >
+<h2 class="shadow">Записаться онлайн</h2>
+<!--<p>Укажите желаемую дату и время, я вам перезвоню</p>-->
+</div><!-- end .container -->
+</header>
+
 <div class="contact_form content_section">
 <div class="container">
 <div class="row">
@@ -309,7 +235,7 @@
 <form name="sentMessage" id="contactForm" novalidate>
 <div class="row">
 <div class="form-group">
-<input type="text" class="form-control" autocomplete="given-name" placeholder="Имя" id="name">
+<input type="text" class="form-control" autocomplete="given-name" placeholder="Имя" id="name" required >
 <p class="help-block"></p>
 </div>
 <div class="form-group">
@@ -333,11 +259,11 @@
 </div>
 </div>
 <div class="col-md-5 contact_info">
-<p><a href="tel:+375" rel="nofollow"><i class="fa fa-phone"></i>+375 </a></p>
-<p><a href="viber://chat?number=375295170962" rel="nofollow"><i class="fa fa-mobile"></i>VIBER</a></p>
-<p><a href="https://t.me/MatildaAgrippinovna" rel="nofollow"><i class="fab fa-telegram"></i>TELEGRAM</a></p>
+<p><a href="tel:+375" rel="nofollow" target="_blank"><i class="fa fa-phone"></i>+375 </a></p>
+<p><a href="viber://chat?number=375295170962" rel="nofollow" target="_blank"><i class="fa fa-mobile"></i>VIBER</a></p>
+<p><a href="https://t.me/" rel="nofollow" target="_blank"><i class="fab fa-telegram"></i>TELEGRAM</a></p>
 <p><a href="whatsapp://send?text=Здравствуйте!_Меня интересует ваши услуги:&phone=+375295170962&abid=+375295170962" rel="nofollow"><i class="fa fa-mobile" aria-hidden="true"></i>Whatsapp</a></p>
-<p><i class="fa fa-envelope"></i><a href="mailto:je-" rel="nofollow"><i class="fa fa-envelope"></i>Написать email</a></p>
+<p><i class="fa fa-envelope"></i><a href="mailto:je-" rel="nofollow" target="_blank"><i class="fa fa-envelope"></i>Написать email</a></p>
 </div>
 </div>
 </div><!--container-->
@@ -363,9 +289,9 @@
 <div class="col-md-4 indent">
 <div class="socials">
 <ul class="socials_list">
-<li><a title="Instagram" class="ico_social-instagram" href="https://www.instagram.com/evina_photoart/" target="_blank" rel="nofollow">
+<li><a title="Instagram" class="ico_social-instagram" href="https://www.instagram.com/" target="_blank" rel="nofollow">
 </a></li>
-<li><a title="Facebook" class="ico_social-facebook" href="#" target="_blank" rel="nofollow"></a></li>
+<li><a title="Facebook" class="ico_social-facebook" href="#" rel="nofollow" target="_blank"></a></li>
 <li><a title="YouTube" class="ico_social-youtube" href="#" target="_blank"></a></li>
 </ul>
 </div>
@@ -384,24 +310,6 @@
 <script src="{% static 'js/jquery-ui.min.js' %}"></script>
 
 <script>
-<!--    document.addEventListener('DOMContentLoaded', function() {-->
-<!--        const headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6, div');-->
-
-<!--        const observer = new IntersectionObserver(entries => {-->
-<!--            entries.forEach(entry => {-->
-<!--                if (entry.isIntersecting) {-->
-<!--                    entry.target.classList.add('fade-in');-->
-<!--                    observer.unobserve(entry.target);-->
-<!--                }-->
-<!--            });-->
-<!--        }, {-->
-<!--            threshold: 0.1-->
-<!--        });-->
-
-<!--        headers.forEach(header => {-->
-<!--            observer.observe(header);-->
-<!--        });-->
-<!--    });-->
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
