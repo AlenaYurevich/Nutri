@@ -582,9 +582,7 @@ a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7p
 .fixed-menu,
 .fixed-menu:before,
 .fixed-menu:after{display:none!important;}
-/*.mobile_menu_wrapper{display:block;background:#8B008B;width:100%;padding:15px 40px 20px 10px;}*/
 .mobile_menu_wrapper a{color:#fff}
-
 .fixed-menu{display:none!important}
 #top header nav{display:none!important;}
 }
