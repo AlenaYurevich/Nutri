@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto Condensed", sans-serif;
-  margin: 0;
+  background: linear-gradient(to bottom, var(--main-color1-light), #fff);
   padding: 0;
   overflow-x: hidden;
   font-size: 18px;
@@ -17,7 +17,26 @@ body {
 .page_section header #contact {background-image:url("../images/slide_bg/breadcrumbs-min.jpg");background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;
 position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */}
-.page_section header::before {
+/*.page_section header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 100%); /* Полупрозрачный черный цвет для затемнения
+    z-index: 1; /* Убедитесь, что слой находится поверх изображения
+}
+.page_section header > * {
+    position: relative;
+    z-index: 2;
+}*/
+header {background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;
+position: relative; /* Добавляем относительное позиционирование */
+    overflow: hidden; /* Скрываем все, что выходит за пределы блока */}
+header::before {
     content: "";
     position: absolute;
     top: 0;
@@ -29,14 +48,11 @@ position: relative; /* Добавляем относительное позиц�
         rgba(0, 0, 0, 0.7) 100%); /* Полупрозрачный черный цвет для затемнения */
     z-index: 1; /* Убедитесь, что слой находится поверх изображения */
 }
-.page_section header > * {
+header > * {
     position: relative;
     z-index: 2; /* Убедитесь, что контент находится поверх затемнения */
 }
 .page_section header{color:#fff;width:100%;overflow:hidden;padding-top:420px;padding-bottom:370px;}
-body{background: linear-gradient(to bottom, var(--main-color1-light), #fff);
- margin:0;padding:0;overflow-x:hidden !important; font-size: 18px;
- line-height: 1.5; color: #333;}
 .page_section header div.container{z-index:900;position:relative;}
 .page_section header div.container h1,.page_section header div.container h2{font-size:30px;letter-spacing:1px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:30px;text-transform:uppercase;}
 .page_section header div.container p{color:#fff;font-weight:300;text-align:center;font-size:24px;letter-spacing:1px; sans-serif;line-height:22px;padding:0 20px 10px 20px;margin-bottom:0;text-shadow: 0 1px 4px rgba(0,0,0,.5)}
@@ -66,16 +82,14 @@ header #logo img.logo_retina{display:none;}
     margin: 0;
     text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
     font-size: 25px;
-    letter-spacing: 4px;
-    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 5px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
 .gold span2 + span2 {
     font-size: 15px;
-    font-family: "Roboto Condensed", sans-serif;
-    letter-spacing: 13px;
+    letter-spacing: 12px;
 }
 .gold a, .gold a:hover {
 text-decoration: none
@@ -184,6 +198,7 @@ text-decoration: none
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
 .navmenu ul li{list-style:none;margin:0; position:relative;}
+
 @media only screen and (max-width:990px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
 #top header{height:62px !important;position:relative;width:100%;z-index:999;padding:0;}
 #top header #logo{padding:5px 10px 5px 0;}

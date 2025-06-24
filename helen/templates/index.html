@@ -57,7 +57,7 @@
     <li class="scrollable"><a href="#">Главная</a></li>
     <li class="scrollable"><a href="#">Обо мне</a></li>
     <li class="scrollable"><a href="#">Расчет ИМТ</a></li>
-    <li class="scrollable"><a href="#">Услуги</a></li>
+    <li class="scrollable"><a href="#service">Услуги</a></li>
     <li class="scrollable"><a href="#">Контакты</a></li>
     </ul>
 </nav><!-- end nav -->
@@ -93,7 +93,7 @@
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-3">
 <img loading="lazy" src="{% static 'images/gallery/02.jpeg' %}" alt="Консультация нутрициолога онлайн" />
-<span class="service_title">Устали от диет, которые не работают</span>
+<span class="service_title">Устали от диет, которые не работают на долгом сроке</span>
 </div>
 </div>
 <div class="col-md-4">
@@ -112,25 +112,30 @@
 <div class="content_section container">
 <div class="row indent">
 <h2 class="center shadow animate-on-scroll delay-1">Мои преимущества</h2>
-
-
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2">
 <img loading="lazy" src="{% static 'images/gallery/bgmu.jpg' %}" alt="Консультация нутрициолога онлайн" />
-<span class="service_title">Медицинское образование<br>и опыт работы</span>
+<span class="service_title">Медицинское образование и глубокие знания, работа с клиентами, имеющими хронические заболевания</span>
+<span class="service_title">Понимание биохимии, физиологии и взаимодействия лекарств и нутриентов на профессиональном уровне</span>
+<span class="service_title">Дополнение рекомендаций лечащего врача без противоречий</span>
 </div>
+
 </div>
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-3">
 <img loading="lazy" src="{% static 'images/gallery/call.png' %}" alt="Консультация нутрициолога онлайн" />
-<span class="service_title">Экономия времени<br>и конфеденциальность</span>
+<span class="service_title">Экономия времени и конфеденциальность</span>
+<span class="service_title">Доступность из любого региона, комфортная для Вас среда</span>
+<span class="service_title">Легкий обмен документами (анализы, выписки), использование дневников питания (спец. приложения), чат для оперативной поддержки</span>
 </div>
 </div>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-4">
-<img loading="lazy" src="{% static 'images/gallery/06.png' %}" alt="Консультация нутрициолога онлайн" />
-<span class="service_title">Гарантия результата<br>за 3 месяца</span>
+<img loading="lazy" src="{% static 'images/gallery/05.jpg' %}" alt="Консультация нутрициолога онлайн" />
+<span class="service_title">Безопасная нутрициологическая поддержка и работа со сложными случаями</span>
+<span class="service_title">Гарантия результата за 3 месяца</span>
+<span class="service_title">Гибкость форматов работы без поездок и очередей, на основе вашего рациона питания, без жестких ограничений</span>
 </div>
 </div>
 
@@ -143,7 +148,7 @@
 </section>
 <!--<div class="clear"></div>-->
 
-<section>
+<section class="about">
 <div class="content_section container featured_items">
     <h2 class="center animate-on-scroll delay-1">Обо мне</h2>
 <div class="row">
@@ -151,12 +156,17 @@
     <img loading="lazy" class="animate-on-scroll delay-2" src="{% static 'images/lenamishuta.jpg' %}" alt="Консультация нутрициолога онлайн" />
     </div>
 <div class="col-md-6 animate-on-scroll delay-3">
-    <p class="justify">Я закончила БГМУ по специальности ..., повышала образование в ... и в .... . Опыт работы в медицине - более 12 лет.</p>
-    <p class="justify">Беру в работу пациентов, нуждающихся в специализированном питании (диабет, гормональные нарушения, заболевания ЖКТ).</p>
-    <p class="justify">Ко мне обращаются клиенты, ориентированные на набор мышечной массы, повышение выносливости, коррекцию рациона для тренировок.</p>
-    <p class="justify">Я помогаю родителям, стремящимся оптимизировать питание для детей и взрослых.</p>
-    <p class="justify"> Самое большое удовлетворение от своей работы я получаю тогда, когда вижу блеск в глазах клиента и радостную улыбку на лице!</p>
-     <p class="justify">Видеообращение (до 30 секунд)</p>
+    <ul>
+        <li>Дипломированный нутрициолог с высшим медицинским образованием</li>
+        <li>Консультант по питанию и здоровому образу жизни</li>
+    </ul>
+    <p class="justify">Анализирую Ваш рацион питания и помогаю составить полноценный сбалансированный рацион без строгих диет и жёстких ограничений с учётом Ваших индивидуальных особенностей (возраст, пол, образ жизни, сопутствующие заболевания)</p>
+    <p class="justify">Обучаю Вас основам здорового питания и правилами составления пищевой тарелки</p>
+    <p class="justify">Работаем с пищевым поведением путем мягкой коррекции Вашего питания. Комфортно и постепенно меняем Ваши пищевые привычки и образ жизни для достижения гарантированного и стойкого результата</p>
+    <p class="justify">Научимся выбирать нужные и полезные продукты, вкусно и просто их готовить</p>
+    <p class="justify">Разберёмся как с помощью питания молодо и свежо выглядеть, увеличить силы и энергию, улучшить настроение и минимизировать стресс</p>
+    <p class="justify">Самое большое удовлетворение от своей работы я получаю тогда, когда вижу блеск в глазах клиента и радостную улыбку на лице!</p>
+     <p class="justify">слева Видеообращение (до 30 секунд)</p>
         <div class="indent">
     <p class="center">Записаться на консультацию</p>
     <!--  <a class="btn btn-primary" href="viber://chat?number=%2B375295170962"-->
@@ -168,14 +178,21 @@
 </div>
 
 <div class="clear"></div>
-<a href="#gallery" class="next_section"></a>
+<a href="#service" class="next_section"></a>
 </div>
     </div>
 <!-- //section content -->
-
 </section>
-<!-- gallery content -->
-<section id="" class ="advantages">
+
+<section>
+<div class="content_section container featured_items">
+    <h2 class="center animate-on-scroll delay-1">Калькулятор расчета индивидуальной массы тела (ИМТ)</h2>
+<div class="row">
+    <div class="col-md-6"></div>
+</div>
+</div>
+</section>
+<section id="service" class ="service">
 <!-- section header -->
 <header>
 <div class="content_section container">
@@ -184,9 +201,9 @@
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2 ">
-<h3 >Индивидуальный разбор здоровья</h3>
+<h3>Индивидуальный разбор здоровья</h3>
 <h4>Комплексный анализ вашего состояния, питания и целей с учетом медицинских особенностей</h4>
-<p class="">Что входит:</p>
+<strong>Что входит:</strong>
 <p class="justify"><i class="fa fa-check"></i> Глубокий сбор анамнеза (анализы, диагнозы, симптомы, текущее питание)</p>
 <p class="justify"><i class="fa fa-check"></i> Оценка дефицитов витаминов/минералов на основе анализов (если есть)</p>
 <p class="justify"><i class="fa fa-check"></i> Разбор пищевых привычек и их влияния на здоровье</p>
@@ -200,7 +217,7 @@
 <div class="service animate-on-scroll delay-2 ">
 <h3 >Индивидуальный разбор здоровья</h3>
 <h4>Комплексный анализ вашего состояния, питания и целей с учетом медицинских особенностей</h4>
-<p class="">Что входит:</p>
+<strong>Что входит:</strong>
 <p class="justify"><i class="fa fa-check"></i> Глубокий сбор анамнеза (анализы, диагнозы, симптомы, текущее питание)</p>
 <p class="justify"><i class="fa fa-check"></i> Оценка дефицитов витаминов/минералов на основе анализов (если есть)</p>
 <p class="justify"><i class="fa fa-check"></i> Разбор пищевых привычек и их влияния на здоровье</p>
@@ -212,16 +229,16 @@
 </div>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2 ">
-<h3 >Индивидуальный разбор здоровья</h3>
-<h4>Комплексный анализ вашего состояния, питания и целей с учетом медицинских особенностей</h4>
-<p class="">Что входит:</p>
-<p class="justify"><i class="fa fa-check"></i> Глубокий сбор анамнеза (анализы, диагнозы, симптомы, текущее питание)</p>
-<p class="justify"><i class="fa fa-check"></i> Оценка дефицитов витаминов/минералов на основе анализов (если есть)</p>
-<p class="justify"><i class="fa fa-check"></i> Разбор пищевых привычек и их влияния на здоровье</p>
-<p class="justify"><i class="fa fa-check"></i> Рекомендации по коррекции питания с учетом заболеваний (если есть)</p>
-<p class="justify"><i class="fa fa-check"></i> Ответы на вопросы + чек-лист с первыми шагами</p>
-<span>Цена: 95 руб.</span>
-<p>Продолжительность: <br>60–75 минут</p>
+<h3>Экспресс-консультация «Оптимизация рациона»</h3>
+<h4>Разбор вашего текущего питания и индивидуальные рекомендации по его улучшению</h4>
+<strong>Что входит:</strong>
+<p class="justify"><i class="fa fa-check"> Анализ вашего дневника питания (если есть) или разбор типичного рациона</p>
+<p class="justify"><i class="fa fa-check"> Выявление дефицитов и избытков в питании (белки, жиры, углеводы, клетчатка)</p>
+<p class="justify"><i class="fa fa-magnifying-glass"></i> Рекомендации по сбалансированному меню под ваши цели (энергия, ЖКТ, вес и др.)</p>
+<p class="justify"><i class="fa fa-magnifying-glass"></i> Подбор полезных альтернатив вредным привычкам в еде</p>
+<p class="justify"><i class="fa fa-magnifying-glass"></i> Чек-лист с простыми и эффективными изменениями</p>
+<span>Цена: 60 руб.</span>
+<p>Продолжительность: <br>40 минут</p>
 </div>
 </div>
 
@@ -313,6 +330,7 @@
 <div class="col-md-4 indent">
 <ul class="navigator indent">
 <li class="scrollable"><a href="#">Главная</a></li>
+<li class="scrollable"><a href="#">Обо мне</a></li>
 
 </ul>
 </div>
@@ -326,7 +344,7 @@
 </ul>
 </div>
 <div class="clear"></div>
-<div class="copyright">© 2025 </div>
+<div class="copyright">© 2025</div>
 <div class="copyright"></div>
 </div>
 <div class="col-md-4 indent center">
