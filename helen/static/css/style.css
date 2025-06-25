@@ -59,7 +59,7 @@ p{padding:0;margin:0 0 10px 0;}
 .service{background:#fff;border-radius:6px;box-shadow:0 0 4px rgba(0, 0, 0, 0.13);padding:20px;text-align:center}
 .service header{background-image:url("../images/slide_bg/03.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
 .service h2{color:#fff}
-.service p{font-size:18px;font-weight:300; line-height:18px ;padding:10px 0 10px 0 !important;}
+.service p{font-weight:300; line-height:18px ;padding:10px 0 10px 0 !important;}
 .service span{font-size:20px;font-weight:400; color: var(--main-color1); line-height:18px ;padding:10px 0 10px 0 !important;}
 .service_icon{width:76px;height:76px;line-height:76px;display:block;margin:0 auto 28px auto;border:0;font-size:33px;color:#ffffff;font-family:'FontAwesome';padding:0;text-align:center;transition:all 500ms;-webkit-transition:all 500ms;border-radius:50%;-webkit-border-radius:50%;background-color:#919682;}
 .service:hover .service_icon{background-color:#EE19EE;}
@@ -607,6 +607,6 @@ a.menu_toggler:before{background-image:url("../images/retina/btn_menu.png");back
 .author-body:before,
 .thiscommentbody:before,
 }
-.fa.fa-check, .fa.fa-magnifying-glass {
-  color: #2ecc71; /* Зеленый цвет */
+.fa.fa-check, .fa.fa-magnifying-glass, .fa.fa-wand-magic-sparkles{
+  color: #66743f /* Зеленый цвет */
 }
