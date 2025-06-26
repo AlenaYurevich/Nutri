@@ -57,11 +57,8 @@ header > * {
 .page_section header div.container h1,.page_section header div.container h2{font-size:30px;letter-spacing:1px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:30px;text-transform:uppercase;}
 .page_section header div.container p{color:#fff;font-weight:300;text-align:center;font-size:24px;letter-spacing:1px; sans-serif;line-height:22px;padding:0 20px 10px 20px;margin-bottom:0;text-shadow: 0 1px 4px rgba(0,0,0,.5)}
 header #logo img.logo_retina{display:none;}
-#top header{height:82px;padding:0; background:#ffffff;border:none;position:absolute;left:0;top:0;width:100%!important;z-index:9999;box-shadow:0 2px 2px rgba(0, 0, 0, 0.06);}
-
-#logo {float:left;padding:12px 10px 0 0;vertical-align:top;  display: flex; /* Горизонтальное расположение */ align-items: flex-start; /* Ключевое свойство для выравнивания по верху */}
-.logo_def{margin-bottom:7px;width:90px }
-
+#top header{height:75px;padding:0; background:#ffffff;border:none;position:absolute;left:0;top:0;width:100%!important;z-index:9999;box-shadow:0 2px 2px rgba(0, 0, 0, 0.06);}
+#logo {float:left;padding:8px 10px 0 0;vertical-align:top;  display: flex; /* Горизонтальное расположение */ align-items: flex-start; /* Ключевое свойство для выравнивания по верху */}
 .gold span {
     color: #cfc09f;
     font-family: "MonteCarlo", cursive;
@@ -106,11 +103,11 @@ text-decoration: none
 }
 
 .vertical-group {
-  padding: 10px 10px 8px 20px;
+  padding: 10px 10px 8px 10px;
   display: flex;
   flex-direction: column; /* Вертикальное расположение внутри */
 }
-
+#logo img{height:54px !important;width:auto !important;margin-top:5px}
 @media (min-width:800px){
 .page_section header {
     background-image: url("../images/slide_bg/10.jpeg?width=1200");
@@ -200,9 +197,9 @@ text-decoration: none
 .navmenu ul li{list-style:none;margin:0; position:relative;}
 
 @media only screen and (max-width:990px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
-#top header{height:62px !important;position:relative;width:100%;z-index:999;padding:0;}
+#top header{height:76px !important;position:relative;width:100%;z-index:999;padding:0;}
 #top header #logo{padding:5px 10px 5px 0;}
-#top header #logo img{height:52px !important;width:auto !important;}
+#top header #logo img{height:54px !important;width:auto !important;margin-top:5px}
 #top header .container{position:relative;}
 #home{margin-top:0;}
 a.menu_toggler{display:inline-block;float:right;margin:-17px 20px 0px 0;border:none;border-radius:0;box-shadow:none;width:34px;height:34px; position:absolute;overflow:hidden; right:0; top:50%; background-color:var(--main-color2)}
@@ -211,7 +208,7 @@ a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7p
 .fixed-menu,
 .fixed-menu:before,
 .fixed-menu:after{display:none!important;}
-.mobile_menu_wrapper{display:block;background:var(--main-color2);width:100%;padding:15px 40px 20px 10px;}
+.mobile_menu_wrapper{display:block;background: linear-gradient(to bottom, #cfc09f 14%,#634f2c 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#3a2c0f 84%);width:100%;padding:15px 40px 20px 10px;}
 .mobile_menu_wrapper li{padding:10px 0;}
 .mobile_menu_wrapper a{color:#fff}
 .mobile_menu_wrapper a:hover{color:var(--main-color1-light)}

@@ -1,75 +1,19 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block seo %}
     <title>Нутрициолог Елена Мишута, Минск</title>
     <meta name="description" content="Запишись онлайн   ★ ">
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="">
     <meta name="robots" content="" />
-
     <link rel="canonical" href="#"/>
-    <!-- Favicon && Apple touch -->
-<link rel="shortcut icon" href="images/icons/favicon1.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="images/icons/apple_icons_57x57.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple_icons_72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple_icons_114x114.png">
-<link rel="apple-touch-icon" sizes="192x192" href="images/icons/apple_icons_192x192.png">
-    <link href="{% static 'css/first.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" />
-
-
-  <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-<meta property="og:url" content="">
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Нутрициолог Елена Мишута">
-<meta property="og:image" content="{% static 'images/lenamishuta.jpg' %}" />
-<meta property="og:site_name" content=""/>
-<meta property="og:description" content=""/>
-</head>
-
-
-<body class="animated single_page" data-animated="fadeIn">
-<div>
-<!-- header section -->
-<div id="top">
-<header>
-<div class="gold">
-<div class="container">
-<!-- logo -->
-<div id="logo">
-    <a href="index.html#top" tille="Главная страница">
-        <span data-double="EM">EM</span></a>
-<div class="vertical-group">
-    <span2 data-double="Елена Мишута">Елена Мишута</span2>
-    <span2 data-double="Нутрициолог">Нутрициолог</span2>
-</div>
-</div>
-<nav class="navmenu">
-    <ul>
-    <li class="scrollable"><a href="#">Главная</a></li>
-    <li class="scrollable"><a href="#">Обо мне</a></li>
-    <li class="scrollable"><a href="#">Расчет ИМТ</a></li>
-    <li class="scrollable"><a href="#service">Услуги</a></li>
-    <li class="scrollable"><a href="#">Контакты</a></li>
-    </ul>
-</nav><!-- end nav -->
-
-<div class="clear"></div>
-</div>
-</div><!-- end container -->
-
-
-</header><!-- //header section -->
-</div>
-<!-- //header section -->
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Нутрициолог Елена Мишута">
+    <meta property="og:image" content="{% static 'images/lenamishuta.jpg' %}" />
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+{% endblock %}
+{% block page_content %}
 <!-- section header -->
 <section class="page_section">
 <header>
@@ -154,7 +98,7 @@
 
 <section class="about">
 <div class="content_section container featured_items">
-    <h2 class="center animate-on-scroll delay-1">Обо мне</h2>
+    <h2 class="center animate-on-scroll delay-1">Чем я могу быть полезна</h2>
 <div class="row">
     <div class="col-md-6">
     <img loading="lazy" class="animate-on-scroll delay-2" src="{% static 'images/lenamishuta.jpg' %}" alt="Консультация нутрициолога онлайн" />
@@ -208,7 +152,7 @@
 <h3>Индивидуальный разбор здоровья</h3>
 <h4>Комплексный анализ вашего состояния, питания и целей с учетом медицинских особенностей</h4>
 <strong>Что входит:</strong>
-<p class="justify"><i class="fa fa-check"></i>&emsp;Глубокий сбор анамнеза (анализы, диагнозы, симптомы, текущее питание)</p>
+<p class="justify"><i class="fa fa-check"></i>&emsp;Глубокий сбор анамнеза (анализы, жалобы, симптомы, текущее питание)</p>
 <p class="justify"><i class="fa fa-check"></i>&emsp;Оценка дефицитов витаминов/минералов на основе анализов (если есть)</p>
 <p class="justify"><i class="fa fa-check"></i>&emsp;Разбор пищевых привычек и их влияния на здоровье</p>
 <p class="justify"><i class="fa fa-check"></i>&emsp;Рекомендации по коррекции питания с учетом заболеваний (если есть)</p>
@@ -222,7 +166,7 @@
 <h3>Программа сопровождения «Здоровье под контролем»</h3>
 <h4>Персональный план питания и образа жизни на 1 месяц с поддержкой</h4>
 <strong>Что входит:</strong>
-<p class="justify"><i class="fa fa-wand-magic-sparkles"></i>&emsp;Разработка индивидуального рациона (с учетом анализов, болезней, целей)</p>
+<p class="justify"><i class="fa fa-wand-magic-sparkles"></i>&emsp;Разработка индивидуального рациона (с учетом анализов, заболеваний, целей)</p>
 <p class="justify"><i class="fa fa-wand-magic-sparkles"></i>&emsp;Подбор БАДов/нутриентов (при необходимости, с учетом лекарств)</p>
 <p class="justify"><i class="fa fa-wand-magic-sparkles"></i>&emsp;Еженедельные корректировки по ощущениям и результатам</p>
 <p class="justify"><i class="fa fa-wand-magic-sparkles"></i>&emsp;Доступ в чат для вопросов (ответы в течение 24 часов)</p>
@@ -264,134 +208,5 @@
 </div>
 <!-- //section content -->
 </section>
-
-<!-- Contact content -->
-<section class="" id="contact">
-
-<header>
-<div class="container" >
-<h2 class="shadow">Записаться онлайн</h2>
-<!--<p>Укажите желаемую дату и время, я вам перезвоню</p>-->
-</div><!-- end .container -->
-</header>
-
-<div class="contact_form content_section">
-<div class="container">
-<div class="row">
-<div class="col-md-7">
-<div id="note"></div>
-<div id="fields">
-<form name="sentMessage" id="contactForm" novalidate>
-<div class="row">
-<div class="form-group">
-<input type="text" class="form-control" autocomplete="given-name" placeholder="Имя" id="name" required >
-<p class="help-block"></p>
-</div>
-<div class="form-group">
-<input type="email" class="form-control" autocomplete="email" placeholder="Email по желанию" id="email">
-<p class="help-block main_color2"></p>
-</div>
-<div class="form-group">
-<input type="tel" class="form-control phone" autocomplete="tel" placeholder="Телефон*" id="phone" required data-validation-required-message="Введите телефон">
-<p class="help-block main_color2"></p>
-</div>
-<div class="form-group">
-<input type="hidden" id="page" value="eugenia">
-<textarea class="form-control" id="message" required data-validation-required-message="Введите сообщение">Услуга, желаемая дата и время *  </textarea>
-<p class="help-block main_color2">* Обязательные поля</p>
-</div>
-<div class="clearfix"></div>
-<div id="success"></div>
-<input class="send_btn" type="submit" value="Отправить">
-</div>
-</form>
-</div>
-</div>
-<div class="col-md-5 contact_info">
-<p><a href="tel:+375" rel="nofollow" target="_blank"><i class="fa fa-phone"></i>+375 </a></p>
-<p><a href="viber://chat?number=375295170962" rel="nofollow" target="_blank"><i class="fa fa-mobile"></i>VIBER</a></p>
-<p><a href="https://t.me/" rel="nofollow" target="_blank"><i class="fab fa-telegram"></i>TELEGRAM</a></p>
-<p><a href="whatsapp://send?text=Здравствуйте!_Меня интересует ваши услуги:&phone=+375295170962&abid=+375295170962" rel="nofollow"><i class="fa fa-mobile" aria-hidden="true"></i>Whatsapp</a></p>
-<p><i class="fa fa-envelope"></i><a href="mailto:je-" rel="nofollow" target="_blank"><i class="fa fa-envelope"></i>Написать email</a></p>
-</div>
-</div>
-</div><!--container-->
-</div>
-
-<div class="content_section partner_section">
-<div class="container">
-<a href="#top" class="next_section back2top"></a>
-</div>
-</div>
-</section><!-- //section content -->
-
-<!--footer-->
-<div class="footer">
-<div class="footer_bottom container">
-<div class="row">
-<div class="col-md-4 indent">
-<ul class="navigator indent">
-    <li class="scrollable"><a href="#">Главная</a></li>
-    <li class="scrollable"><a href="#">Обо мне</a></li>
-    <li class="scrollable"><a href="#">Расчет ИМТ</a></li>
-    <li class="scrollable"><a href="#service">Услуги</a></li>
-    <li class="scrollable"><a href="#">Контакты</a></li>
-
-</ul>
-</div>
-<div class="col-md-4 indent">
-<div class="socials">
-<ul class="socials_list">
-<li><a title="Instagram" class="ico_social-instagram" href="https://www.instagram.com/" target="_blank" rel="nofollow">
-</a></li>
-<li><a title="Facebook" class="ico_social-facebook" href="#" rel="nofollow" target="_blank"></a></li>
-<li><a title="YouTube" class="ico_social-youtube" href="#" target="_blank"></a></li>
-</ul>
-</div>
-<div class="clear"></div>
-<div class="copyright">© 2025</div>
-<div class="copyright"></div>
-</div>
-<div class="col-md-4 indent center">
-
-</div>
-</div>
-</div><!-- //footer_bottom -->
-</div><!--//footer-->
-</div><!-- end #page1 -->
-<script src="{% static 'js/jquery.js' %}"></script>
-<script src="{% static 'js/jquery-ui.min.js' %}"></script>
-
-<script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate-fade-in-up');
-      observer.unobserve(entry.target); // Прекращаем наблюдение после анимации
-    }
-  });
-}, {
-  rootMargin: '0px 0px -100px 0px', // Срабатывает при появлении 100px элемента
-  threshold: 0.1
-});
-
-document.querySelectorAll('.animate-on-scroll').forEach(el => {
-  observer.observe(el);
-});
-jQuery('.animate-on-scroll').each(function() {
-  if (!this.classList.contains('animate-fade-in-up')) {
-    this.style.opacity = '0';
-    this.style.transform = 'translateY(100px)';
-  }
-});
-</script>
-
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/current.js' %}"></script>
-<script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
-<script src="js/contact_me.js"></script>
-<script src="js/maskedinput.js"></script>
-<script src="https://kit.fontawesome.com/5c1c4bfca5.js" crossorigin="anonymous"></script>
-<header class="fixed-menu"></header>
-</body>
-</html>
+{% endblock %}
+<
