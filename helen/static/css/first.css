@@ -17,22 +17,7 @@ body {
 .page_section header #contact {background-image:url("../images/slide_bg/breadcrumbs-min.jpg");background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;
 position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */}
-/*.page_section header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.7) 100%); /* Полупрозрачный черный цвет для затемнения
-    z-index: 1; /* Убедитесь, что слой находится поверх изображения
-}
-.page_section header > * {
-    position: relative;
-    z-index: 2;
-}*/
+
 header {background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;
 position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */}
