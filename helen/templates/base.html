@@ -7,15 +7,16 @@
     {% block seo %}
     {% endblock %}
     <!-- Favicon && Apple touch -->
-<link rel="shortcut icon" href="images/icons/favicon1.ico" type="image/x-icon">
+<link rel="shortcut icon" href="{% static 'images/logo5.png' %}" type="image/x-icon">
 <link rel="apple-touch-icon" href="images/icons/apple_icons_57x57.png">
 <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple_icons_72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple_icons_114x114.png">
 <link rel="apple-touch-icon" sizes="192x192" href="images/icons/apple_icons_192x192.png">
     <link href="{% static 'css/first.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" />
   <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +32,7 @@
 <div class="container">
 <!-- logo -->
 <div id="logo">
-<a href="index.html#top" tille="Главная страница">
+<a href="" tille="Главная страница">
 <!--            <span data-double="EM">EM</span>-->
     <img class="shadow2" src ="{% static 'images/logo5.png' %}"> </a>
     <div class="vertical-group">
@@ -66,12 +67,14 @@
 </section>
 
 <!-- Contact content -->
-<section class="" id="contact">
+<section class="contact" id="contact">
 
 <header>
 <div class="container" >
-<h2 class="shadow">Записаться онлайн</h2>
-<!--<p>Укажите желаемую дату и время, я вам перезвоню</p>-->
+    <div class="row indent">
+        <h2 class="center shadow animate-on-scroll delay-1">Записаться на консультацию</h2>
+        <p class="center shadow animate-on-scroll delay-2">Укажите желаемую дату и время, я вам перезвоню</p>
+    </div><!-- end .row -->
 </div><!-- end .container -->
 </header>
 

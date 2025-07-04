@@ -1946,7 +1946,8 @@ outline-offset: -2px;
 .btn:focus {
 color:#fff;
 text-decoration: none;
-background: #C7A491;
+background: var(--main-color4);
+border-color: var(--main-color4);
 }
 .btn:active,
 .btn.active {
@@ -2007,23 +2008,15 @@ color: #fff;
 background-color: #333;
 }
 .btn-primary {
-color: #fff;
-background-color: #C7A491;
-border-color: #C7A491;
+background: linear-gradient(to top, var(--main-color3), var(--main-color5));
+border-color: var(--main-color3);
 }
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
-color: #fff;
-background-color: #8B008B ;
-border-color: #8B008B ;
-}
+
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
 background-image: none;
+border-color: var(--main-color5);
 }
 .btn-primary.disabled,
 .btn-primary[disabled],

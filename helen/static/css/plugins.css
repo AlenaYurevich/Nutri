@@ -75,7 +75,7 @@ div.pp_default .pp_contract{background:url("../images/prettyPhoto/default/sprite
 div.pp_default .pp_contract:hover{background:url("../images/prettyPhoto/default/sprite.png") 0 -113px no-repeat;cursor:pointer}
 div.pp_default .pp_close{background:url("../images/prettyPhoto/default/sprite.png") 2px 1px no-repeat;cursor:pointer;height:30px;width:30px}
 div.pp_default .pp_gallery ul li a{background:url("../images/prettyPhoto/default/default_thumb.png") center center #f8f8f8;border:1px solid #aaa}
-/*div.pp_default .pp_social{margin-top:7px}*/
+div.pp_default .pp_social{margin-top:7px}
 div.pp_default .pp_gallery a.pp_arrow_previous,div.pp_default .pp_gallery a.pp_arrow_next{left:auto;position:static}
 div.pp_default .pp_nav .pp_play,div.pp_default .pp_nav .pp_pause{background:url("../images/prettyPhoto/default/sprite.png") -51px 1px no-repeat;height:30px;width:30px}
 div.pp_default .pp_nav .pp_pause{background-position:-51px -29px}
@@ -185,7 +185,7 @@ div.pp_pic_holder{display:none;position:absolute;width:100px;z-index:10000}
 .pp_content_container .pp_right{padding-right:20px}
 .pp_content_container .pp_details{float:left;margin:10px 0 2px}
 .pp_description{display:none;margin:0}
-.pp_social{float:left;margin:0}
+.pp_social{float:left;margin:0;display:none}
 .pp_social .facebook{float:left;margin-left:5px;overflow:hidden;width:55px}
 .pp_social .twitter{float:left}
 .pp_nav{clear:right;float:left;margin:3px 10px 0 0}

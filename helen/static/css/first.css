@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto Condensed", sans-serif;
-  background: linear-gradient(to bottom, var(--main-color1-light), #fff);
+  background: #fff;
   padding: 0;
   overflow-x: hidden;
   font-size: 1.2em;
@@ -54,7 +54,6 @@ header #logo img.logo_retina{display:none;}
     letter-spacing: -2px;
     line-height: 1.2;
     margin: 0;
-   /* text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);*/
 }
 .gold span2 {
     color: #cfc09f;
@@ -62,7 +61,6 @@ header #logo img.logo_retina{display:none;}
     position: relative;
     line-height: 1.2;
     margin: 0;
-    /*text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);*/
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
     font-size: 28px;
     letter-spacing: 5px;
@@ -74,15 +72,11 @@ header #logo img.logo_retina{display:none;}
     font-size: 16px;
     letter-spacing: 14px;
 }
-/*.gold a, .gold a:hover {
-text-decoration: none
-}*/
 .gold span:before, .gold span2:before {
     content: attr(data-double);
     left: 0;
     position: absolute;
     z-index: 1;
-    /*background: linear-gradient(to bottom, #cfc09f 14%,#634f2c 16%, #cfc09f 20%, #cfc09f 22%,#ffecb3 40%,#3a2c0f 84%);*/
     background: linear-gradient(to bottom, #EEECE0 45%,#EAE6DB 25%, #CAC0A3 25%, #60584B 84%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -97,7 +91,7 @@ text-decoration: none
 #logo img{height:70px !important;width:auto !important;margin-top:0px;}
 @media (min-width:800px){
 .page_section header {
-    background-image: url("../images/slide_bg/10.jpeg?width=1200");
+    background-image: url("../images/slide_bg/10.jpeg");
     background-position: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -172,10 +166,9 @@ text-decoration: none
 .delay-4 { animation-delay: 0.9s; }
 .delay-5 { animation-delay: 1.1s; }
 
-
 .navmenu{margin:0;padding:20px 0 2px 0;float:right;}
 .navmenu ul li{display:inline-block;vertical-align:top;line-height:32px; }
-.navmenu ul li a{font-size:18px;padding:8px;font-weight:400; color: #cfc09f;background: linear-gradient(to bottom, #EEECE0 50%,#EAE6DB 25%, #CAC0A3 25%, #60584B 84%);
+.navmenu ul li a{padding:8px;font-weight:400; color: #cfc09f;background: linear-gradient(to bottom, #EEECE0 50%,#EAE6DB 25%, #CAC0A3 25%, #60584B 84%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 2px 2px rgba(0,0,0,.2);
