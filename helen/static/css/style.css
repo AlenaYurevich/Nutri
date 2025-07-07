@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth; /* Плавная прокрутка */
+}
 :root {
   /* Основные цвета */
   --main-color1: #515F3B;    /* темно зеленый */
@@ -53,6 +56,20 @@ a.btn-primary:hover, a.btn-primary:focus {background:var(--main-color4);border-c
 
 .btn-primary:hover {background-color: var(--main-color4)! important;border-color: var(--main-color4)! important;box-shadow:rgba(28,56,72,0.1) 0px 2px 2px,rgba(28,56,72,0.1) 0px 4px 4px,rgba(28,56,72,0.1) 0px 8px 8px,rgba(28,56,72,0.1) 0px 16px 16px,rgba(28,56,72,0.1) 0px 32px 32px}
 .btn-primary:active {background-color: var(--main-color5)! important;border-color: var(--main-color5)! important;}
+#bmi-calculate-btn:focus {
+    outline: none;
+    box-shadow: none;  }
+  /* Красивое hover-состояние */
+  #bmi-calculate-btn:hover {
+    background-color: #286090;
+    border-color: #204d74;  }
+  /* Анимация нажатия */
+  #bmi-calculate-btn:active {
+    transform: translateY(1px);
+  }
+  #bmi-calculate-btn {
+  transition: all 0.3s ease;
+}
 p{padding:0;margin:0 0 10px 0;}
 .about li {list-style-type: disc!important;}
 .service{background:#fff;border-radius:6px;box-shadow:0 0 4px rgba(0, 0, 0, 0.13);padding:20px;text-align:center}

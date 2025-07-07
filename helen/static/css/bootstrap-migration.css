@@ -1,0 +1,18 @@
+/* bootstrap-migration.css */
+/* Новые классы с поддержкой старых */
+.card {
+  @extend .panel;
+  @extend .panel-default;
+}
+.card-body {
+  @extend .panel-body;
+}
+/* И так далее для всех компонентов */
+.bmi-calc .mt-30 { margin-top: 30px; }
+.bmi-calc .p-20 { padding: 20px; }
+.bmi-calc .bg-info { background-color: #d9edf7; }
+.bmi-calc .bg-success { background-color: #dff0d8; }
+.bmi-calc .bg-danger { background-color: #f2dede; }
+.bmi-calc .well { background: white; }
+.bmi-calc .h1 { font-size: 36px; }
+.bmi-calc .lead { font-size: 18px; }

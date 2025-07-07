@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block seo %}
+    <title>Расчеты нутрициолога</title>
+    <meta name="description" content="Рассчитываем идеальные параметры вашего тела">
+    <meta name="keywords" content="Рассчитать индекс массы тела, идеальную массу тела">
+    <link rel="canonical" href=""/>
+    <meta property="og:title" content="Расчеты нутрициолога"/>
+    <meta property="og:image" content="https://posttarif.by/apple-touch-icon.png"/>
+    <meta property="og:description" content="Рассчитываем идеальные параметры вашего тела">
+    <meta property="og:type" content="article"/>
+{% endblock %}
+{% block page_content %}
+ <main>
+  <header>
+    <div class="">
+     <h1>Расчеты нутрициолога</h1>
+      <p>Рассчитаем идеальные показатели вашего тела</p>
+    </div>
+  </header>
+<div class="container">
+
+<div class="row indent">
+         <h2>Расчет идеальной массы тела (ИдМТ)</h2>
+    <form method="POST" class="PostForm">{% csrf_token %}
+      <div class="col-md-6">
+         {{ form.height.label }}
+         {{ form.height }}
+         {{ form.height.error_messages }}
+      </div>
+      <div class="col-md-6 data-nosnippet">
+         {{ form.gender.label }}
+         {{ form.gender }}
+         {{ form.gender.errors }}
+      </div>
+
+<!-- <button class="btn btn-primary" type="submit" name="send">Рассчитать</button>-->
+        <input class="send_btn" type="submit" name="send" value="Рассчитать">
+    </form>
+
+     <div class="col-md-6 indent">
+        <p>{{ result }}</p>
+     </div>
+     </div><!--row-->
+<div class="row indent">
+    <h2>Расчет индекса массы тела (ИМТ)</h2>
+    <form method="POST" class="PostForm">{% csrf_token %}
+      <div class="col-md-6">
+         {{ form.height.label }}
+         {{ form.height }}
+         {{ form.height.error_messages }}
+         {{ form.weight.label }}
+         {{ form.weight }}
+         {{ form.weight.error_messages }}
+      </div>
+      <div class="col-md-6">
+      </div>
+        <input class="send_btn" type="submit" name="send" value="Рассчитать">
+    </form>
+
+     <div class="col-md-6 indent">
+        <p>{{ result }}</p>
+     </div>
+</div><!--row-->
+
+
+</div>
+</main>
+ {% endblock %}

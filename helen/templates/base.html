@@ -13,10 +13,12 @@
 <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple_icons_114x114.png">
 <link rel="apple-touch-icon" sizes="192x192" href="images/icons/apple_icons_192x192.png">
     <link href="{% static 'css/first.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/bootstrap-migration.css' %}" rel="stylesheet"/>
     <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +47,7 @@
     <ul>
     <li class="scrollable"><a href="#">Главная</a></li>
     <li class="scrollable"><a href="#">Обо мне</a></li>
-    <li class="scrollable"><a href="#">Расчет ИМТ</a></li>
+    <li class="scrollable"><a href="#calc">Калькулятор индекса массы тела</a></li>
     <li class="scrollable"><a href="#service">Услуги</a></li>
     <li class="scrollable"><a href="#">Контакты</a></li>
     </ul>
@@ -194,6 +196,7 @@
     <script src="js/contact_me.js"></script>
     <script src="js/maskedinput.js"></script>
     <script src="https://kit.fontawesome.com/5c1c4bfca5.js" crossorigin="anonymous"></script>
+
 <header class="fixed-menu"></header>
 </body>
 </html>
