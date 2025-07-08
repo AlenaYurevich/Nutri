@@ -59,15 +59,11 @@ a.btn-primary:hover, a.btn-primary:focus {background:var(--main-color4);border-c
 #bmi-calculate-btn:focus {
     outline: none;
     box-shadow: none;  }
-  /* Красивое hover-состояние */
-  #bmi-calculate-btn:hover {
-    background-color: #286090;
-    border-color: #204d74;  }
-  /* Анимация нажатия */
-  #bmi-calculate-btn:active {
+    /* Анимация нажатия */
+#bmi-calculate-btn:active {
     transform: translateY(1px);
   }
-  #bmi-calculate-btn {
+#bmi-calculate-btn {
   transition: all 0.3s ease;
 }
 p{padding:0;margin:0 0 10px 0;}
@@ -609,6 +605,17 @@ header #logo img.logo_retina{display:block!important;}
 .socials_list li a.ico_social-dribbble:before{background-image:url("../images/retina/palette_icons.png") !important;background-size:200px 150px !important}
 a.menu_toggler:before{background-image:url("../images/retina/btn_menu.png");background-size:20px 20px !important}
 }
-.fa.fa-check, .fa.fa-magnifying-glass, .fa.fa-wand-magic-sparkles{
+.fa.fa-check, .fa.fa-magnifying-glass, .fa.fa-wand-magic-sparkles .fa-exclamation{
   color: #66743f /* Зеленый цвет */
+}
+.progress-bar {
+  position: relative;
+  min-width: 30px; /* Чтобы текст помещался */
+}
+.progress-bar span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-shadow: 0 0 2px #000;
 }
