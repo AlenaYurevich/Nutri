@@ -70,14 +70,11 @@
 
 <!-- Contact content -->
 <section class="contact" id="contact">
-
-<header>
-<div class="container" >
-    <div class="row indent">
-        <h2 class="center shadow animate-on-scroll delay-1">Записаться на консультацию</h2>
-        <p class="center shadow animate-on-scroll delay-2">Укажите желаемую дату и время, я вам перезвоню</p>
-    </div><!-- end .row -->
-</div><!-- end .container -->
+<header class="text-center mb-5">
+    <div class="container">
+        <h2 class="animate-on-scroll delay-1">Записаться на консультацию</h2>
+        <p class="lead animate-on-scroll delay-2">Укажите желаемую дату и время, я вам перезвоню</p>
+    </div><!-- end .container -->
 </header>
 
 <div class="contact_form content_section">
@@ -86,18 +83,18 @@
 <div class="col-md-7">
 <div id="note"></div>
 <div id="fields">
-<form name="sentMessage" id="contactForm" novalidate>
-<div class="row">
+<form id="contactForm" name="sentMessage" novalidate>
+<!--<div class="row">-->
 <div class="form-group">
-<input type="text" class="form-control" autocomplete="given-name" placeholder="Имя" id="name" required >
+<input type="text" class="form-control" required autocomplete="given-name" placeholder="Имя*" id="name">
 <p class="help-block"></p>
 </div>
 <div class="form-group">
-<input type="email" class="form-control" autocomplete="email" placeholder="Email - по желанию" id="email">
+<input type="tel" class="form-control phone" placeholder="Телефон*" id="phone" required autocomplete="tel" data-validation-required-message="Введите телефон">
 <p class="help-block main_color2"></p>
 </div>
 <div class="form-group">
-<input type="tel" class="form-control phone" autocomplete="tel" placeholder="Телефон*" id="phone" required data-validation-required-message="Введите телефон">
+<input type="email" class="form-control" autocomplete="email" placeholder="Email (по желанию)" id="email">
 <p class="help-block main_color2"></p>
 </div>
 <div class="form-group">
@@ -108,20 +105,31 @@
 <div class="clearfix"></div>
 <div id="success"></div>
 <input class="send_btn" type="submit" value="Отправить">
-</div>
+<!--</div>-->
 </form>
 </div>
 </div>
 <div class="col-md-5 contact_info">
-<p><a href="tel:+375" rel="nofollow" target="_blank"><i class="fa fa-phone"></i>+375 </a></p>
-<p><a href="viber://chat?number=375295170962" rel="nofollow" target="_blank"><i class="fa fa-mobile"></i>VIBER</a></p>
-<p><a href="https://t.me/helenmishuta" rel="nofollow" target="_blank"><i class="fab fa-telegram"></i>TELEGRAM</a></p>
-<p><a href="whatsapp://send?text=Здравствуйте!_Меня интересует ваши услуги:&phone=+375295170962&abid=+375295170962" rel="nofollow"><i class="fa fa-mobile" aria-hidden="true"></i>Whatsapp</a></p>
-<p><i class="fa fa-envelope"></i><a href="mailto:je-" rel="nofollow" target="_blank"><i class="fa fa-envelope"></i>Написать email</a></p>
+<h3 class="mb-5">Быстрая связь</h3>
+<p><a href="tel:+375" rel="nofollow" target="_blank"><i class="fas fa-phone-alt fa-fw me-2"></i>+375 </a></p>
+<p><a href="viber://chat?number=375295170962" rel="nofollow" target="_blank"><i class="fab fa-viber fa-fw me-2 text-viber"></i> Написать в Viber</a></p>
+<p><a href="https://t.me/helenmishuta" rel="nofollow" target="_blank"><i class="fab fa-telegram fa-fw me-2"></i>Telegram</a></p>
+<p><a href="whatsapp://send?text=Здравствуйте!_Меня интересует ваши услуги:&phone=+375295170962&abid=+375295170962" rel="nofollow"><i class="fab fa-whatsapp fa-fw me-2 text-whatsapp"></i> WhatsApp</a></p>
+<p><a href="mailto:je-" rel="nofollow" target="_blank"><i class="far fa-envelope fa-fw me-2"></i> email@example.com</a></p>
 </div>
+
+
+   <div class="mt-4 pt-2 border-top">
+            <small class="text-muted">* Среднее время ответа: 20 минут в рабочее время</small>
+          </div>
+
 </div>
 </div><!--container-->
 </div>
+
+
+<!--{% block contact_form %}-->
+<!--{% endblock %}-->
 
 <div class="content_section partner_section">
 <div class="container">
