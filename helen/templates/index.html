@@ -184,30 +184,29 @@
           <div class="panel-body">
             <form method="POST" class="form-horizontal" action="#calc">
               {% csrf_token %}
-
               <div class="form-group">
-                <label for="{{ form.height.id_for_label }}" class="col-sm-4 control-label">
-                  {{ form.height.label }} (в см)
+                <label for="{{ bmi_form.height.id_for_label }}" class="col-sm-4 control-label">
+                  {{ bmi_form.height.label }} (в см)
                 </label>
                 <div class="col-sm-8">
-                  {{ form.height }}
-                  {% if form.height.errors %}
+                  {{ bmi_form.height }}
+                  {% if bmi_form.height.errors %}
                   <span class="help-block text-danger">
-                    {{ form.height.errors|first }}
+                    {{ bmi_form.height.errors|first }}
                   </span>
                   {% endif %}
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="{{ form.weight.id_for_label }}" class="col-sm-4 control-label">
-                  {{ form.weight.label }} (в кг)
+                <label for="{{ bmi_form.weight.id_for_label }}" class="col-sm-4 control-label">
+                  {{ bmi_form.weight.label }} (в кг)
                 </label>
                 <div class="col-sm-8">
-                  {{ form.weight }}
-                  {% if form.weight.errors %}
+                  {{ bmi_form.weight }}
+                  {% if bmi_form.weight.errors %}
                   <span class="help-block text-danger">
-                    {{ form.weight.errors|first }}
+                    {{ bmi_form.weight.errors|first }}
                   </span>
                   {% endif %}
                 </div>
@@ -215,7 +214,7 @@
 
               <div class="form-group">
                 <div class="col-sm-offset-4 col-sm-8">
-                    <button type="submit" class="btn btn-primary btn-lg" style="width: 250px;" id="bmi-calculate-btn">
+                    <button type="submit" name="bmi_submit" class="btn btn-primary btn-lg" style="width: 250px;" id="bmi-calculate-btn">
                     <i class="fa fa-calculator"></i>
                     Рассчитать ИМТ
                     </button>
@@ -223,17 +222,17 @@
               </div>
             </form>
 
-            {% if result %}
+            {% if bmi_result %}
             <div class="bmi-result mt-30 p-20
-                        {% if result.0.bmi < 18.5 %}bg-info
-                        {% elif result.0.bmi >= 30 %}bg-danger
+                        {% if bmi_result.0.bmi < 18.5 %}bg-info
+                        {% elif bmi_result.0.bmi >= 30 %}bg-danger
                         {% else %}bg-success{% endif %}">
               <h3>Результаты расчета</h3>
 
               <div class="well">
                 <p class="lead">
-                  <strong>{{ result.0.description }}:</strong>
-                  <span class="h1">{{ result.0.bmi }}</span>
+                  <strong>{{ bmi_result.0.description }}:</strong>
+                  <span class="h1">{{ bmi_result.0.bmi }}</span>
                 </p>
 
                 <p class="h4">
@@ -241,14 +240,14 @@
                     {% if result.0.bmi < 18.5 %}fa-exclamation
                     {% elif result.0.bmi >= 25 %}fa-exclamation
                     {% else %}fa-check{% endif %}"></i>
-                  {{ result.0.classification }}
+                  {{ bmi_result.0.classification }}
                 </p>
 
                 <div class="alert
-                            {% if result.0.bmi < 18.5 %}alert-info
-                            {% elif result.0.bmi >= 25 %}alert-warning
+                            {% if bmi_result.0.bmi < 18.5 %}alert-info
+                            {% elif bmi_result.0.bmi >= 25 %}alert-warning
                             {% else %}alert-success{% endif %}">
-                  {{ result.0.advice }}
+                  {{ bmi_result.0.advice }}
                 </div>
 <div class="bmi-scale">
     <div class="row text-muted small">

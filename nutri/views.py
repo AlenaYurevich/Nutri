@@ -1,37 +1,51 @@
 from django.shortcuts import render
-from .forms import ImtForm, ContactForm
-from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
+from .forms import BMIForm, ContactForm
 from calc.imt import calculate_bmi
+from django.core.mail import send_mail
 
 
-def main_view(request):
-    if request.method == "POST":
-        form = ImtForm(request.POST)
-        # form2 = ContactForm(request.POST)
-        if form.is_valid():
-            height = int(request.POST.get('height'))
-            weight = float(request.POST.get('weight'))
-            result = calculate_bmi(height, weight)
-            context = {'form': form, 'result': result}
-            return render(request, 'index.html', context)
-        # if form2.is_valid():
-        #     subject = 'Пробное сообщение'
-        #     body = {'name': form2.cleaned_data['name'],
-        #             'email': form2.cleaned_data['email'],
-        #             'phone': form2.cleaned_data['phone'],
-        #             'message': form2.cleaned_data['message'],
-        #             }
-        #     message = '\n'.join(body.values())
-        #     try:
-        #         send_mail(subject, message, 'admin@example.com', ['admin@example.com'])
-        #     except BadHeaderError:
-        #         return HttpResponse('Найден некорректный заголовок')
-        #     print('Сообщение отправлено')
-    else:
-        form = ImtForm()
-        form2 = ContactForm
-        return render(request, 'index.html', {'form': form})  # внутри фигурных скобок
+def index(request):
+    bmi_result = None
+    contact_success = False
+    bmi_form = BMIForm()
+    contact_form = ContactForm()
+    # Обработка формы ИМТ
+    if 'bmi_submit' in request.POST:
+        bmi_form = BMIForm(request.POST)
+        if bmi_form.is_valid():
+            height = bmi_form.cleaned_data['height']
+            weight = bmi_form.cleaned_data['weight']
+            bmi_result = calculate_bmi(height, weight)
+            # Не валидна - форма сохранит ошибки
+        # else:
+        #     bmi_form = BMIForm()
+            # Обработка контактной формы
+    elif 'contact_submit' in request.POST:
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            # Сохранение данных и отправка email
+            contact = contact_form.save()
+            # Отправка email (пример)
+            send_mail(
+                'Новая заявка с сайта',
+                f'Имя: {contact.name}\nТелефон: {contact.phone}\nСообщение: {contact.message}',
+                'noreply@example.com',
+                ['you@example.com'],
+                fail_silently=False,
+            )
+            contact_success = True
+            contact_form = ContactForm()  # Очищаем форму после успешной отправки
+            # Не валидна - форма сохранит ошибки
+        else:
+            contact_form = ContactForm()
+    context = {
+        'bmi_form': bmi_form,
+        'bmi_result': bmi_result,
+        'contact_form': contact_form,
+        'contact_success': contact_success,
+    }
+    return render(request, 'index.html', context)
 
 
 def about_view(request):

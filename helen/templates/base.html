@@ -83,53 +83,80 @@
 <div class="col-md-7">
 <div id="note"></div>
 <div id="fields">
-<form id="contactForm" name="sentMessage" novalidate>
-<!--<div class="row">-->
-<div class="form-group">
-<input type="text" class="form-control" required autocomplete="given-name" placeholder="Имя*" id="name">
-<p class="help-block"></p>
-</div>
-<div class="form-group">
-<input type="tel" class="form-control phone" placeholder="Телефон*" id="phone" required autocomplete="tel" data-validation-required-message="Введите телефон">
+<!--<form id="contactForm" name="sentMessage" novalidate>-->
+<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--<div class="form-group">-->
+<!--<input type="text" class="form-control" required autocomplete="given-name" placeholder="Имя*" id="name">-->
+<!--<p class="help-block"></p>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<input type="tel" class="form-control phone" placeholder="Телефон*" id="phone" required autocomplete="tel" data-validation-required-message="Введите телефон">-->
+<!--<p class="help-block main_color2"></p>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<input type="email" class="form-control" autocomplete="email" placeholder="Email (по желанию)" id="email">-->
+<!--<p class="help-block main_color2"></p>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<input type="hidden" id="page" value="helen">-->
+<!--<textarea class="form-control" id="message" required data-validation-required-message="Введите сообщение">Услуга, желаемая дата и время *  </textarea>-->
+<!--<p class="help-block main_color2">* Обязательные поля</p>-->
+<!--</div>-->
+<!--<div class="clearfix"></div>-->
+<!--<div id="success"></div>-->
+<!--<input class="send_btn" type="submit" value="Отправить">-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</form>-->
+
+<form name="sentMessage" method = "POST" action = "" id="contactForm" novalidate>
+{% csrf_token %}
+<div class="row">
+<div class="form-group main_color2">
+{{contact_form.name}}
 <p class="help-block main_color2"></p>
 </div>
 <div class="form-group">
-<input type="email" class="form-control" autocomplete="email" placeholder="Email (по желанию)" id="email">
+{{contact_form.email}}
+<!--<input type="email"  class="form-control" id="email">-->
+
 <p class="help-block main_color2"></p>
 </div>
 <div class="form-group">
-<input type="hidden" id="page" value="helen">
-<textarea class="form-control" id="message" required data-validation-required-message="Введите сообщение">Услуга, желаемая дата и время *  </textarea>
-<p class="help-block main_color2">* Обязательные поля</p>
+<!--<input type="tel" class="form-control phone"  id="phone" required data-validation-required-message="Введите телефон">-->
+{{contact_form.phone}}
+<p class="help-block main_color2"></p>
+</div>
+<div class="form-group">
+<!--<textarea class="form-control" id="message" required data-validation-required-message="Введите сообщение">Услуга, желаемая дата и время *  </textarea>-->
+{{contact_form.message}}
+    <p class="help-block main_color2">* Обязательные поля</p>
 </div>
 <div class="clearfix"></div>
 <div id="success"></div>
-<input class="send_btn" type="submit" value="Отправить">
-<!--</div>-->
+<input class="send_btn" name="contact_submit" type="submit" value="Отправить">
+</div>
 </form>
+
 </div>
 </div>
 <div class="col-md-5 contact_info">
-<h3 class="mb-5">Быстрая связь</h3>
+<h3 class="">Быстрая связь</h3>
 <p><a href="tel:+375" rel="nofollow" target="_blank"><i class="fas fa-phone-alt fa-fw me-2"></i>+375 </a></p>
 <p><a href="viber://chat?number=375295170962" rel="nofollow" target="_blank"><i class="fab fa-viber fa-fw me-2 text-viber"></i> Написать в Viber</a></p>
 <p><a href="https://t.me/helenmishuta" rel="nofollow" target="_blank"><i class="fab fa-telegram fa-fw me-2"></i>Telegram</a></p>
 <p><a href="whatsapp://send?text=Здравствуйте!_Меня интересует ваши услуги:&phone=+375295170962&abid=+375295170962" rel="nofollow"><i class="fab fa-whatsapp fa-fw me-2 text-whatsapp"></i> WhatsApp</a></p>
-<p><a href="mailto:je-" rel="nofollow" target="_blank"><i class="far fa-envelope fa-fw me-2"></i> email@example.com</a></p>
+<p><a href="mailto:je-" rel="nofollow" target="_blank"><i class="far fa-envelope fa-fw me-2"></i>email</a></p>
 </div>
-
-
    <div class="mt-4 pt-2 border-top">
             <small class="text-muted">* Среднее время ответа: 20 минут в рабочее время</small>
-          </div>
+   </div>
 
 </div>
 </div><!--container-->
 </div>
 
 
-<!--{% block contact_form %}-->
-<!--{% endblock %}-->
+
 
 <div class="content_section partner_section">
 <div class="container">
