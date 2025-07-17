@@ -108,39 +108,34 @@
 <!--&lt;!&ndash;</div>&ndash;&gt;-->
 <!--</form>-->
 
-<form name="sentMessage" method = "POST" action = "" id="contactForm" novalidate>
+<form name="sentMessage" method = "POST" action="#contact" id="contactForm" novalidate>
 {% csrf_token %}
 <div class="row">
-<div class="form-group main_color2">
+<div class="form-group">
 {{contact_form.name}}
-<p class="help-block main_color2"></p>
+<p class="help-block"> {{ contact_form.name.errors }}</p>
+</div>
+<div class="form-group">
+{{contact_form.phone}}
+<p class="help-block2">{{ contact_form.phone.errors }}</p>
 </div>
 <div class="form-group">
 {{contact_form.email}}
-<!--<input type="email"  class="form-control" id="email">-->
-
-<p class="help-block main_color2"></p>
+<p class="help-block">{{ contact_form.email.errors }}</p>
 </div>
 <div class="form-group">
-<!--<input type="tel" class="form-control phone"  id="phone" required data-validation-required-message="Введите телефон">-->
-{{contact_form.phone}}
-<p class="help-block main_color2"></p>
-</div>
-<div class="form-group">
-<!--<textarea class="form-control" id="message" required data-validation-required-message="Введите сообщение">Услуга, желаемая дата и время *  </textarea>-->
 {{contact_form.message}}
-    <p class="help-block main_color2">* Обязательные поля</p>
+<p class="help-block">* Обязательные поля</p>
 </div>
 <div class="clearfix"></div>
 <div id="success"></div>
 <input class="send_btn" name="contact_submit" type="submit" value="Отправить">
 </div>
 </form>
+</div>
+</div>
 
-</div>
-</div>
 <div class="col-md-5 contact_info">
-<h3 class="">Быстрая связь</h3>
 <p><a href="tel:+375" rel="nofollow" target="_blank"><i class="fas fa-phone-alt fa-fw me-2"></i>+375 </a></p>
 <p><a href="viber://chat?number=375295170962" rel="nofollow" target="_blank"><i class="fab fa-viber fa-fw me-2 text-viber"></i> Написать в Viber</a></p>
 <p><a href="https://t.me/helenmishuta" rel="nofollow" target="_blank"><i class="fab fa-telegram fa-fw me-2"></i>Telegram</a></p>
@@ -228,9 +223,8 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/current.js' %}"></script>
     <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
-    <script src="js/contact_me.js"></script>
-    <script src="js/maskedinput.js"></script>
-<!--    <script src="https://kit.fontawesome.com/5c1c4bfca5.js" crossorigin="anonymous"></script>-->
+<!--    <script src="js/contact_me.js"></script>-->
+ <!--    <script src="https://kit.fontawesome.com/5c1c4bfca5.js" crossorigin="anonymous"></script>-->
 
 <header class="fixed-menu"></header>
 </body>
