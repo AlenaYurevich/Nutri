@@ -5,7 +5,7 @@ html {
   /* Основные цвета */
   --main-color1: #515F3B;    /* темно зеленый */
   --main-color2: #919682;    /* светлозеленый */
-  --main-color3: #C7A491;    /* розовый */
+  --main-color3: #C79699;    /* розовый */
   --main-color4: #D4B49E;    /* розовый активный */
   --main-color5: #ECCFC9;    /* светло-розовый*/
   --main-color1-dark: #515F3B ;
@@ -54,7 +54,7 @@ text-transform:uppercase;letter-spacing:2px;line-height:1;!important;
   transition: all 2s ease-out; /* Для плавности */}
 a.btn-primary:hover, a.btn-primary:focus {background:var(--main-color4);border-color:var(--main-color4);box-shadow:rgba(28,56,72,0.1) 0px 2px 2px,rgba(28,56,72,0.1) 0px 4px 4px,rgba(28,56,72,0.1) 0px 8px 8px,rgba(28,56,72,0.1) 0px 16px 16px,rgba(28,56,72,0.1) 0px 32px 32px;}
 
-.btn-primary:hover {background-color: var(--main-color4)! important;border-color: var(--main-color4)! important;box-shadow:rgba(28,56,72,0.1) 0px 2px 2px,rgba(28,56,72,0.1) 0px 4px 4px,rgba(28,56,72,0.1) 0px 8px 8px,rgba(28,56,72,0.1) 0px 16px 16px,rgba(28,56,72,0.1) 0px 32px 32px}
+.btn-primary:hover {background-color: var(--main-color3)! important;border-color: var(--main-color4)! important;box-shadow:rgba(28,56,72,0.1) 0px 2px 2px,rgba(28,56,72,0.1) 0px 4px 4px,rgba(28,56,72,0.1) 0px 8px 8px,rgba(28,56,72,0.1) 0px 16px 16px,rgba(28,56,72,0.1) 0px 32px 32px}
 .btn-primary:active {background-color: var(--main-color5)! important;border-color: var(--main-color5)! important;}
 #bmi-calculate-btn:focus {
     outline: none;
@@ -199,7 +199,7 @@ h3.title{font-style:normal;font-size:24px;font-weight:300;color:#000;padding:0;m
     outline: none !important;
     border-radius: 5px !important;
     color: #515f3b! important;
-    background: #eef2f7! important;
+    background: #dee9de! important;
     font-weight: 400;
     box-shadow: 0 1px 1px #FFFFFF, 0 1px 1px rgba(0, 0, 0, 0.15) inset !important;
     text-shadow: 0 1px 0 rgba(235, 235, 235, 0.75) !important;
@@ -214,11 +214,11 @@ form textarea{height:124px !important;margin:0 0 10px 0 !important;padding:11px 
 .notification_ok:before{content:'';width:16px;height:16px;position:absolute;left:11px;top:13px;background-position:0 0;background-repeat:no-repeat;}
 .notification_error:before{background-image:url("../images/error.png");}
 .notification_ok:before{background-image:url("../images/info.png");}
-input.send_btn{cursor:pointer;background: linear-gradient(to top, rgb(199, 164, 145) 0%, rgb(236, 207, 201) 100%);;font-size:20px;color:#fff;margin:auto;border-radius:50px;display:inline-block;padding:27px 0px 22px;font-weight:bold;width:300px;vertical-align:top;transition:all 0.3s ease;border:0 !important;text-transform:uppercase;letter-spacing:2px;line-height:1;}
+input.send_btn{cursor:pointer;background: linear-gradient(to top, rgb(199, 150, 153) 0%, rgb(236, 207, 201) 100%);;font-size:20px;color:#fff;margin:auto;border-radius:50px;display:inline-block;padding:27px 0px 22px;font-weight:bold;width:300px;vertical-align:top;transition:all 0.3s ease;border:0 !important;text-transform:uppercase;letter-spacing:2px;line-height:1;}
 input.send_btn:hover{background:var(--main-color3);text-decoration:none;box-shadow:none;}
 .contact_info{font-size:20px}
 .contact_info p{margin:0 0 13px 0;position:relative;line-height:24px;padding:0 0 0 30px;}
-.contact_info p i{position:absolute !important;left:0 !important;top:0 !important;line-height:24px;color:main_color2}
+.contact_info p i{position:absolute !important;left:0 !important;top:0 !important;line-height:24px;color: var(--main-color1)}
 .footer{padding-bottom:50px;background: linear-gradient(to top, #515f3b, #919682);color:#fff}
 .navigator li a{color:#fff; margin:0 0 15px 30px;display:inline-block}
 .navigator li a hover{color:#ECCFC9;}
@@ -485,7 +485,8 @@ a.shortcode_social_icon:hover i{color:#FFFFFF !important;}
 #gallery header{background-image:url("../images/slide_bg/slide2_bg.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
 #contact header{background-image:url("../images/slide_bg/05.jpg");padding-top:50px;padding-bottom:50px}
 #contact h2{color:#fff}
-#contact p{color:#fff; font-size:1.5rem}
+#contact p{font-size:1.2rem}
+#contact .lead{color:#fff; font-size:1.5rem}
 @media (min-width:992px){.partner_section .partner_item{float:left;width:20%;}
 .portfolio-modal .container{width:992px;}
 }
@@ -621,4 +622,4 @@ a.menu_toggler:before{background-image:url("../images/retina/btn_menu.png");back
 }
 .mb-3(margin-bottom: 3rem}
 .mb-5(margin-bottom: 5rem}
-.errorlist{text-color: var(--main-color4}
+.errorlist ul li{color: var(--main-color4)}
