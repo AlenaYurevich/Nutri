@@ -9,3 +9,5 @@
 /helen/admin/img/
 /helen/admin/js/
 /nutri/.env
+/helen/templates/404.html
+/helen/templates/500.html
