@@ -38,7 +38,7 @@ header > * {
     position: relative;
     z-index: 2; /* Убедитесь, что контент находится поверх затемнения */
 }
-.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:420px;padding-bottom:370px;}
+.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:350px;padding-bottom:370px;}
 .page_section header div.container{z-index:900;position:relative;}
 .page_section header div.container h1,.page_section header div.container h2{font-size:30px;letter-spacing:1px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:30px;text-transform:uppercase;}
 .page_section header div.container p{color:#fff;font-weight:300;text-align:center;font-size:24px;letter-spacing:1px; sans-serif;line-height:22px;padding:0 20px 10px 20px;margin-bottom:0;text-shadow: 0 1px 4px rgba(0,0,0,.5)}

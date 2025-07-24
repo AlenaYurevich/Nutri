@@ -24,6 +24,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+
+
 <!--<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">-->
 </head>
 
@@ -86,31 +88,6 @@
 <div class="col-md-7">
 <div id="note"></div>
 <div id="fields">
-<!--<form id="contactForm" name="sentMessage" novalidate>-->
-<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-<!--<div class="form-group">-->
-<!--<input type="text" class="form-control" required autocomplete="given-name" placeholder="Имя*" id="name">-->
-<!--<p class="help-block"></p>-->
-<!--</div>-->
-<!--<div class="form-group">-->
-<!--<input type="tel" class="form-control phone" placeholder="Телефон*" id="phone" required autocomplete="tel" data-validation-required-message="Введите телефон">-->
-<!--<p class="help-block main_color2"></p>-->
-<!--</div>-->
-<!--<div class="form-group">-->
-<!--<input type="email" class="form-control" autocomplete="email" placeholder="Email (по желанию)" id="email">-->
-<!--<p class="help-block main_color2"></p>-->
-<!--</div>-->
-<!--<div class="form-group">-->
-<!--<input type="hidden" id="page" value="helen">-->
-<!--<textarea class="form-control" id="message" required data-validation-required-message="Введите сообщение">Услуга, желаемая дата и время *  </textarea>-->
-<!--<p class="help-block main_color2">* Обязательные поля</p>-->
-<!--</div>-->
-<!--<div class="clearfix"></div>-->
-<!--<div id="success"></div>-->
-<!--<input class="send_btn" type="submit" value="Отправить">-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--</form>-->
-
 <form name="sentMessage" method = "POST" action="#contact" id="contactForm" novalidate>
 {% csrf_token %}
 <div class="row">
@@ -196,7 +173,8 @@
 </div><!-- //footer_bottom -->
 </div><!--//footer-->
 </div><!-- end #page1 -->
-    <script src="{% static 'js/jquery.js' %}"></script>
+
+
     <script src="{% static 'js/jquery-ui.min.js' %}"></script>
     <script>
     const observer = new IntersectionObserver((entries) => {

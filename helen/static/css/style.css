@@ -485,7 +485,7 @@ a.shortcode_social_icon:hover i{color:#FFFFFF !important;}
 .modal{top:80px;}
 .fade{opacity:0;transition:opacity .15s linear;}
 #gallery header{background-image:url("../images/slide_bg/slide2_bg.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
-#contact header{background-image:url("../images/slide_bg/07.png");padding-top:50px;padding-bottom:50px}
+#contact header{background-image:url("../images/slide_bg/07.png");padding-top:50px;padding-bottom:70px}
 #contact h2{color:#fff}
 #contact p{font-size:1.2rem}
 #contact .lead{color:#fff; font-size:1.5rem}
