@@ -42,7 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'helen',
     'calc',
+    'blog',
+
 ]
+MARKITUP_SET = 'markitup/sets/markdown'
+MARKITUP_FILTER = ('markdown.markdown', {})
+MARKITUP_SKIN = 'markitup/skins/simple/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
