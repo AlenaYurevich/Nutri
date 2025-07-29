@@ -26,6 +26,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('about', about_view, name='about'),
     path('calc/', include('calc.urls')),
+    path('blog/', include('blog.urls')),
     path('sitemap.xml', TemplateView.as_view(template_name='sitemap.xml', content_type='application/xml')),
     path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

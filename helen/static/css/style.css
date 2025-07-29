@@ -182,7 +182,6 @@ h3.title{font-style:normal;font-size:24px;font-weight:300;color:#000;padding:0;m
 .portfolio_item_wrapper{background:#ffffff;padding:14px;box-shadow:0 0 4px rgba(0, 0, 0, 0.13);border-radius:6px;}
 .portfolio_item_wrapper img,
 .portfolio_item_wrapper .item_fadder{border-radius:3px;}
-#blog header{background-image:url("../images/slide_bg/slide5_bg.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
 .blog_post{position:relative;padding:14px;background:#fff;box-shadow:0 0 4px rgba(0, 0, 0, 0.13);border-radius:6px;text-align:center;}
 .blog_post iframe{padding:0;margin:0;border:0;vertical-align:top;outline:none;font-size:0;}
 .blog_post h3{font-size:24px;line-height: 1;color:#919682;margin: 20px 0;text-align:center;text-transform: uppercase;}
@@ -486,7 +485,7 @@ a.shortcode_social_icon:hover i{color:#FFFFFF !important;}
 .fade{opacity:0;transition:opacity .15s linear;}
 #gallery header{background-image:url("../images/slide_bg/slide2_bg.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
 #contact header{background-image:url("../images/slide_bg/07.png");padding-top:50px;padding-bottom:70px}
-#contact h2{color:#fff}
+#contact h2, .blog h1{color:#fff}
 #contact p{font-size:1.2rem}
 #contact .lead{color:#fff; font-size:1.5rem}
 @media (min-width:992px){.partner_section .partner_item{float:left;width:20%;}
