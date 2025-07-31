@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+    <title>{{ post.title }}</title>
+    <meta name="description" content='{{ post.content | safe | slice:":150" }}'>
+    <meta name="keywords" content="Тарифы, рост тарифов, новые расчеты">
+    <link rel="canonical" href="{% url 'blog_detail' slug=post.slug %}"/>
+    <meta property="og:title" content="{{ post.title }}"/>
+    <meta property="og:image" content="{{ post.image }}"/>
+    <meta property="og:description" content='{{ post.content | safe | slice:":150" }}'/>
+    <meta property="og:type" content="article"/>
+{% endblock %}
+{% block page_content %}
+ <section class="blog">
+  <header class="text-center">
+    <div class="container">
+      <h1 class="animate-on-scroll delay-1"><a href="{% url 'blog_index' %}">База знаний</a></h1>
+    </div>
+  </header>
+  <hr>
+ <div class="row">
+    <div class="col-md-3 order-md-1">
+    </div>
+    <div class="col-md-7 order-md-2">
+        <h2 class=""><a class ="" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a><span class="text-muted"></span></h2>
+        <p>{{ post.created_on }} |
+      {% for category in post.categories.all %}
+      <a href="{% url 'blog_category' category.slug %}">
+      {{ category.name | capfirst }}
+      </a> |
+      {% endfor %}
+        </p>
+        <p>{{ post.content }}</p>
+        <img class = "img-fluid" src = "{{ post.image.url}}" alt = "{{ post.alt }}"/>
+        <a class="" href="{% url 'blog_index' %}">Все статьи >>></a>
+    </div>
+  </div>
+  </section>
+ {% endblock %}

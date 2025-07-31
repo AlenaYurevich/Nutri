@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+  <title>Новости по категории {{ category.name | capfirst | default_if_none:"-" }}</title>
+  <meta name="description" content="Обновления на сайте, повышение тарифов на услуги по категории {{ category.name | capfirst }}">
+  <meta name="keywords" content="Тарифы, рост тарифов, новые расчеты">
+  <link rel="canonical" href="{% url 'blog_category' category.slug %}"/>
+  <meta property="og:title" content="Новости по категории {{ category.name | capfirst | default_if_none:'-' }}"/>
+  <meta property="og:image" content="https://posttarif.by/apple-touch-icon.png"/>
+  <meta property="og:description" content="Обновления на сайте, повышение тарифов на услуги по категории {{ category.name | capfirst }}"/>
+  <meta property="og:type" content="article"/>
+{% endblock %}
+{% block page_content %}
+ <section class="blog">
+  <header class ="center">
+    <div class="container">
+      <h1 class="animate-on-scroll delay-1">База знаний<br>
+          по категории {{ category.name | capfirst | default_if_none:"-" }}</h1>
+     <h4><a class="animate-on-scroll delay-3" href="{% url 'blog_index' %}">Все статьи</a></h4>
+    </div>
+  </header>
+  <hr>
+  {% for post in posts %}
+<div class="row">
+    <div class="col-md-3 order-md-1">
+        <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}"/>
+    </div>
+    <div class="col-md-7 order-md-2">
+    <h2 class="featurette-heading"><a class ="" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a><span class="text-muted"></span></h2>
+        <small>
+            {{ post.created_on.date }} |&nbsp;
+            {% for category in post.categories.all %}
+                <a href="{% url 'blog_category' category.slug %}">
+                {{ category.name | capfirst }}
+                </a> |&nbsp;
+            {% endfor %}
+        </small>
+        <p>{{ post.content }}</p>
+    </div>
+</div>
+<hr class="featurette-divider">
+    {% endfor %}
+ </section>
+ {% endblock %}

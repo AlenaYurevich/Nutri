@@ -59,10 +59,6 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-def about_view(request):
-    return render(request, 'about.html')
-
-
 def handler404(request, exception):
     context = {'error_message': 'Страница не найдена'}
     return render(request, '404.html', context, status=404)
@@ -71,4 +67,3 @@ def handler404(request, exception):
 def handler500(request):
     context = {'error_message': 'Ошибка сервера'}
     return render(request, '500.html', context, status=500)
-

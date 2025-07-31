@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils.text import slugify
-# from markitup.fields import MarkupField
 
 
 class Category(models.Model):
@@ -27,6 +26,10 @@ class Post(models.Model):
     alt = models.CharField(max_length=30)
     categories = models.ManyToManyField('Category', related_name='posts')
     slug = models.SlugField(max_length=250, unique=True, blank=True)
+    order = models.PositiveIntegerField(default=0, db_index=True)
+
+    class Meta:
+        ordering = ['order', '-created_on']  # Сначала по order, затем по дате
 
     def save(self, *args, **kwargs):
         if not self.slug:

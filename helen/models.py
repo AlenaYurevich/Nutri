@@ -1,6 +1,4 @@
 from django.db import models
-from django.utils.html import format_html
-# from markitup.fields import MarkupField
 
 
 class Service(models.Model):

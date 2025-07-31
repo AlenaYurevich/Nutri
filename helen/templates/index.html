@@ -26,11 +26,11 @@
 </header>
 
 <div class="content_section container">
-<div class="row indent">
-<h2 class="center main_color1 animate-on-scroll delay-1">Ваши проблемы</h2>
-
+<div class="row center indent">
+<h2 class="animate-on-scroll delay-1">Ваши проблемы</h2>
+ <p class="animate-on-scroll delay-2 mb-3">Знакомо ли Вам это?</p>
 <div class="col-md-4">
-<div class="service animate-on-scroll delay-2">
+<div class="service animate-on-scroll delay-2 mb-3">
 <img loading="lazy" src="{% static 'images/gallery/01.jpg' %}" alt="Консультация нутрициолога онлайн" />
     <span class="service_title">Не знаете, как совместить <strong>питание</strong> и работу</span>
 </div>
@@ -47,9 +47,7 @@
 <span class="service_title">Хотите питаться правильно, разнообразно и без <strong>строгих ограничений</strong></span>
 </div>
 </div>
-
 </div>
-     <a href="" class="next_section"></a>
 </div>
 
 </section>
@@ -59,7 +57,7 @@
 <div class="row indent">
 <h2 class="center shadow animate-on-scroll delay-1">Мои преимущества</h2>
 <div class="col-md-4">
-<div class="service animate-on-scroll delay-2">
+<div class="service animate-on-scroll delay-2 mb-3">
 <img loading="lazy" src="{% static 'images/gallery/04.jpg' %}" alt="Консультация нутрициолога онлайн" />
 <span>Высшее образование и <strong>многолетний опыт</strong> работы в медицине</span>
 <span><strong>Знания</strong> в физиологии, биохимии, фармакологии, позволяющие комплексно подойти к решению Вашей проблемы</span>
@@ -69,7 +67,7 @@
 </div>
 
 <div class="col-md-4">
-<div class="service animate-on-scroll delay-3">
+<div class="service animate-on-scroll delay-3 mb-3">
 <img loading="lazy" src="{% static 'images/gallery/05.jpg' %}" alt="Консультация нутрициолога онлайн" />
 <span>Мягко и комфортно меняем Ваш образ жизни для увеличения <strong>сил и энергии</strong>, снятия стресса, сохранения красоты и молодости, а также профилактики заболеваний.
 </span>
@@ -78,7 +76,7 @@
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-4">
-<img loading="lazy" src="{% static 'images/gallery/call.png' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/06.jpg' %}" alt="Консультация нутрициолога онлайн" />
 <span>Удобный формат работы (онлайн/оффлайн)</span>
 <span>Экономия времени и <strong>конфиденциальность</strong></span>
 <span>Легкий способ быть <strong>на связи</strong> (чат для оперативной поддержки), быстрый обмен информацией для достижения лучшего результата</span>
@@ -95,7 +93,7 @@
 
 
 <section id="about" class="about">
-<div class="content_section container featured_items">
+<div class="content_section container">
     <h2 class="center animate-on-scroll delay-1">Обо мне</h2>
 <div class="row">
     <div class="col-md-6">
@@ -214,7 +212,8 @@
 
               <div class="form-group">
                 <div class="col-sm-offset-4 col-sm-8">
-                    <button type="submit" name="bmi_submit" class="btn btn-primary btn-lg" style="width: 250px;" id="bmi-calculate-btn">
+<!--                    <button type="submit" name="bmi_submit" class="btn btn-primary btn-lg" style="width: 250px;" id="bmi-calculate-btn">-->
+                     <button type="submit" name="bmi_submit" class="btn btn-primary btn-lg" id="bmi-calculate-btn">
                     <i class="fa fa-calculator"></i>
                     Рассчитать ИМТ
                     </button>
@@ -320,6 +319,11 @@ $('#calc form').submit(function(e) {
 </section>
 
 <section>
+    <div class="content_section container">
+    <div class="row">
+     <h2 class="center animate-on-scroll delay-1">База знаний</h2>
+    </div>
+    </div>
 <div class="clear"></div>
 <!-- //gallery_block -->
 <!-- section content -->

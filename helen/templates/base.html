@@ -22,8 +22,9 @@
   <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!--<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <script src="{% static 'js/jquery.js' %}"></script>
 <body class="animated single_page" data-animated="fadeIn">
@@ -35,8 +36,7 @@
 <div class="container">
 <!-- logo -->
 <div id="logo">
-<a href="" tille="Главная страница">
-<!--            <span data-double="EM">EM</span>-->
+<a href="{% url 'home' %}" tille="Главная страница">
     <img class="shadow2" src ="{% static 'images/logo5.png' %}"> </a>
     <div class="vertical-group">
         <span2 data-double="Елена Мишута">Елена Мишута</span2>
@@ -46,14 +46,14 @@
 </div>
 <nav class="navmenu">
     <ul>
-    <li class="scrollable"><a href="#top">Главная</a></li>
-    <li class="scrollable"><a href="#about">Обо мне</a></li>
-    <li class="scrollable"><a href="#calc">Калькулятор ИМТ</a></li>
-    <li class="scrollable"><a href="#service">Услуги</a></li>
-    <li class="scrollable"><a href="{% url 'blog_index' %}">База знаний</a></li>
-    <li class="scrollable"><a href="#contact">Контакты</a></li>
+        <li class="scrollable"><a href="{% url 'home' %}#top">Главная</a></li>
+        <li class="scrollable"><a href="{% url 'home' %}#about">Обо мне</a></li>
+        <li class="scrollable"><a href="{% url 'home' %}#calc">Калькулятор ИМТ</a></li>
+        <li class="scrollable"><a href="{% url 'home' %}#service">Услуги</a></li>
+        <li class="scrollable"><a href="{% url 'blog_index' %}">База знаний</a></li>
+        <li class="scrollable"><a href="{% url 'home' %}#contact">Контакты</a></li>
     </ul>
-</nav><!-- end nav -->
+</nav>
 <div class="clear"></div>
 </div>
 </div><!-- end container -->
@@ -143,11 +143,12 @@
 <div class="row">
 <div class="col-md-4 indent">
 <ul class="navigator indent">
-    <li class="scrollable"><a href="#top">Главная</a></li>
-    <li class="scrollable"><a href="#about">Обо мне</a></li>
-    <li class="scrollable"><a href="#calc">Расчет ИМТ</a></li>
-    <li class="scrollable"><a href="#service">Услуги</a></li>
-    <li class="scrollable"><a href="#contact">Контакты</a></li>
+    <li class="scrollable"><a href="{% url 'home' %}#top">Главная</a></li>
+    <li class="scrollable"><a href="{% url 'home' %}#about">Обо мне</a></li>
+    <li class="scrollable"><a href="{% url 'home' %}#calc">Калькулятор ИМТ</a></li>
+    <li class="scrollable"><a href="{% url 'home' %}#service">Услуги</a></li>
+    <li class="scrollable"><a href="{% url 'blog_index' %}">База знаний</a></li>
+    <li class="scrollable"><a href="{% url 'home' %}#contact">Контакты</a></li>
 </ul>
 </div>
 
@@ -183,7 +184,7 @@
         }
       });
     }, {
-      rootMargin: '0px 0px -100px 0px', // Срабатывает при появлении 100px элемента
+      rootMargin: '0px 0px -100px 0px', // Срабатывает при появлении 90px элемента
       threshold: 0.1
     });
 
