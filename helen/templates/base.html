@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<script src="{% static 'js/jquery.js' %}"></script>
+<!--<script src="{% static 'js/jquery.js' %}"></script>-->
 <body class="animated single_page" data-animated="fadeIn">
 <div><!-- page -->
 <!-- header section -->
@@ -184,7 +184,7 @@
         }
       });
     }, {
-      rootMargin: '0px 0px -100px 0px', // Срабатывает при появлении 90px элемента
+      rootMargin: '0px 0px -90px 0px', // Срабатывает при появлении 90px элемента
       threshold: 0.1
     });
 
@@ -194,7 +194,7 @@
     jQuery('.animate-on-scroll').each(function() {
       if (!this.classList.contains('animate-fade-in-up')) {
         this.style.opacity = '0';
-        this.style.transform = 'translateY(100px)';
+        this.style.transform = 'translateY(90px)';
       }
     });
     </script>

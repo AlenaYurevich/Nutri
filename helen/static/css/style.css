@@ -29,7 +29,7 @@ h1, h2, h3 {
 }
 h1 { font-size: 2.7rem; }
 h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--main-color1);
 }
 h3 { font-size: 1.8rem; }
@@ -70,7 +70,7 @@ a.btn-primary:hover, a.btn-primary:focus {background:var(--main-color4);border-c
 }
 p{padding:0;margin:0 0 10px 0;}
 .about li {list-style-type: disc!important;}
-.service{background:#fff;border-radius:6px;box-shadow:0 0 4px rgba(0, 0, 0, 0.13);padding:12px;text-align:justify}
+.service{background:#fff;border-radius:6px;box-shadow:0 0 4px rgba(0, 0, 0, 0.13);padding:20px;text-align:justify}
 .service header{background-image:url("../images/slide_bg/04.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
 .service h2{color:#fff}
 .service p{font-weight:300; line-height:18px ;padding:10px 0 10px 0 !important;}
@@ -91,7 +91,7 @@ main header p{color:#fff;font-weight:300;text-align:center;font-size:1.5rem;lett
 .content_section{padding: 77px 0;}
 .bottom_null{padding-bottom:0;}
 .empty_section{padding-top:30px !important;}
-.next_section{width:44px;height:27px;background:url("../images/palette_icons.png") no-repeat -144px 0;display:block;margin:90px auto 0 auto;opacity:1;transition:all 400ms;}
+.next_section{width:44px;height:27px;background:url("../images/palette_icons.png") no-repeat -144px 0;display:block;margin:80px auto 0 auto;opacity:1;transition:all 400ms;}
 .next_section:hover{opacity:0.5;}
 .back2top{background:url("../images/palette_icons.png") no-repeat -144px -27px;}
 .full_slider .next_section{width:42px;height:25px;position:absolute;bottom:60px;left:50%;background-position:-147px -107px;margin:0 0 0 -21px;z-index:555;}
@@ -444,7 +444,7 @@ a.shortcode_social_icon:hover i{color:#FFFFFF !important;}
 #contact header{background-image:url("../images/slide_bg/07.png");padding-top:50px;padding-bottom:70px}
 #contact h2, .blog h1 a, .blog h4 a, .blog h1{color:#fff}
 #contact p{font-size:1.2rem}
-#contact .lead{color:#fff; font-size:1.5rem}
+#contact .lead, #service .lead{color:#fff; font-size:2rem}
 @media (min-width:992px){.partner_section .partner_item{float:left;width:20%;}
 .portfolio-modal .container{width:992px;}
 }
