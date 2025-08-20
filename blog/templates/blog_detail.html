@@ -12,13 +12,14 @@
 {% endblock %}
 {% block page_content %}
  <section class="blog">
-  <header class="text-center">
-    <div class="container">
+  <header>
+    <div class="container center">
       <h1 class="animate-on-scroll delay-1"><a href="{% url 'blog_index' %}">База знаний</a></h1>
+      <p class="lead animate-on-scroll delay-2">Полезная информация от нутрициолога</p>
     </div>
   </header>
   <hr>
- <div class="row">
+ <div class="row indent">
     <div class="col-md-3 order-md-1">
     </div>
     <div class="col-md-7 order-md-2">
@@ -30,10 +31,13 @@
       </a> |
       {% endfor %}
         </p>
-        <p>{{ post.content }}</p>
+        <p>{{ post.content | safe }}</p>
         <img class = "img-fluid" src = "{{ post.image.url}}" alt = "{{ post.alt }}"/>
-        <a class="" href="{% url 'blog_index' %}">Все статьи >>></a>
     </div>
+
   </div>
+        <div class="container">
+     <a class="" href="{% url 'blog_index' %}">Все статьи >>></a>
+         </div>
   </section>
  {% endblock %}

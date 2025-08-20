@@ -29,21 +29,20 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    /*background: linear-gradient(to bottom,
+    background: linear-gradient(to bottom,
         rgba(0, 0, 0, 0) 20%,
         rgba(0, 0, 0, 0.7) 80%); /* Полупрозрачный черный цвет для затемнения */
-    background:
+    /*background:
         radial-gradient(farthest-corner at 1000px 20px,
         rgba(0, 0, 0, 0) 20%,
-        rgba(0, 0, 0, 0.7) 70%);
+        rgba(0, 0, 0, 0.7) 70%);*/
     z-index: 1; /* Убедитесь, что слой находится поверх изображения */
 }
 header > * {
     position: relative;
     z-index: 2; /* Убедитесь, что контент находится поверх затемнения */
 }
-/*.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:380px;padding-bottom:400px;}*/
-.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:370px;padding-bottom:200px;}
+.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:400px;}
 .page_section header div.container{z-index:900;position:relative;}
 .page_section header div.container h1,.page_section header div.container h2{font-size:30px;letter-spacing:1px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:30px;text-transform:uppercase;}
 .page_section header div.container p{color:#fff;font-weight:300;text-align:center;font-size:24px;letter-spacing:1px; sans-serif;line-height:22px;padding:0 20px 10px 20px;margin-bottom:0;text-shadow: 0 1px 4px rgba(0,0,0,.5)}
@@ -99,17 +98,16 @@ header #logo img.logo_retina{display:none;}
 @media (min-width:800px){
    .page_section header {
     background-image: url("../images/slide_bg/79.jpg");
-    /*background-image: url("../images/slide_bg/97.jpg");*/
     background-position: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */
-
 }
 .blog header {
-    background-image: url("../images/slide_bg/02.jpg");
+    background-image: url("../images/slide_bg/07.png");
+    padding-top:200px;padding-bottom:100px;
     background-position: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;

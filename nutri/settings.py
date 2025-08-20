@@ -43,11 +43,22 @@ INSTALLED_APPS = [
     'helen',
     'calc',
     'blog',
+    'ckeditor',
+    'ckeditor_uploader',
 
 ]
-MARKITUP_SET = 'markitup/sets/markdown'
-MARKITUP_FILTER = ('markdown.markdown', {})
-MARKITUP_SKIN = 'markitup/skins/simple/'
+# MARKITUP_SET = 'markitup/sets/markdown'
+# MARKITUP_FILTER = ('markdown.markdown', {})
+# MARKITUP_SKIN = 'markitup/skins/simple/'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    'awesome_ckeditor': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 300,
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

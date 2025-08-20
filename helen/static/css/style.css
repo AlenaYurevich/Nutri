@@ -27,7 +27,7 @@ h1, h2, h3 {
   font-weight: 300;
   line-height: 1.3;
 }
-h1 { font-size: 2.7rem; }
+h1 { font-size: 3.5rem; }
 h2 {
   font-size: 3.5rem;
   color: var(--main-color1);
@@ -443,8 +443,9 @@ a.shortcode_social_icon:hover i{color:#FFFFFF !important;}
 #gallery header{background-image:url("../images/slide_bg/slide2_bg.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
 #contact header{background-image:url("../images/slide_bg/07.png");padding-top:50px;padding-bottom:70px}
 #contact h2, .blog h1 a, .blog h4 a, .blog h1{color:#fff}
-#contact p{font-size:1.2rem}
-#contact .lead, #service .lead{color:#fff; font-size:2rem}
+/*#contact p{font-size:1.2rem}*/
+/*#contact .lead, #service .lead{color:#fff; font-size:2rem}*/
+.lead {color:#fff; font-size:2rem}
 @media (min-width:992px){.partner_section .partner_item{float:left;width:20%;}
 .portfolio-modal .container{width:992px;}
 }
