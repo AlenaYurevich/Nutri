@@ -23,21 +23,33 @@
       <p class="lead animate-on-scroll delay-2">Полезная информация от нутрициолога</p>
     </div>
   </header>
-  {% for post in page_obj %}
- <div class="row">
-    <div class="col-md-3 order-md-1">
-           <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}"/>
-    </div>
-    <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading"><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a><span class="text-muted"></span></h2>
-        <small>{{ post.created_on }}</small>
-        <p>{{ post.content | safe | slice:":249" }} <a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
-    </div>
+</section>
+<section class='page_section blog'>
+<!--&lt;!&ndash; section content &ndash;&gt;-->
+            <div class="content_section container">
+                <div class="row">
+                	<div class="posts_block">
+                        {% for post in page_obj %}
+                        <div class="element col-md-6">
+                            <div class="blog_post">
+                                <div class="round_corners">
+                                	<div class="post_flex">
+                                        <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}"/>
+                                    </div>
+                                <h3><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
+                                <small>{{ post.created_on }}</small>
+                                <p class="">{{ post.content | safe | slice:":249" }} <a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
+                                </div>
+                        </div><!--//blog_post-->
+                        </div>
+                        {% endfor %}
 
- </div>
-  <hr class="featurette-divider">
-  {% endfor %}
+                    </div>
+                </div>
+            </div>
+</section>
 
+  <div class="container">
   <div class="pagination">
   <span class="step-links">
     {% if page_obj.has_previous %}
@@ -56,7 +68,7 @@
     {% endif %}
   </span>
   </div>
+ </div>
 
-  </section>
 </main>
  {% endblock %}

@@ -18,7 +18,7 @@
 <section class="page_section">
 <header>
 <div class="container">
-<h1 class="animate-fade-in-up delay-1 shadow">Персональное питание<br>для энергии и стройности</h1>
+<h1 class="animate-fade-in-up delay-1 shadow">Персональное<br>питание<br>для энергии<br>и стройности</h1>
 <h3 class="animate-fade-in-up delay-2 shadow">Составьте <strong>свой идеальный рацион</strong> с сертифицированным нутрициологом и улучшите <strong>своё здоровье</strong></h3>
 <a class="btn btn-primary delay-3" href ="#contact">Записаться</a>
 </div><!-- end .container -->
@@ -58,7 +58,7 @@
 <h2 class="center shadow animate-on-scroll delay-1">Мои преимущества</h2>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2 mb-3">
-<img loading="lazy" src="{% static 'images/gallery/04.jpg' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/04.png' %}" alt="Консультация нутрициолога онлайн" />
 <span>Высшее образование и <strong>многолетний опыт</strong> работы в медицине</span>
 <span><strong>Знания</strong> в физиологии, биохимии, фармакологии, позволяющие комплексно подойти к решению Вашей проблемы</span>
 <span>Использование в работе только <strong>научно-доказанных фактов</strong> с учётом рекомендаций врачей смежных специальностей (терапевт, эндокринолог, гастроэнтеролог)
@@ -114,7 +114,6 @@
         <li>Работа с пищевым поведением, выстраивание <strong>здоровых</strong> пищевых привычек</li>
         <li>Помощь клиентам в достижении их целей, предоставление рекомендаций и поддержки в процессе изменений</li>
     </ul>
-     <p class="justify">слева Видеообращение (до 30 секунд)</p>
         <div class="indent">
     <p class="center">Записаться на консультацию</p>
     <a class="btn btn-primary"  target="_blank" href="https://t.me/helenmishuta" rel="nofollow">Телеграм</a>
@@ -172,7 +171,7 @@
 <!-- //section content -->
 </section>
 
-<section id="calc" class="bmi-calc">
+<section id="calc" class="bmi-calc mb-5">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
@@ -277,7 +276,7 @@
     </div>
   </div>
 </section>
- <script src="{% static 'js/jquery.js' %}"></script>
+<!-- <script src="{% static 'js/jquery.js' %}"></script>-->
 <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
 <script>
 $('#calc form').submit(function(e) {
@@ -292,7 +291,7 @@ $('#calc form').submit(function(e) {
 });
 </script>
  <!-- Pricing Section -->
-<section id="service" class="service">
+<section id="services" class="services">
     <header>
         <div class="content_section container">
             <div class="row indent">
@@ -303,15 +302,15 @@ $('#calc form').submit(function(e) {
                     <div class="service animate-on-scroll delay-2">
                         <h3>{{ service.title }}</h3>
                         <h4>{{ service.subtitle }}</h4>
-                        <strong>Что входит:</strong>
+                        <p class="center"><strong>Что входит:</strong></p>
                         {% for item in service.items.all %}
                         <p class="justify"><i class="fa {{ service.icon_class }}"></i>&emsp;{{ item.text }}</p>
                         {% endfor %}
-                        <span>Цена: {{ service.price }}</span>
+                        <span class="center">Цена: {{ service.price }}</span>
                         {% if service.renewal_price %}
-                        <span>Продление: {{ service.renewal_price }}</span>
+                        <span class="center">Продление: {{ service.renewal_price }}</span>
                         {% endif %}
-                        <p>Продолжительность: <br>{{ service.duration }}</p>
+                        <p class="center">Продолжительность: <br>{{ service.duration }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -326,12 +325,5 @@ $('#calc form').submit(function(e) {
      <h2 class="center animate-on-scroll delay-1">База знаний</h2>
     </div>
     </div>
-<div class="clear"></div>
-<!-- //gallery_block -->
-<!-- section content -->
-<div class="content_section container empty_section">
-<div class="clear"></div>
-</div>
-<!-- //section content -->
 </section>
 {% endblock %}

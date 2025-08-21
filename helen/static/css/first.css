@@ -1,7 +1,8 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  background: #fff;
+  /*background: #fff;*/
+  background: #e5e7e7;
   padding: 0;
   overflow-x: hidden;
   font-size: 1.2em;
@@ -30,8 +31,8 @@ header::before {
     right: 0;
     bottom: 0;
     background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0) 20%,
-        rgba(0, 0, 0, 0.7) 80%); /* Полупрозрачный черный цвет для затемнения */
+        rgba(0, 0, 0, 0) 10%,
+        rgba(0, 0, 0, 0.7) 90%); /* Полупрозрачный черный цвет для затемнения */
     /*background:
         radial-gradient(farthest-corner at 1000px 20px,
         rgba(0, 0, 0, 0) 20%,
@@ -42,7 +43,7 @@ header > * {
     position: relative;
     z-index: 2; /* Убедитесь, что контент находится поверх затемнения */
 }
-.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:400px;}
+.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:210px;}
 .page_section header div.container{z-index:900;position:relative;}
 .page_section header div.container h1,.page_section header div.container h2{font-size:30px;letter-spacing:1px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:30px;text-transform:uppercase;}
 .page_section header div.container p{color:#fff;font-weight:300;text-align:center;font-size:24px;letter-spacing:1px; sans-serif;line-height:22px;padding:0 20px 10px 20px;margin-bottom:0;text-shadow: 0 1px 4px rgba(0,0,0,.5)}
@@ -107,7 +108,7 @@ header #logo img.logo_retina{display:none;}
 }
 .blog header {
     background-image: url("../images/slide_bg/07.png");
-    padding-top:200px;padding-bottom:100px;
+    padding-top:140px;padding-bottom:60px;
     background-position: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -134,9 +135,9 @@ header #logo img.logo_retina{display:none;}
 .page_section header div.container h2
  {
   font-family: "Oranienbaum", serif;
-  font-size: 90px;
+  font-size: 100px;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   padding: 0 0 10px 0;
   margin: 0;
   text-align: left;
