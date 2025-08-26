@@ -213,7 +213,6 @@
 
               <div class="form-group">
                 <div class="col-sm-offset-4 col-sm-8">
-<!--                    <button type="submit" name="bmi_submit" class="btn btn-primary btn-lg" style="width: 250px;" id="bmi-calculate-btn">-->
                      <button type="submit" name="bmi_submit" class="btn btn-primary btn-lg" id="bmi-calculate-btn">
                     <i class="fa fa-calculator"></i>
                     Рассчитать ИМТ
@@ -221,7 +220,6 @@
                 </div>
               </div>
             </form>
-
             {% if bmi_result %}
             <div class="bmi-result mt-30 p-20
                         {% if bmi_result.0.bmi < 18.5 %}bg-info
@@ -230,7 +228,7 @@
               <h3>Результаты расчета</h3>
 
               <div class="well">
-                <p class="lead">
+                <p class="">
                   <strong>{{ bmi_result.0.description }}:</strong>
                   <span class="h1">{{ bmi_result.0.bmi }}</span>
                 </p>
@@ -295,35 +293,69 @@ $('#calc form').submit(function(e) {
     <header>
         <div class="content_section container">
             <div class="row indent">
-                <h2 class="center shadow animate-on-scroll delay-1">Мои услуги</h2>
-                <p class="center lead animate-on-scroll delay-2">Варианты работы со специалистом по нутрициологии</p>
-                {% for service in services %}
-                <div class="col-md-4">
-                    <div class="service animate-on-scroll delay-2">
-                        <h3>{{ service.title }}</h3>
-                        <h4>{{ service.subtitle }}</h4>
-                        <p class="center"><strong>Что входит:</strong></p>
-                        {% for item in service.items.all %}
-                        <p class="justify"><i class="fa {{ service.icon_class }}"></i>&emsp;{{ item.text }}</p>
-                        {% endfor %}
-                        <span class="center">Цена: {{ service.price }}</span>
-                        {% if service.renewal_price %}
-                        <span class="center">Продление: {{ service.renewal_price }}</span>
-                        {% endif %}
-                        <p class="center">Продолжительность: <br>{{ service.duration }}</p>
-                    </div>
-                </div>
+                <h2 class="center shadow animate-on-scroll delay-1">Услуги нутрициолога</h2>
+{% for service in services %}
+<div class="col-md-6">
+    <div class="service animate-on-scroll delay-{{ forloop.counter }}">
+        <h3>{{ service.title }}</h3>
+        {% if service.subtitle %}
+        <h4 class="center">{{ service.subtitle }}</h4>
+        {% endif %}
+
+        <div class="green-block">
+            <p class="center text-uppercase"><strong>Кому:</strong></p>
+            <ul>
+                {% for item in service.get_target_audience_list %}
+                <li class="justify">{{ item }}</li>
                 {% endfor %}
-            </div>
+            </ul>
         </div>
+
+        <div class="green-block">
+            <p class="center text-uppercase"><strong>{{ service.purpose_title }}</strong></p>
+            <ul>
+                {% for item in service.get_purposes_list %}
+                <li class="justify">{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="green-block">
+            <p class="center text-uppercase"><strong>{{ service.includes_title }}</strong></p>
+            {% for item in service.get_included_items_list %}
+            <p class="justify"><i class="fa fa-check"></i> {{ item }}</p>
+            {% endfor %}
+        </div>
+        <span class="center">Цена: {{ service.price }} BYN</span>
+        <a class="btn btn-primary"  target="_blank" href="https://t.me/helenmishuta" rel="nofollow">Заказать</a>
+    </div>
+</div>
+{% endfor %}
+   </div></div>
     </header>
 </section>
 
 <section>
     <div class="content_section container">
-    <div class="row">
+    <div class="row mb-3">
      <h2 class="center animate-on-scroll delay-1">База знаний</h2>
+        {% for post in posts %}
+                        <div class="element col-md-4">
+                            <div class="blog_post">
+                                <div class="round_corners">
+                                	<div class="post_flex">
+                                        <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}"/>
+                                    </div>
+                                <h3><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
+                                <small>{{ post.created_on }}</small>
+                                <p class="">{{ post.content | safe | slice:":170" }} <a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
+                                </div>
+                        </div><!--//blog_post-->
+                        </div>
+                        {% endfor %}
+
     </div>
+        <a href="{% url 'blog_index' %}">Все статьи >>></a>
     </div>
 </section>
 {% endblock %}

@@ -3,9 +3,9 @@ html {
 }
 :root {
   /* Основные цвета */
-/*  --main-color1: #515F3B;    /* темно зеленый */
-  --main-color1: #597372;    /* fern */
-  --main-color2: #919682;    /* светлозеленый */
+ /* --main-color1: #597372;    /* fern */
+  --main-color1: #4C735E;    /* fern */
+  --main-color2: #9AA8A8;    /* эвкалипт */
   --main-color3: #C79699;    /* розовый */
   --main-color4: #D4B49E;    /* розовый активный */
   --main-color5: #ECCFC9;    /* светло-розовый*/
@@ -16,7 +16,7 @@ img {border: 0;  max-width: 100%;  height: auto;}
 input{outline:none !important;}
 .clear{clear:both;}
 ul{padding:0;margin:0;}
-li{padding:0;margin:10px;list-style-type:none;}
+li{padding:0;margin:6px;}
 .fleft {float:left;}
 .fright {float:right;}
 .shadow {text-shadow: 2px 1px 1px rgba(0,0,0,.4)}
@@ -71,16 +71,25 @@ a.btn-primary:hover, a.btn-primary:focus {background:var(--main-color4);border-c
 }
 p{padding:0;margin:0 0 10px 0;}
 .about li {list-style-type: disc!important;}
-.service{background:#fff;border-radius:6px;box-shadow:0 0 4px rgba(0, 0, 0, 0.13);padding:20px;text-align:justify}
+.service{background:#fff;border-radius:15px;
+box-shadow:0 0 4px rgba(0, 0, 0, 0.13);padding:36px 20px;text-align:justify;
+margin: 20px 0}
 .services header{background-image:url("../images/slide_bg/04.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
 .services h2{color:#fff}
-.services p{font-weight:300; line-height:18px ;padding:10px 0 10px 0 !important;}
 .service span{font-size:20px;font-weight:400; color: var(--main-color1); line-height:24px; padding:10px 0 10px 0 !important; display:block}
 .service_icon{width:76px;height:76px;line-height:76px;display:block;margin:0 auto 28px auto;border:0;font-size:33px;color:#ffffff;font-family:'FontAwesome';padding:0;text-align:center;transition:all 500ms;border-radius:50%;background-color:#919682;}
 .service:hover .service_icon{background-color:#EE19EE;}
 .service h3{line-height:24px;padding-top:10px;font-weight:400;color: var(--main-color1); display:block;text-align:center;}
 /*.page_section h2{font-size: 50px}*/
 
+.green-block {
+  background: var(--main-color1); /* Зеленый цвет */
+  padding: 30px;
+  border-radius: 15px;
+  margin: 20px 0;
+  color: white; /* Белый текст для контраста */
+}
+.text-uppercase{text-transform: uppercase;}
 #gallery{}
 #gallery header{background-image:url("../images/slide_bg/slide2_bg_min.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
 .advantages header{background-image:url("../images/slide_bg/02.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
@@ -133,6 +142,7 @@ h3.title{font-style:normal;font-size:24px;font-weight:300;color:#000;padding:0;m
     transition: opacity 400ms;
     width: 100%;
 }
+
 .link_ico{position:absolute;left:50%;top:50%;height:30px;margin:-15px 0 0 -15px
 ;width:30px;text-align:center;transform:scale(0.95);z-index:2;transition:all 400ms ease 0s;opacity:0;}
 .link_ico i{font-size:30px;line-height:30px;color:#fff;}
@@ -222,7 +232,8 @@ input.send_btn:hover{background:var(--main-color3);text-decoration:none;box-shad
 .contact_info p{margin:0 0 13px 0;position:relative;line-height:24px;padding:0 0 0 30px;}
 .contact_info p i{position:absolute !important;left:0 !important;top:0 !important;line-height:24px;color: var(--main-color1)}
 .footer{padding-bottom:50px;background: linear-gradient(to top, var(--main-color1), var(--main-color2));color:#fff}
-.navigator li a{color:#fff; margin:0 0 15px 30px;display:inline-block}
+.navigator li{list-style:none}
+.navigator li a{color:#fff; margin:0 0 15px 30px;display:inline-block; transition: all 0.3s ease-in-out;}
 .navigator li a hover{color:#ECCFC9;}
 .popular_posts,
 .recent_posts{list-style:none;margin:0;padding:0;}
@@ -242,7 +253,7 @@ input.send_btn:hover{background:var(--main-color3);text-decoration:none;box-shad
 .footer_bottom .socials li{display:inline-block;margin:0 -1px 0 2px;}
 .footer_bottom .socials li a{background:rgba(255, 255, 255, 0.4);border-radius:50%;box-shadow:none;display:block;height:40px;position:relative;transition:background 250ms ease 0s;width:40px;}
 .footer_bottom .socials li a:before{content:"";display:block;height:24px;left:8px;position:absolute;top:8px;width:24px;}
-.socials_list li:hover a{background:#D4B49e;}
+.socials_list li:hover a{background:#ECCFC9;}
 .socials_list li a.ico_social-facebook:before,
 .socials_list li a.ico_social-pinterest:before,
 .socials_list li a.ico_social-youtube:before,
@@ -464,12 +475,12 @@ thead{font-size:20px}
 #top header{background:#ffffff !important;top:0 !important;height:74px!important;}
 .footer_sidebar{padding-left:20px;padding-right:20px;width:auto !important;}
 .full_slider_caption{font-size:16px;line-height:18px;}
-body{padding-right:0;padding-left:0;}
+ body{padding-right:0;padding-left:0;}
 .promo_text_block h1{font-size:30px;line-height:35px;padding-bottom:15px;}
 .footer_sidebar .col-md-3{padding-bottom:30px;}
-section header h1{font-size:35px !important;line-height:35px !important;}
+section header h1{font-size:50px !important;line-height:50px !important;}
+section header h3{font-size:22px !important;line-height:28px !important;}
 .page_section{margin-top:0;}
-
 .contact_info{margin-top:0;padding-top:30px;}
 .blog_post-footer{text-align:center;padding-bottom:30px;}
 .prev_next_links,
@@ -571,9 +582,9 @@ header #logo img.logo_retina{display:block!important;}
 .socials_list li a.ico_social-dribbble:before{background-image:url("../images/retina/palette_icons.png") !important;background-size:200px 150px !important}
 a.menu_toggler:before{background-image:url("../images/retina/btn_menu.png");background-size:20px 20px !important}
 }
-.fa.fa-check, .fa.fa-magnifying-glass, .fa.fa-wand-magic-sparkles, .fa-exclamation{
-  color: #66743f /* Зеленый цвет */
-}
+/*.fa.fa-check, .fa.fa-magnifying-glass, .fa.fa-wand-magic-sparkles, .fa-exclamation{
+  color: #66743f
+}*/
 .progress-bar {
   position: relative;
   min-width: 30px; /* Чтобы текст помещался */

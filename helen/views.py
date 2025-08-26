@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from nutri.forms import BMIForm, ContactForm
 from calc.imt import calculate_bmi
+from blog.models import Post
 from django.core.mail import send_mail, BadHeaderError
 from .models import Service  # Импортируем модель Service
 
@@ -12,7 +13,12 @@ def index(request):
     bmi_form = BMIForm(request.POST if 'bmi_submit' in request.POST else None)
     contact_form = ContactForm()
     # Получаем все активные услуги с их пунктами
-    services = Service.objects.filter(is_active=True).prefetch_related('items').order_by('order')
+    services = Service.objects.filter(is_active=True)
+    posts = Post.objects.all().order_by('order')
+    # paginator = Paginator(posts, 3)  # Show 7 posts per page
+    # page_number = request.GET.get('page')
+    # page_obj = paginator.get_page(page_number)
+
     # Обработка формы ИМТ
     if 'bmi_submit' in request.POST:
         bmi_form = BMIForm(request.POST)
@@ -55,6 +61,7 @@ def index(request):
         'contact_form': contact_form,
         'contact_success': contact_success,
         'services': services,  # Добавляем услуги в контекст
+        "posts": posts,
     }
     return render(request, 'index.html', context)
 

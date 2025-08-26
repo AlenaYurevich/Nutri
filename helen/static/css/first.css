@@ -31,7 +31,7 @@ header::before {
     right: 0;
     bottom: 0;
     background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0) 10%,
+        rgba(0, 0, 0, 0) 20%,
         rgba(0, 0, 0, 0.7) 90%); /* Полупрозрачный черный цвет для затемнения */
     /*background:
         radial-gradient(farthest-corner at 1000px 20px,
@@ -101,7 +101,6 @@ header #logo img.logo_retina{display:none;}
     background-image: url("../images/slide_bg/79.jpg");
     background-position: top center;
     background-attachment: fixed;
-
     background-repeat: no-repeat;
     background-size: cover;
     position: relative; /* Добавляем относительное позиционирование */
@@ -190,7 +189,7 @@ header #logo img.logo_retina{display:none;}
     -webkit-text-fill-color: transparent;
     font-family: "Roboto Condensed", sans-serif;
     }
-.navmenu li a:hover, .navmenu li.active a{padding:8px; text-decoration:none;color:#cfc09f; background: linear-gradient(to bottom, #EEECE0 65%,#EAE6DB 50%, #CAC0A3 25%, #60584B 84%);
+.navmenu li a:hover, .navmenu li.active a{padding:8px;color:#cfc09f; background: linear-gradient(to bottom, #EEECE0 65%,#EAE6DB 50%, #CAC0A3 25%, #60584B 84%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.5s ease-in-out;
@@ -210,7 +209,7 @@ a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7p
 .fixed-menu:before,
 .fixed-menu:after{display:none!important;}
 .mobile_menu_wrapper{display:block;background: var(--main-color2);padding:74px 40px 20px 10px;}
-.mobile_menu_wrapper li{padding:10px 0;}
+.mobile_menu_wrapper ul li{padding:10px 0; list-style:none}
 .mobile_menu_wrapper a{color:#fff}
 .mobile_menu_wrapper a:hover{color:var(--main-color1-light)}
 .fixed-menu{display:none!important}
