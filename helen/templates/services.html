@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+    <title>Нутрициолог Елена Мишута онлайн</title>
+    <meta name="description" content="Запишись на консультацию нутрициолога онлайн ★ Расчет индекса массы тела ">
+    <meta name="keywords" content="Нутрициолог Минск Москва Брест Витебск Гомель Гродно Могилев расчет индекса массы тела онлайт">
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="#"/>
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Нутрициолог Елена Мишута">
+    <meta property="og:image" content="{% static 'images/lenamishuta.jpg' %}" />
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+{% endblock %}
+{% block page_content %}
+<!-- section header -->
+
+ <!-- Pricing Section -->
+<section id="services" class="services">
+    <header>
+        <div class="content_section container">
+            <div class="row indent">
+                <h2 class="center shadow animate-on-scroll delay-1">Услуги нутрициолога</h2>
+{% for service in services %}
+<div class="col-md-6">
+    <div class="service animate-on-scroll delay-{{ forloop.counter }}">
+        <h3>{{ service.title }}</h3>
+        {% if service.subtitle %}
+        <h4 class="center">{{ service.subtitle }}</h4>
+        {% endif %}
+
+        <div class="green-block">
+            <p class="center text-uppercase"><strong>Кому:</strong></p>
+            <ul>
+                {% for item in service.get_target_audience_list %}
+                <li class="justify">{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="green-block">
+            <p class="center text-uppercase"><strong>{{ service.purpose_title }}</strong></p>
+            <ul>
+                {% for item in service.get_purposes_list %}
+                <li class="justify">{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="green-block">
+            <p class="center text-uppercase"><strong>{{ service.includes_title }}</strong></p>
+            {% for item in service.get_included_items_list %}
+            <p class="justify"><i class="fa fa-check"></i> {{ item }}</p>
+            {% endfor %}
+        </div>
+        <span class="center">Цена: {{ service.price }} BYN</span>
+        <a class="btn btn-primary"  target="_blank" href="https://t.me/helenmishuta" rel="nofollow">Заказать</a>
+    </div>
+</div>
+{% endfor %}
+            </div>
+        </div>
+    </header>
+</section>
+{% endblock %}

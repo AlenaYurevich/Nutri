@@ -42,14 +42,13 @@
         <span2 data-double="Елена Мишута">Елена Мишута</span2>
         <span2 data-double="Нутрициолог">Нутрициолог</span2>
     </div>
-
 </div>
 <nav class="navmenu">
     <ul>
         <li class="scrollable"><a href="{% url 'home' %}#top">Главная</a></li>
-        <li class="scrollable"><a href="{% url 'home' %}#about">Обо мне</a></li>
+        <li class="scrollable"><a href="{% url 'about' %}">Обо мне</a></li>
         <li class="scrollable"><a href="{% url 'home' %}#calc">Калькулятор ИМТ</a></li>
-        <li class="scrollable"><a href="{% url 'home' %}#services">Услуги</a></li>
+        <li class="scrollable"><a href="{% url 'services' %}">Услуги</a></li>
         <li class="scrollable"><a href="{% url 'blog_index' %}">База знаний</a></li>
         <li class="scrollable"><a href="{% url 'home' %}#contact">Контакты</a></li>
     </ul>
@@ -78,54 +77,51 @@
     </div><!-- end .container -->
 </header>
 <div class="contact_form content_section">
-<div class="container">
-<div class="row">
+    <div class="container">
+        <div class="row">
 <div class="col-md-7">
-<div id="note"></div>
-<div id="fields">
-<form name="sentMessage" method = "POST" action="#contact" id="contactForm" novalidate>
-{% csrf_token %}
-<div class="row">
-<div class="form-group">
-{{contact_form.name}}
-<p class="help-block"> {{ contact_form.name.errors }}</p>
-</div>
-<div class="form-group">
-{{contact_form.phone}}
-<p class="help-block2">{{ contact_form.phone.errors }}</p>
-</div>
-<div class="form-group">
-{{contact_form.email}}
-<p class="help-block">{{ contact_form.email.errors }}</p>
-</div>
-<div class="form-group">
-{{contact_form.message}}
-<p class="help-block">* Обязательные поля</p>
-</div>
-<div class="clearfix"></div>
-<div id="success"></div>
-<input class="send_btn" name="contact_submit" type="submit" value="Отправить">
-</div>
-</form>
-</div>
+    <div id="note"></div>
+    <div id="fields">
+    <form name="sentMessage" method = "POST" action="#contact" id="contactForm" novalidate>
+    {% csrf_token %}
+        <div class="row">
+        <div class="form-group">
+        {{contact_form.name}}
+        <p class="help-block"> {{ contact_form.name.errors }}</p>
+        </div>
+        <div class="form-group">
+        {{contact_form.phone}}
+        <p class="help-block2">{{ contact_form.phone.errors }}</p>
+        </div>
+        <div class="form-group">
+        {{contact_form.email}}
+        <p class="help-block">{{ contact_form.email.errors }}</p>
+        </div>
+        <div class="form-group">
+        {{contact_form.message}}
+        <p class="help-block">* Обязательные поля</p>
+        </div>
+        <div class="clearfix"></div>
+        <div id="success"></div>
+        <input class="send_btn" name="contact_submit" type="submit" value="Отправить">
+        </div>
+    </form>
+    </div>
 </div>
 
-<div class="col-md-5 contact_info">
-<p><a href="tel:+375" rel="nofollow" target="_blank"><i class="fas fa-phone-alt fa-fw me-2"></i>+375 </a></p>
-<p><a href="viber://chat?number=375295170962" rel="nofollow" target="_blank"><i class="fab fa-viber fa-fw me-2 text-viber"></i>Viber</a></p>
-<p><a href="https://t.me/helenmishuta" rel="nofollow" target="_blank"><i class="fab fa-telegram fa-fw me-2"></i>Telegram</a></p>
-<p><a href="mailto:je-" rel="nofollow" target="_blank"><i class="far fa-envelope fa-fw me-2"></i>Email</a></p>
-</div>
+    <div class="col-md-5 contact_info">
+        <p><a href="tel:+375" rel="nofollow" target="_blank"><i class="fas fa-phone-alt fa-fw me-2"></i>+375 </a></p>
+        <p><a href="viber://chat?number=375295170962" rel="nofollow" target="_blank"><i class="fab fa-viber fa-fw me-2 text-viber"></i>Viber</a></p>
+        <p><a href="https://t.me/helenmishuta" rel="nofollow" target="_blank"><i class="fab fa-telegram fa-fw me-2"></i>Telegram</a></p>
+        <p><a href="mailto:je-" rel="nofollow" target="_blank"><i class="far fa-envelope fa-fw me-2"></i>Email</a></p>
+    </div>
    <div class="mt-4 pt-2 border-top">
        <small class="text-muted">* Среднее время ответа: 20 минут в рабочее время</small>
    </div>
 
+        </div>
+    </div><!--container-->
 </div>
-</div><!--container-->
-</div>
-
-
-
 
 <div class="content_section partner_section">
 <div class="container">
@@ -141,11 +137,11 @@
 <div class="col-md-4 indent">
 <ul class="navigator indent">
     <li class="scrollable"><a href="{% url 'home' %}#top">Главная</a></li>
-    <li class="scrollable"><a href="{% url 'home' %}#about">Обо мне</a></li>
-    <li class="scrollable"><a href="{% url 'home' %}#calc">Калькулятор ИМТ</a></li>
-    <li class="scrollable"><a href="{% url 'home' %}#service">Услуги</a></li>
-    <li class="scrollable"><a href="{% url 'blog_index' %}">База знаний</a></li>
-    <li class="scrollable"><a href="{% url 'home' %}#contact">Контакты</a></li>
+        <li class="scrollable"><a href="{% url 'about' %}">Обо мне</a></li>
+        <li class="scrollable"><a href="{% url 'home' %}#calc">Калькулятор ИМТ</a></li>
+        <li class="scrollable"><a href="{% url 'services' %}">Услуги</a></li>
+        <li class="scrollable"><a href="{% url 'blog_index' %}">База знаний</a></li>
+        <li class="scrollable"><a href="{% url 'home' %}#contact">Контакты</a></li>
 </ul>
 </div>
 
@@ -170,9 +166,8 @@
 </div><!--//footer-->
 </div><!-- end #page1 -->
 
-
     <script src="{% static 'js/jquery-ui.min.js' %}"></script>
-    <script>
+        <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -194,7 +189,7 @@
         this.style.transform = 'translateY(90px)';
       }
     });
-    </script>
+        </script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/current.js' %}"></script>
     <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>

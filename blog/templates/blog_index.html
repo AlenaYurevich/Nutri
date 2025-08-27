@@ -38,7 +38,7 @@
                                     </div>
                                 <h3><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
                                 <small>{{ post.created_on }}</small>
-                                <p class="">{{ post.content | safe | slice:":249" }} <a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
+                                <p class="">{{ post.content | safe | slice:":100" }} <a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
                                 </div>
                         </div><!--//blog_post-->
                         </div>

@@ -51,17 +51,6 @@ header #logo img.logo_retina{display:none;}
 .blog header{color:#fff;width:100%;overflow:hidden;padding-top:150px;padding-bottom:60px;}
 #top header{height:73px;padding:0; background:#ffffff;border:none;position:absolute;left:0;top:0;width:100%!important;z-index:9999;box-shadow:0 2px 2px rgba(0, 0, 0, 0.06);}
 #logo {float:left;padding:3px 10px 0 0;vertical-align:top;  display: flex; /* Горизонтальное расположение */ align-items: flex-start; /* Ключевое свойство для выравнивания по верху */}
-/*.gold span {
-    color: #cfc09f;
-    font-family: "MonteCarlo", cursive;
-    font-style: normal;
-    text-transform: uppercase;
-    position: relative;
-    font-size: 60px;
-    letter-spacing: -2px;
-    line-height: 1.2;
-    margin: 0;
-}*/
 .gold span2 {
     font-family: "Oranienbaum", serif;
     color: #cfc09f;
@@ -129,7 +118,6 @@ header #logo img.logo_retina{display:none;}
     transform: translateY(0); /* Конечное положение*/
   }
 }
-
 /* Применяем анимацию к заголовкам */
 .page_section header div.container h1,
 .page_section header div.container h2

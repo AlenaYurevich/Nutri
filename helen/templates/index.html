@@ -108,7 +108,7 @@
     <strong>Чем я могу быть полезна:</strong>
     <ul>
         <li>Анализ текущего рациона питания, выявление <strong>недостатков</strong> или избытков в питании</li>
-        <li>Создание индивидуальных планов питания, учитывающих потребности и <strong>предпочтения клиента</strong>, а также его здоровье и физическую активность. Без строгих диет и жестких ограничений
+        <li>Создание индивидуальных планов питания, учитывающих <strong>потребности и предпочтения клиента</strong>, а также его здоровье и физическую активность. Без строгих диет и жестких ограничений
 </li>
         <li>Обучение  клиентов принципам здорового питания, правильному выбору продуктов</li>
         <li>Работа с пищевым поведением, выстраивание <strong>здоровых</strong> пищевых привычек</li>
@@ -128,8 +128,8 @@
     <div class="gallery_block2">
 <div class="gallery_item animate-on-scroll delay-2">
 <div class="img_block hover_img">
-<a href="{% static 'images/diploma.jpg' %}" class="prettyPhoto"  data-rel="prettyPhoto[about]">
-    <img src="{% static 'images/diploma.jpg' %}" alt="Белорусский государственный медицинский университет"/>
+<a href="{% static 'images/diploma2.jpg' %}" class="prettyPhoto" alt="Белорусский государственный медицинский университет" data-rel="prettyPhoto[about]">
+    <img src="{% static 'images/diploma.jpg' %}" />
     <div class="item_fadder"></div>
     <div class="link_ico"><i class="fa fa-search"></i></div>
 </a>
@@ -331,7 +331,8 @@ $('#calc form').submit(function(e) {
     </div>
 </div>
 {% endfor %}
-   </div></div>
+            </div>
+        </div>
     </header>
 </section>
 
@@ -350,10 +351,9 @@ $('#calc form').submit(function(e) {
                                 <small>{{ post.created_on }}</small>
                                 <p class="">{{ post.content | safe | slice:":170" }} <a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
                                 </div>
-                        </div><!--//blog_post-->
+                            </div><!--//blog_post-->
                         </div>
-                        {% endfor %}
-
+        {% endfor %}
     </div>
         <a href="{% url 'blog_index' %}">Все статьи >>></a>
     </div>

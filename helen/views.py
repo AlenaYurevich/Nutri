@@ -15,9 +15,6 @@ def index(request):
     # Получаем все активные услуги с их пунктами
     services = Service.objects.filter(is_active=True)
     posts = Post.objects.all().order_by('order')
-    # paginator = Paginator(posts, 3)  # Show 7 posts per page
-    # page_number = request.GET.get('page')
-    # page_obj = paginator.get_page(page_number)
 
     # Обработка формы ИМТ
     if 'bmi_submit' in request.POST:
@@ -64,6 +61,18 @@ def index(request):
         "posts": posts,
     }
     return render(request, 'index.html', context)
+
+
+def about(request):
+    return render(request, 'about.html')
+
+
+def services(request):
+    services = Service.objects.filter(is_active=True)
+    context = {
+        'services': services,
+    }
+    return render(request, 'services.html', context)
 
 
 def handler404(request, exception):
