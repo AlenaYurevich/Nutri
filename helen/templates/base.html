@@ -104,22 +104,33 @@
         <div class="clearfix"></div>
         <div id="success"></div>
         <input class="send_btn" name="contact_submit" type="submit" value="Отправить">
+<div class="indent">
+        {% if contact_success %}
+<div class="alert alert-success" role="alert">
+    ✅ Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.
+</div>
+{% endif %}
+
+{% if contact_errors %}
+<div class="alert alert-danger" role="alert">
+    {{ contact_errors }}
+</div>
+{% endif %}
+</div>
         </div>
     </form>
     </div>
 </div>
 
     <div class="col-md-5 contact_info">
-        <p><a href="tel:+375" rel="nofollow" target="_blank"><i class="fas fa-phone-alt fa-fw me-2"></i>+375 </a></p>
-        <p><a href="viber://chat?number=375295170962" rel="nofollow" target="_blank"><i class="fab fa-viber fa-fw me-2 text-viber"></i>Viber</a></p>
+        <p><a href="tel:+375333007892" rel="nofollow" target="_blank"><i class="fas fa-phone-alt fa-fw me-2"></i>+375 33 300 78 92 </a></p>
+        <p><a href="viber://chat?number=375333007892" rel="nofollow" target="_blank"><i class="fab fa-viber fa-fw me-2 text-viber"></i>Viber</a></p>
         <p><a href="https://t.me/helenmishuta" rel="nofollow" target="_blank"><i class="fab fa-telegram fa-fw me-2"></i>Telegram</a></p>
         <p><a href="mailto:je-" rel="nofollow" target="_blank"><i class="far fa-envelope fa-fw me-2"></i>Email</a></p>
+        <small class="text-muted">* Среднее время ответа: 20 минут в рабочее время</small>
     </div>
-   <div class="mt-4 pt-2 border-top">
-       <small class="text-muted">* Среднее время ответа: 20 минут в рабочее время</small>
-   </div>
 
-        </div>
+        </div><!--row-->
     </div><!--container-->
 </div>
 

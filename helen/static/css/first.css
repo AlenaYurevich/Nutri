@@ -32,11 +32,7 @@ header::before {
     bottom: 0;
     background: linear-gradient(to bottom,
         rgba(0, 0, 0, 0) 20%,
-        rgba(0, 0, 0, 0.7) 90%); /* Полупрозрачный черный цвет для затемнения */
-    /*background:
-        radial-gradient(farthest-corner at 1000px 20px,
-        rgba(0, 0, 0, 0) 20%,
-        rgba(0, 0, 0, 0.7) 70%);*/
+        rgba(0, 0, 0, 0.7) 70%); /* Полупрозрачный черный цвет для затемнения */
     z-index: 1; /* Убедитесь, что слой находится поверх изображения */
 }
 header > * {
@@ -172,15 +168,17 @@ header #logo img.logo_retina{display:none;}
 
 .navmenu{margin:0;padding:20px 0 2px 0;float:right;}
 .navmenu ul li{display:inline-block;vertical-align:top;line-height:32px; }
-.navmenu ul li a{padding:5px;font-weight:400; color: #cfc09f;background: linear-gradient(to bottom, #EEECE0 50%,#EAE6DB 25%, #CAC0A3 25%, #60584B 84%);
+.navmenu ul li a{padding:5px;font-weight:400; color: #cfc09f;
+background: linear-gradient(to bottom, #EEECE0 55%,#EAE6DB 40%, #CAC0A3 25%, #60584B 84%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Roboto Condensed", sans-serif;
     }
-.navmenu li a:hover, .navmenu li.active a{padding:8px;color:#cfc09f; background: linear-gradient(to bottom, #EEECE0 65%,#EAE6DB 50%, #CAC0A3 25%, #60584B 84%);
+.navmenu li a:hover, .navmenu li a:active{padding:6px;color:#cfc09f;
+ background: linear-gradient(to bottom, #EEECE0 65%,#EAE6DB 50%, #CAC0A3 25%, #60584B 84%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
      }
 .navmenu ul li{list-style:none;margin:0; position:relative;}
 
