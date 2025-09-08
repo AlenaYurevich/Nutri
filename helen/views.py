@@ -5,7 +5,6 @@ from calc.imt import calculate_bmi
 from blog.models import Post
 from django.core.mail import send_mail
 from .models import Service  # Импортируем модель Service
-from functools import wraps
 
 
 def handle_forms(request):
@@ -58,13 +57,9 @@ def handle_forms(request):
 
             context['contact_success'] = True
             context['contact_form'] = ContactForm()  # очищаем форму
-
-            # except Exception as e:
-            #     print(f"Ошибка отправки email: {e}")
-            #     context['contact_errors'] = "Произошла ошибка при отправке. Попробуйте позже."
         else:
             context['contact_form'] = contact_form
-            context['contact_errors'] = "Пожалуйста, исправьте ошибки в форме."
+            context['contact_errors'] = "Пожалуйста, проверьте заполнение формы."
 
     return context
 
@@ -72,10 +67,8 @@ def handle_forms(request):
 def index(request):
     forms_context = handle_forms(request)
     services = Service.objects.filter(is_active=True)
-    posts = Post.objects.all().order_by('order')
+    posts = Post.objects.order_by('order')[:3]
     context = {
-        # 'bmi_form': bmi_form,
-        # 'bmi_result': bmi_result,
         **forms_context,
         'services': services,  # Добавляем услуги в контекст
         "posts": posts,

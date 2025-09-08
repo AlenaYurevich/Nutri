@@ -192,7 +192,7 @@ h3.title{font-style:normal;font-size:24px;font-weight:300;color:#000;padding:0;m
 .portfolio_item_wrapper img,
 .portfolio_item_wrapper .item_fadder{border-radius:3px;}
 /*.blog_post{position:relative;padding:14px;background:#fff;box-shadow:0 0 4px rgba(0, 0, 0, 0.20);border-radius:6px;text-align:justify;}*/
-.blog_post{position:relative;padding:14px;background:#fff;box-shadow:0 0 4px rgba(0, 0, 0, 0.20);border-radius:6px;}
+.blog_post{position:relative;padding:14px;background:#fff;box-shadow:0 0 4px rgba(0, 0, 0, 0.20);border-radius:15px;}
 .blog_post iframe{padding:0;margin:0;border:0;vertical-align:top;outline:none;font-size:0;}
 .blog_post h3{font-size:24px;line-height: 1;color:#919682;margin: 20px 0;text-align:center;text-transform: uppercase;}
 .blog_post h3 a{font-style:normal;font-size:24px;font-weight:300;color:var (--main-color1);line-height:1;}
@@ -207,7 +207,7 @@ h3.title{font-style:normal;font-size:24px;font-weight:300;color:#000;padding:0;m
     border: none !important;
     outline: none !important;
     border-radius: 5px !important;
-    color: var(--main-color2)! important;
+    color: var(--main-color1)! important;
     background: #fff! important;
     font-weight: 400;
     box-shadow: 0 1px 1px #FFFFFF, 0 1px 1px rgba(0, 0, 0, 0.15) inset !important;
@@ -248,10 +248,10 @@ input.send_btn:hover{background:var(--main-color3);text-decoration:none;box-shad
 .copyright{padding:0;color:#fff;text-align:center}
 .footer_bottom .socials{text-align:center;padding-bottom:18px;}
 .footer_bottom .socials li{display:inline-block;margin:0 -1px 0 2px;}
-.footer_bottom .socials li a{background:rgba(255, 255, 255, 0.4);border-radius:50%;box-shadow:none;display:block;height:40px;position:relative;transition:background 250ms ease 0s;width:40px;}
+.footer_bottom .socials li a{background:rgba(255, 255, 255, 0.4);border-radius:50%;box-shadow:none;display:block;height:40px;position:relative;transition:background 250ms ease 0s;width:40px; padding-top:6px}
 .footer_bottom .socials li a:before{content:"";display:block;height:24px;left:8px;position:absolute;top:8px;width:24px;}
 .socials_list li:hover a{background:#ECCFC9;}
-.socials_list li a.ico_social-facebook:before,
+/*.socials_list li a.ico_social-facebook:before,
 .socials_list li a.ico_social-pinterest:before,
 .socials_list li a.ico_social-youtube:before,
 .socials_list li a.ico_social-instagram:before,
@@ -260,7 +260,7 @@ input.send_btn:hover{background:var(--main-color3);text-decoration:none;box-shad
 .socials_list li a.ico_social-facebook:before{background-position:0 0;}
 .socials_list li a.ico_social-pinterest:before{background-position:0 -24px;}
 .socials_list li a.ico_social-youtube:before{background-position:-48px -24px;}
-.socials_list li a.ico_social-instagram:before{background-position:-72px -24px;}
+.socials_list li a.ico_social-instagram:before{background-position:-72px -24px;}*/
 iframe{width:100% !important;margin:0 !important;padding:0 !important;border:0 !important;max-width:100% !important;overflow-y:hidden !important;}
 #top{}
 .shadow_no{box-shadow:none !important;}
@@ -268,6 +268,8 @@ iframe{width:100% !important;margin:0 !important;padding:0 !important;border:0 !
 .fixed-menu.fixed_show{opacity:1;top:0;}
 .fixed-menu-wrapper{padding-top:15px;padding-bottom:15px;background:var(--main-color1)}
 .footer a:hover{color:#Eccfc9;}
+.footer_bottom .socials li a{color:#fff;}
+.footer_bottom .socials li a:hover{color:#fff;}
 
 a.menu_toggler{display:none;}
 
@@ -564,7 +566,7 @@ header #logo img.logo_retina{display:block!important;}
 .shortcode_toggles_item_title .ico{background-image:url("../images/retina/accordion_sprite.png") !important;background-size:9px 18px !important}
 .tparrows{background-image:url("../images/retina/palette_icons.png") !important;background-size:200px 150px !important}
 .flex-direction-nav a{background-image:url("../images/retina/flex_arrow.png") !important;background-size:90px 53px !important}
-.socials_list li a.ico_social-facebook:before,
+/*socials_list li a.ico_social-facebook:before,
 .socials_list li a.ico_social-twitter:before,
 .socials_list li a.ico_social-linked:before,
 .socials_list li a.ico_social-delicious:before,
@@ -576,12 +578,10 @@ header #logo img.logo_retina{display:block!important;}
 .socials_list li a.ico_social-youtube:before,
 .socials_list li a.ico_social-instagram:before,
 .socials_list li a.ico_social-gplus:before,
-.socials_list li a.ico_social-dribbble:before{background-image:url("../images/retina/palette_icons.png") !important;background-size:200px 150px !important}
+.socials_list li a.ico_social-dribbble:before{background-image:url("../images/retina/palette_icons.png") !important;background-size:200px 150px !important}*/
 a.menu_toggler:before{background-image:url("../images/retina/btn_menu.png");background-size:20px 20px !important}
 }
-/*.fa.fa-check, .fa.fa-magnifying-glass, .fa.fa-wand-magic-sparkles, .fa-exclamation{
-  color: #66743f
-}*/
+
 .progress-bar {
   position: relative;
   min-width: 30px; /* Чтобы текст помещался */

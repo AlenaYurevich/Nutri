@@ -19,7 +19,6 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=250)
     content = RichTextField(config_name='awesome_ckeditor')
-    # content = models.CharField(blank=True, max_length=1000, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
     image = models.FileField(upload_to='static/images/')
