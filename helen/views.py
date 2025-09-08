@@ -59,7 +59,7 @@ def handle_forms(request):
             context['contact_form'] = ContactForm()  # очищаем форму
         else:
             context['contact_form'] = contact_form
-            context['contact_errors'] = "Пожалуйста, исправьте ошибки в форме."
+            context['contact_errors'] = "Пожалуйста, проверьте заполнение формы."
 
     return context
 
