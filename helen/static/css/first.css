@@ -15,7 +15,7 @@ body {
     justify-content: center;
     }
 .page_section header,
-.page_section header #contact {background-image:url("../images/slide_bg/breadcrumbs-min.jpg");background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;
+.page_section header #contact {background-image:url("../images/slide_bg/13.jpg");background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;
 position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */}
 
@@ -38,9 +38,10 @@ header > * {
     position: relative;
     z-index: 2; /* Убедитесь, что контент находится поверх затемнения */
 }
-.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:250px;padding-bottom:100px;}
+/*.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:250px;padding-bottom:100px;}*/
+.page_section header{color:#fff;width:100%;overflow:hidden;padding-top:450px;padding-bottom:100px;}
 .page_section header div.container{z-index:900;position:relative;}
-.page_section header div.container h1,.page_section header div.container h2{font-size:30px;letter-spacing:1px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:30px;text-transform:uppercase;}
+/*.page_section header div.container h1,.page_section header div.container h2{font-size:100px;letter-spacing:1px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:30px;text-transform:uppercase;}*/
 .page_section header div.container p{color:#fff;font-weight:300;text-align:center;font-size:24px;letter-spacing:1px; sans-serif;line-height:22px;padding:0 20px 10px 20px;margin-bottom:0;text-shadow: 0 1px 4px rgba(0,0,0,.5)}
 header #logo img.logo_retina{display:none;}
 .blog header{color:#fff;width:100%;overflow:hidden;padding-top:150px;padding-bottom:60px;}
@@ -89,6 +90,8 @@ header #logo img.logo_retina{display:none;}
     background-size: cover;
     position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */
+    padding-top:200px;
+    padding-bottom:100px
 }
 .blog header {
     background-image: url("../images/slide_bg/07.png");
@@ -100,7 +103,20 @@ header #logo img.logo_retina{display:none;}
     position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */
 }
-.page_section header div.container h1,.page_section header div.container h2{font-size:60px;letter-spacing:2px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:20px;text-transform:uppercase;}
+/*.page_section header div.container h1,.page_section header div.container h2{font-size:100px;letter-spacing:2px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:20px;text-transform:uppercase;}*/
+/*.page_section header div.container h1,
+.page_section header div.container h2
+ {
+  font-family: "Oranienbaum", serif;
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  padding: 0 0 10px 0;
+  margin: 0;
+  text-align: left;
+  color: #fff;
+  line-height: 90px;
+}*/
 }
 /* Добавляем анимацию кнопке*/
 @keyframes slideUp {
@@ -114,7 +130,7 @@ header #logo img.logo_retina{display:none;}
   }
 }
 /* Применяем анимацию к заголовкам */
-.page_section header div.container h1,
+/*.page_section header div.container h1,
 .page_section header div.container h2
  {
   font-family: "Oranienbaum", serif;
@@ -126,6 +142,19 @@ header #logo img.logo_retina{display:none;}
   text-align: left;
   color: #fff;
   line-height: 90px;
+}*/
+.page_section header div.container h1,
+.page_section header div.container h2
+ {
+  font-family: "Oranienbaum", serif;
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  padding: 0 0 10px 0;
+  margin: 0;
+  text-align: left;
+  color: #fff;
+  line-height: 100px;
 }
 .page_section header div.container h3
  {
@@ -180,6 +209,10 @@ background: linear-gradient(to bottom, #EEECE0 55%,#EAE6DB 40%, #CAC0A3 25%, #60
     transition: all 0.3s ease-in-out;
      }
 .navmenu ul li{list-style:none;margin:0; position:relative;}
+@media (max-width:767px){#top header,
+#top header{background:#ffffff !important;top:0 !important;height:74px!important;}
+section header h1{font-size:70px !important;line-height:60px !important;}
+section header h3{font-size:22px !important;line-height:28px !important;}}
 
 @media only screen and (max-width:990px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
 #top header{height:74px !important;position:relative;width:100%;z-index:999;padding:0;}
@@ -193,7 +226,7 @@ a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7p
 .fixed-menu,
 .fixed-menu:before,
 .fixed-menu:after{display:none!important;}
-.mobile_menu_wrapper{display:block;background: var(--main-color2);padding:74px 40px 20px 10px;}
+.mobile_menu_wrapper{display:block;background: linear-gradient(to top, var(--main-color2), var(--main-color1));padding:74px 40px 20px 10px;}
 .mobile_menu_wrapper ul li{padding:10px 0; list-style:none}
 .mobile_menu_wrapper a{color:#fff}
 .mobile_menu_wrapper a:hover{color:var(--main-color1-light)}
