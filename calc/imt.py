@@ -8,10 +8,10 @@
 def idmt(height, gender):
     if height <= 200:
         if gender == 1:
-            result = height - 100 - (height - 152) * 0.4
+            idmt_result = height - 100 - (height - 152) * 0.4
         else:
-            result = height - 100 - (height - 152) * 0.2
-        return f'Ваша идеальная масса тела {result} кг'
+            idmt_result = height - 100 - (height - 152) * 0.2
+        return f'Ваша идеальная масса тела {idmt_result} кг'
     else:
         return f'Максимальный рост 200 см'
 

@@ -4,11 +4,11 @@ Choices_notice = [(1, f'Женщина'),
                   (2, f'Мужчина')]
 
 
-class IdmtForm(forms.Form):
-    height = forms.IntegerField(label="Введите свой рост в сантиметрах", min_value=120, initial=170,
-                                widget=forms.NumberInput(attrs={'class': "form-control", 'autofocus': 'autofocus'}))
-    gender = forms.TypedChoiceField(label="Пол", choices=Choices_notice, initial=1,
-                                          widget=forms.RadioSelect())
+# class IdmtForm(forms.Form):
+#     height = forms.IntegerField(label="Введите свой рост в сантиметрах", min_value=120, initial=170,
+#                                 widget=forms.NumberInput(attrs={'class': "form-control", 'autofocus': 'autofocus'}))
+#     gender = forms.TypedChoiceField(label="Пол", choices=Choices_notice, initial=1,
+#                                           widget=forms.RadioSelect())
 
 
 class BMIForm(forms.Form):
