@@ -4,6 +4,7 @@
     <title>Расчеты нутрициолога</title>
     <meta name="description" content="Рассчитываем идеальные параметры вашего тела">
     <meta name="keywords" content="Рассчитать индекс массы тела, идеальную массу тела">
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="canonical" href=""/>
     <meta property="og:title" content="Расчеты нутрициолога"/>
     <meta property="og:image" content="https://posttarif.by/apple-touch-icon.png"/>
@@ -11,6 +12,7 @@
     <meta property="og:type" content="article"/>
 {% endblock %}
 {% block page_content %}
+<main>
 <section class="blog">
   <header class="text-center">
     <div class="container">
@@ -18,50 +20,82 @@
         <p class="lead animate-on-scroll delay-2">Рассчитаем идеальные показатели вашего тела</p>
     </div>
   </header>
+</section>
+<section class='blog'>
 <div class="container">
-
 <div class="row indent">
-         <h2>Расчет идеальной массы тела (ИдМТ)</h2>
+<!--         <h2>Расчет идеальной массы тела (ИдМТ)</h2>-->
     <form method="POST" class="PostForm">{% csrf_token %}
       <div class="col-md-6">
          {{ form.height.label }}
          {{ form.height }}
          {{ form.height.error_messages }}
-      </div>
-      <div class="col-md-6 data-nosnippet">
-         {{ form.gender.label }}
-         {{ form.gender }}
-         {{ form.gender.errors }}
-      </div>
-        <input class="send_btn" type="submit" name="send" value="Рассчитать">
-    </form>
 
-     <div class="col-md-6 indent">
-        <p>{{ result }}</p>
-     </div>
-     </div><!--row-->
-<div class="row indent">
-    <h2>Расчет индекса массы тела (ИМТ)</h2>
-    <form method="POST" class="PostForm">{% csrf_token %}
-      <div class="col-md-6">
-         {{ form.height.label }}
-         {{ form.height }}
-         {{ form.height.error_messages }}
          {{ form.weight.label }}
          {{ form.weight }}
          {{ form.weight.error_messages }}
+
+         {{ form.gender.label }}
+         {{ form.gender }}
+         {{ form.gender.errors }}
+
+ <input class="send_btn" type="submit" name="send" value="Рассчитать">
       </div>
-      <div class="col-md-6">
-      </div>
-        <input class="send_btn" type="submit" name="send" value="Рассчитать">
     </form>
 
      <div class="col-md-6 indent">
-        <p>{{ result }}</p>
-     </div>
-</div><!--row-->
+        <p>{{ result_idmt }}</p>
+          {% if result_bmi %}
+            <div class="bmi-result mt-30 p-20
+                        {% if result_bmi.0.bmi < 18.5 %}bg-info
+                        {% elif result_bmi.0.bmi >= 30 %}bg-danger
+                        {% else %}bg-success{% endif %}">
 
+              <div class="well">
+                <p class="">
+                  <strong>{{ result_bmi.0.description }}:</strong>
+                  <span class="h1">{{ result_bmi.0.bmi }}</span>
+                </p>
+
+                <p class="h4">
+                  <i class="fa
+                    {% if result_bmi.0.bmi < 18.5 %}fa-exclamation
+                    {% elif result_bmi.0.bmi >= 25 %}fa-exclamation
+                    {% else %}fa-check{% endif %}"></i>
+                  {{ result_bmi.0.classification }}
+                </p>
+
+                <div class="alert
+                            {% if result_bmi.0.bmi < 18.5 %}alert-info
+                            {% elif result_bmi.0.bmi >= 25 %}alert-warning
+                            {% else %}alert-success{% endif %}">
+                  {{ result_bmi.0.advice }}
+                </div>
+<div class="bmi-scale">
+    <div class="row text-muted small">
+        <div class="col-xs-3 text-left">Дефицит</div>
+        <div class="col-xs-3 text-center">Норма</div>
+        <div class="col-xs-3 text-center">Избыток</div>
+        <div class="col-xs-3 text-right">Ожирение</div>
+      </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-danger" style="width: 16%">≤16</div>
+    <div class="progress-bar progress-bar-warning" style="width: 8.5%">16-18.5</div>
+    <div class="progress-bar progress-bar-success" style="width: 24.5%">18.5-25</div>
+    <div class="progress-bar progress-bar-warning" style="width: 20%">25-30</div>
+    <div class="progress-bar progress-bar-danger" style="width: 31%">≥30</div>
+  </div>
+        <div class="text-center small text-muted">
+    Диапазоны ИМТ по классификации ВОЗ
+  </div>
+</div>
+              </div>
+            </div>
+            {% endif %}
+     </div>
+     </div><!--row-->
 
 </div>
 </section>
+</main>
  {% endblock %}

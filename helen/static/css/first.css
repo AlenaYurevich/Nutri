@@ -211,7 +211,7 @@ background: linear-gradient(to bottom, #EEECE0 55%,#EAE6DB 40%, #CAC0A3 25%, #60
 .navmenu ul li{list-style:none;margin:0; position:relative;}
 @media (max-width:767px){#top header,
 #top header{background:#ffffff !important;top:0 !important;height:74px!important;}
-section header h1{font-size:70px !important;line-height:60px !important;}
+section header h1{font-size:65px !important;line-height:65px !important;}
 section header h3{font-size:22px !important;line-height:28px !important;}}
 
 @media only screen and (max-width:990px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
