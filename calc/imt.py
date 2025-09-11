@@ -1,10 +1,3 @@
-# import math
-# from .sheets import sheet1, sheet2
-# from .vat import vat
-# from .round_as_excel import round_as_excel
-# from .format import formatted
-
-
 def idmt(height, gender):
     if height <= 200:
         if gender == 1:
@@ -70,3 +63,14 @@ def get_bmi_advice(bmi: float) -> str:
         return 'Рекомендуется умеренная физическая активность'
     else:
         return 'Рекомендуется консультация специалиста для разработки плана коррекции веса'
+
+
+def energy(height, weight, age, gender, koef):
+    if height <= 200:
+        if gender == 1:  # женщина
+            energy_result = (9.99 * weight + 6.25 * height - 4.92 * age - 161) * koef
+        else:  # мужчина
+            energy_result = (9.99 * weight + 6.25 * height - 4.92 * age + 5) * koef
+        return f'Ваша суточная энергопотребнось { energy_result } килокалорий'
+    else:
+        return f'Максимальный рост 200 см'
