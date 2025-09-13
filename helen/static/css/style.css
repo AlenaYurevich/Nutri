@@ -631,3 +631,15 @@ a.menu_toggler:before{background-image:url("../images/retina/btn_menu.png");back
     color: #A0A0A0 !important;
     opacity: 1 !important;
 }
+.card {
+  @extend .panel;
+  @extend .panel-default;
+}
+.card-body {
+  @extend .panel-body;
+}
+/* И так далее для всех компонентов */
+.bmi-calc .mt-30 { margin-top: 30px; }
+.bmi-calc .p-20 { padding: 20px; }
+.bmi-calc .well { background: white; }
+.bmi-calc .h1 { font-size: 36px; }

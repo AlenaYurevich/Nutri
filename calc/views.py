@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import IdmtForm
-from .imt import idmt, calculate_bmi
+from .imt import idmt, calculate_bmi, energy
 
 
 def idmt_view(request):
@@ -10,10 +10,13 @@ def idmt_view(request):
             height = int(request.POST.get('height'))
             weight = int(request.POST.get('weight'))
             gender = int(request.POST.get('gender'))
+            age = int(request.POST.get('age'))
+            activity = float(request.POST.get('activity'))
             result_idmt = idmt(height, gender)
             result_bmi = calculate_bmi(height, weight)
+            result_energy = energy(height, weight, age, gender, activity)
             context = {'form': form, 'result_idmt': result_idmt, 'result_bmi': result_bmi,
-                       'gender': gender,
+                       'result_energy': result_energy,
                        }
             return render(request, 'calc.html', context)
     else:
