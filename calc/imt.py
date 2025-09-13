@@ -1,12 +1,12 @@
 def idmt(height, gender):
-    if height <= 200:
+    if height <= 210:
         if gender == 1:
             idmt_result = height - 100 - (height - 152) * 0.4
         else:
             idmt_result = height - 100 - (height - 152) * 0.2
         return f'Ваша идеальная масса тела {idmt_result} кг'
     else:
-        return f'Максимальный рост 200 см'
+        return f'Максимальный рост 210 см'
 
 
 def calculate_bmi(height: int, weight: float) -> list[dict]:
@@ -65,12 +65,16 @@ def get_bmi_advice(bmi: float) -> str:
         return 'Рекомендуется консультация специалиста для разработки плана коррекции веса'
 
 
-def energy(height, weight, age, gender, koef):
-    if height <= 200:
+def energy(height, weight, age, gender, activity):
+    if height <= 210:
         if gender == 1:  # женщина
-            energy_result = (9.99 * weight + 6.25 * height - 4.92 * age - 161) * koef
+            energy_result = (9.99 * weight + 6.25 * height - 4.92 * age - 161) * activity
         else:  # мужчина
-            energy_result = (9.99 * weight + 6.25 * height - 4.92 * age + 5) * koef
-        return f'Ваша суточная энергопотребнось { energy_result } килокалорий'
+            energy_result = (9.99 * weight + 6.25 * height - 4.92 * age + 5) * activity
+
+        # Округляем до целого числа
+        energy_rounded = round(energy_result)
+
+        return f'Ваша суточная энергопотребность {int(energy_rounded)} килокалорий'
     else:
-        return f'Максимальный рост 200 см'
+        return f'Максимальный рост 210 см'

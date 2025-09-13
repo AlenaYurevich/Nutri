@@ -24,7 +24,7 @@
 <section class='blog'>
 <div class="container">
 <div class="row indent">
-<!--         <h2>Расчет идеальной массы тела (ИдМТ)</h2>-->
+
     <form method="POST" class="PostForm">{% csrf_token %}
       <div class="col-md-6">
          {{ form.height.label }}
@@ -35,10 +35,18 @@
          {{ form.weight }}
          {{ form.weight.error_messages }}
 
+         {{ form.age.label }}
+         {{ form.age }}
+         {{ form.age.error_messages }}
+<p></p>
          {{ form.gender.label }}
          {{ form.gender }}
          {{ form.gender.errors }}
-
+<p></p>
+         {{ form.activity.label }}
+         {{ form.activity }}
+         {{ form.activityerrors }}
+<p></p>
  <input class="send_btn" type="submit" name="send" value="Рассчитать">
       </div>
     </form>
@@ -92,6 +100,9 @@
               </div>
             </div>
             {% endif %}
+
+<p class="indent">{{ result_energy }}</p>
+
      </div>
      </div><!--row-->
 
