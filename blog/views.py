@@ -36,7 +36,7 @@ def blog_category(request, category_slug):
     forms_context = handle_forms(request)
     context = {
         'category': category,
-        'posts': posts  # здесь выводим посты Posts,
+        'posts': posts,  # здесь выводим посты Posts,
         ** forms_context,
     }
     return render(request, 'blog_category.html', context)
