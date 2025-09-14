@@ -59,8 +59,8 @@
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2 mb-3">
 <img loading="lazy" src="{% static 'images/gallery/04.png' %}" alt="Консультация нутрициолога онлайн" />
-<span>Высшее образование и <strong>многолетний опыт</strong> работы в медицине</span>
-<span><strong>Знания</strong> в физиологии, биохимии, фармакологии, позволяющие комплексно подойти к решению Вашей проблемы</span>
+<span>Высшее образование и <strong>многолетний опыт</strong> работы в медицине
+ позволяют комплексно подойти к решению Вашей проблемы</span>
 <span>Использование в работе только <strong>научно-доказанных фактов</strong> с учётом рекомендаций врачей смежных специальностей (терапевт, эндокринолог, гастроэнтеролог)
 </span>
 </div>
@@ -69,7 +69,9 @@
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-3 mb-3">
 <img loading="lazy" src="{% static 'images/gallery/05.jpg' %}" alt="Консультация нутрициолога онлайн" />
-<span>Мягко и комфортно меняем Ваш образ жизни для увеличения <strong>сил и энергии</strong>, снятия стресса, сохранения красоты и молодости, а также профилактики заболеваний.
+<span>Мягко и комфортно меняем Ваш образ жизни для увеличения <strong>сил и энергии</strong>, снятия стресса, сохранения красоты и молодости, а также сохранения Вашего здоровья
+</span>
+<span>Доступен формат разовых консультации, а также персонального сопровождения
 </span>
 </div>
 </div>
@@ -179,8 +181,8 @@
           Калькулятор индекса массы тела (ИМТ)
         </h2>
           <p class="center animate-on-scroll delay-2 mb-3">Проверьте свое текущеее состояние</p>
-        <div class="panel panel-default">
-          <div class="panel-body">
+        <div class="panel panel-default animate-on-scroll delay-3">
+          <div class="panel-body mb-5">
             <form method="POST" class="form-horizontal" action="#calc">
               {% csrf_token %}
               <div class="form-group">
@@ -270,8 +272,17 @@
             {% endif %}
           </div>
         </div>
-      </div>
+
+        <div class="center indent">
+            <h2 class="text-center animate-on-scroll delay-1">
+            Анкета первичной консультации
+            </h2>
+                <p class="center animate-on-scroll delay-2 mb-3">Заполните анкету для оценки Вашей активности и физической формы</p>
+             <a class="btn btn-primary"  target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdMdz7JXCR6U87NAHGegoLDIdxBFd1YH5iwBEUSxBBWnZTQ4A/viewform?fbclid=PAZXh0bgNhZW0CMTEAAaeKIUbiEkyMpPrDUNtXuLwzqusF3V7HdczB5Ua7zHI0shoSNhyDcfd0c9DgDQ_aem_3LWt-9R9hSlO_4_HX3yKhw" rel="nofollow">
+Заполнить анкету</a>
+        </div>
     </div>
+  </div>
   </div>
 </section>
 <!-- <script src="{% static 'js/jquery.js' %}"></script>-->
@@ -302,7 +313,7 @@ $('#calc form').submit(function(e) {
         <h4 class="center">{{ service.subtitle }}</h4>
         {% endif %}
 
-        <div class="green-block">
+        <div class="green-block animate-on-scroll delay-2">
             <p class="center text-uppercase"><strong>Кому:</strong></p>
             <ul>
                 {% for item in service.get_target_audience_list %}
@@ -311,7 +322,7 @@ $('#calc form').submit(function(e) {
             </ul>
         </div>
 
-        <div class="green-block">
+        <div class="green-block animate-on-scroll delay-3">
             <p class="center text-uppercase"><strong>{{ service.purpose_title }}</strong></p>
             <ul>
                 {% for item in service.get_purposes_list %}
@@ -320,14 +331,14 @@ $('#calc form').submit(function(e) {
             </ul>
         </div>
 
-        <div class="green-block">
+        <div class="green-block animate-on-scroll delay-4">
             <p class="center text-uppercase"><strong>{{ service.includes_title }}</strong></p>
             {% for item in service.get_included_items_list %}
             <p class="justify"><i class="fa fa-check"></i> {{ item }}</p>
             {% endfor %}
         </div>
-        <span class="center">Цена: {{ service.price }} BYN</span>
-        <a class="btn btn-primary"  target="_blank" href="https://t.me/helenmishuta" rel="nofollow">Заказать</a>
+        <span class="center animate-on-scroll" >Цена: {{ service.price }} BYN</span>
+        <a class="btn btn-primary animate-on-scroll"  target="_blank" href="https://t.me/helenmishuta" rel="nofollow">Заказать</a>
     </div>
 </div>
 {% endfor %}

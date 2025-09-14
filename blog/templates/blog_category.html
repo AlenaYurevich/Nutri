@@ -19,26 +19,32 @@
      <h4><a class="animate-on-scroll delay-3" href="{% url 'blog_index' %}">Все статьи</a></h4>
     </div>
   </header>
-  <hr>
+ </section>
+<section class='page_section blog'>
+    <div class="content_section container">
+        <div class="row">
+            <div class="posts_block">
   {% for post in posts %}
-<div class="row">
-    <div class="col-md-3 order-md-1">
-        <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}"/>
-    </div>
-    <div class="col-md-7 order-md-2">
-    <h2 class="featurette-heading"><a class ="" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a><span class="text-muted"></span></h2>
-        <small>
-            {{ post.created_on.date }} |&nbsp;
-            {% for category in post.categories.all %}
+  <div class="element col-md-6">
+      <div class="blog_post">
+          <div class="round_corners">
+              <div class="post_flex">
+                  <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}"/>
+              </div>
+              <h3><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
+              <small>{{ post.created_on }} |</small>
+              {% for category in post.categories.all %}
                 <a href="{% url 'blog_category' category.slug %}">
-                {{ category.name | capfirst }}
-                </a> |&nbsp;
-            {% endfor %}
-        </small>
-        <p>{{ post.content | safe }}</p>
-    </div>
-</div>
-<hr class="featurette-divider">
+                {{ category.name | capfirst }} |&nbsp
+                </a>
+              {% endfor %}
+              <p class="">{{ post.content | safe  }} </p>
+          </div>
+      </div><!--//blog_post-->
+  </div>
     {% endfor %}
+            </div>
+        </div>
+    </div>
  </section>
  {% endblock %}
