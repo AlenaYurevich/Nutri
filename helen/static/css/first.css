@@ -103,20 +103,7 @@ header #logo img.logo_retina{display:none;}
     position: relative; /* Добавляем относительное позиционирование */
     overflow: hidden; /* Скрываем все, что выходит за пределы блока */
 }
-/*.page_section header div.container h1,.page_section header div.container h2{font-size:100px;letter-spacing:2px;padding:0 0 10px 0;margin:0;text-align:center;color:#fff;line-height:20px;text-transform:uppercase;}*/
-/*.page_section header div.container h1,
-.page_section header div.container h2
- {
-  font-family: "Oranienbaum", serif;
-  font-size: 100px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  padding: 0 0 10px 0;
-  margin: 0;
-  text-align: left;
-  color: #fff;
-  line-height: 90px;
-}*/
+
 }
 /* Добавляем анимацию кнопке*/
 @keyframes slideUp {
