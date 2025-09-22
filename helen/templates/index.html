@@ -91,8 +91,6 @@
 </header><!-- //section header -->
 
 </section>
-<!--<div class="clear"></div>-->
-
 
 <section id="about" class="about">
 <div class="content_section container">
@@ -118,7 +116,7 @@
     </ul>
         <div class="indent">
     <p class="center">Записаться на консультацию</p>
-    <a class="btn btn-primary"  target="_blank" href="https://t.me/helenmishuta" rel="nofollow">Телеграм</a>
+    <a class="btn btn-primary"  target="_blank" href="https://t.me/+375333007892" rel="nofollow">Телеграм</a>
         </div>
 
 </div>
@@ -181,8 +179,8 @@
           Калькулятор индекса массы тела (ИМТ)
         </h2>
           <p class="center animate-on-scroll delay-2 mb-3">Проверьте свое текущеее состояние</p>
-        <div class="panel panel-default animate-on-scroll delay-3">
-          <div class="panel-body mb-5">
+        <div class="panel panel-default animate-on-scroll delay-3 mb-5">
+          <div class="panel-body">
             <form method="POST" class="form-horizontal" action="#calc">
               {% csrf_token %}
               <div class="form-group">
@@ -285,8 +283,6 @@
   </div>
   </div>
 </section>
-<!-- <script src="{% static 'js/jquery.js' %}"></script>-->
-<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
 <script>
 $('#calc form').submit(function(e) {
   e.preventDefault();
@@ -338,7 +334,7 @@ $('#calc form').submit(function(e) {
             {% endfor %}
         </div>
         <span class="center animate-on-scroll" >Цена: {{ service.price }} BYN</span>
-        <a class="btn btn-primary animate-on-scroll"  target="_blank" href="https://t.me/helenmishuta" rel="nofollow">Заказать</a>
+        <a class="btn btn-primary animate-on-scroll"  target="_blank" href="https://t.me/+375333007892" rel="nofollow">Заказать</a>
     </div>
 </div>
 {% endfor %}
