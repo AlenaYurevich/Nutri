@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from nutri.forms import BMIForm, ContactForm
 from calc.imt import calculate_bmi
 from blog.models import Post
+from django.conf import settings
 from django.core.mail import send_mail
 from .models import Service  # Импортируем модель Service
 
@@ -30,33 +30,30 @@ def handle_forms(request):
     if 'contact_submit' in request.POST:
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
-            # try:
-            #     # Отправка email
-            #     subject = 'Новое сообщение с сайта'
-            #     body = f"""
-            #         Имя: {contact_form.cleaned_data['name']}
-            #         Email: {contact_form.cleaned_data['email']}
-            #         Телефон: {contact_form.cleaned_data['phone']}
-            #         Сообщение: {contact_form.cleaned_data['message']}
-            #         """
-            #
-            #     send_mail(
-            #         subject,
-            #         body,
-            #         DEFAULT_FROM_EMAIL,  # из settings.py
-            #         ['admin@yourdomain.com'],  # куда отправлять
-            #         fail_silently=False,
-            #     )
-            print("=" * 50)
-            print("ФОРМА ОТПРАВЛЕНА (тестовый режим):")
-            print(f"Имя: {contact_form.cleaned_data['name']}")
-            print(f"Email: {contact_form.cleaned_data['email']}")
-            print(f"Телефон: {contact_form.cleaned_data['phone']}")
-            print(f"Сообщение: {contact_form.cleaned_data['message']}")
-            print("=" * 50)
+            try:
+                # Отправка email
+                subject = 'Новое сообщение с сайта'
+                body = f"""
+                    Имя: {contact_form.cleaned_data['name']}
+                    Email: {contact_form.cleaned_data['email']}
+                    Телефон: {contact_form.cleaned_data['phone']}
+                    Сообщение: {contact_form.cleaned_data['message']}
+                    """
+                # Проверяем, есть ли настройка email, иначе используем fallback
+                from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'noreply@yourdomain.com')
+                send_mail(
+                    subject,
+                    body,
+                    from_email,
+                    ['yurevichei@mail.ru'],  # куда отправлять
+                    fail_silently=False,
+                )
+                context['contact_success'] = True
+                context['contact_form'] = ContactForm()  # очищаем форму
+            except Exception as e:
+                print(f"Ошибка отправки email: {e}")
+                context['contact_errors'] = "Произошла ошибка при отправке. Попробуйте позже."
 
-            context['contact_success'] = True
-            context['contact_form'] = ContactForm()  # очищаем форму
         else:
             context['contact_form'] = contact_form
             context['contact_errors'] = "Пожалуйста, проверьте заполнение формы."

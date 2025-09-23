@@ -142,4 +142,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Путь для сбор�
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # или smtp.yandex.ru,  smtp.mail.ru
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'mironline9393@gmail.com'  # полный email
+EMAIL_HOST_PASSWORD = 'eblx vuzy ddqe egyl'  # не обычный пароль!
+DEFAULT_FROM_EMAIL = 'mironline9393@gmail.com'
