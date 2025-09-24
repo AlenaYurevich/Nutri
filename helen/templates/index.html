@@ -2,16 +2,16 @@
 {% load static %}
 {% block seo %}
     <title>Нутрициолог Елена Мишута онлайн</title>
-    <meta name="description" content="Запишись на консультацию нутрициолога онлайн ★ Расчет индекса массы тела ">
-    <meta name="keywords" content="Нутрициолог Минск Москва Брест Витебск Гомель Гродно Могилев расчет индекса массы тела онлайт">
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="#"/>
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website"/>
+    <meta name="description" content="Запишись на консультацию нутрициолога онлайн ★ Расчет индекса массы тела">
+    <meta name="keywords" content="Нутрициолог Минск Москва Брест Витебск Гомель Гродно Могилев расчет индекса массы тела онлайн">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{% url 'home' %}">
+    <meta property="og:url" content="mishuta-ntrition.pro">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Нутрициолог Елена Мишута">
-    <meta property="og:image" content="{% static 'images/lenamishuta.jpg' %}" />
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
+    <meta property="og:image" content="{% static 'images/elenamishuta.jpg' %}?v=2">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="Запишись на консультацию нутрициолога онлайн ★ Расчет индекса массы тела">
 {% endblock %}
 {% block page_content %}
 <!-- section header -->
@@ -31,19 +31,19 @@
  <p class="animate-on-scroll delay-2 mb-3">Знакомо ли Вам это?</p>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2 mb-3">
-<img loading="lazy" src="{% static 'images/gallery/01.jpg' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/01.jpg' %}" alt="Консультация нутрициолога онлайн">
     <span class="service_title">Не знаете, как совместить <strong>питание</strong> и работу</span>
 </div>
 </div>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-3">
-<img loading="lazy" src="{% static 'images/gallery/02.jpg' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/02.jpg' %}" alt="Консультация нутрициолога онлайн">
 <span class="service_title">Устали от <strong>диет</strong>, которые не работают на долгом сроке</span>
 </div>
 </div>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-4">
-<img loading="lazy" src="{% static 'images/gallery/03.jpg' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/03.jpg' %}" alt="Консультация нутрициолога онлайн">
 <span class="service_title">Хотите питаться правильно, разнообразно и без <strong>строгих ограничений</strong></span>
 </div>
 </div>
@@ -51,14 +51,14 @@
 </div>
 </section>
 
-<section id="" class ="advantages">
+<section class ="advantages">
 <header>
 <div class="content_section container">
 <div class="row indent">
 <h2 class="center shadow animate-on-scroll delay-1">Мои преимущества</h2>
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-2 mb-3">
-<img loading="lazy" src="{% static 'images/gallery/04.png' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/04.png' %}" alt="Консультация нутрициолога онлайн">
 <span>Высшее образование и <strong>многолетний опыт</strong> работы в медицине
  позволяют комплексно подойти к решению Вашей проблемы</span>
 <span>Использование в работе только <strong>научно-доказанных фактов</strong> с учётом рекомендаций врачей смежных специальностей (терапевт, эндокринолог, гастроэнтеролог)
@@ -68,7 +68,7 @@
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-3 mb-3">
-<img loading="lazy" src="{% static 'images/gallery/05.jpg' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/05.jpg' %}" alt="Консультация нутрициолога онлайн">
 <span>Мягко и комфортно меняем Ваш образ жизни для увеличения <strong>сил и энергии</strong>, снятия стресса, сохранения красоты и молодости, а также сохранения Вашего здоровья
 </span>
 <span>Доступен формат разовых консультации, а также персонального сопровождения
@@ -78,7 +78,7 @@
 
 <div class="col-md-4">
 <div class="service animate-on-scroll delay-4">
-<img loading="lazy" src="{% static 'images/gallery/06.jpg' %}" alt="Консультация нутрициолога онлайн" />
+<img loading="lazy" src="{% static 'images/gallery/06.jpg' %}" alt="Консультация нутрициолога онлайн">
 <span>Удобный формат работы (онлайн/оффлайн)</span>
 <span>Экономия времени и <strong>конфиденциальность</strong></span>
 <span>Легкий способ быть <strong>на связи</strong> (чат для оперативной поддержки), быстрый обмен информацией для достижения лучшего результата</span>
@@ -97,7 +97,7 @@
     <h2 class="center animate-on-scroll delay-1">Обо мне</h2>
 <div class="row">
     <div class="col-md-6">
-    <img loading="lazy" class="animate-on-scroll delay-2" src="{% static 'images/elenamishuta2.jpg' %}" alt="Консультация нутрициолога онлайн" />
+    <img loading="lazy" class="animate-on-scroll delay-2" src="{% static 'images/elenamishuta.jpg' %}" alt="Консультация нутрициолога онлайн">
     </div>
 <div class="col-md-6 animate-on-scroll delay-3">
     <ul>
@@ -118,7 +118,6 @@
     <p class="center">Записаться на консультацию</p>
     <a class="btn btn-primary"  target="_blank" href="https://t.me/+375333007892" rel="nofollow">Телеграм</a>
         </div>
-
 </div>
 </div>
 
@@ -128,8 +127,8 @@
     <div class="gallery_block2">
 <div class="gallery_item animate-on-scroll delay-2">
 <div class="img_block hover_img">
-<a href="{% static 'images/diploma2.jpg' %}" class="prettyPhoto" alt="Белорусский государственный медицинский университет" data-rel="prettyPhoto[about]">
-    <img src="{% static 'images/diploma.jpg' %}" />
+<a href="{% static 'images/diploma2.jpg' %}" class="prettyPhoto" data-rel="prettyPhoto[about]">
+    <img src="{% static 'images/diploma.jpg' %}" alt="Диплом врача">
     <div class="item_fadder"></div>
     <div class="link_ico"><i class="fa fa-search"></i></div>
 </a>
@@ -138,7 +137,7 @@
 <div class="gallery_item animate-on-scroll delay-3">
 <div class="img_block hover_img">
 <a href="{% static 'images/milano2.jpg' %}" class="prettyPhoto"  data-rel="prettyPhoto[about]">
-<img class="" src="{% static 'images/milano.jpg' %}" alt="Миланский университет"/>
+<img class="" src="{% static 'images/milano.jpg' %}" alt="Миланский университет">
 <div class="item_fadder"></div>
 <div class="link_ico"><i class="fa fa-search"></i></div>
 </a>
@@ -147,7 +146,7 @@
 <div class="gallery_item animate-on-scroll delay-4">
 <div class="img_block hover_img">
 <a href="{% static 'images/nutritionist2.jpg' %}" class="prettyPhoto"  data-rel="prettyPhoto[about]">
-<img class="" src="{% static 'images/nutritionist.jpg' %}" alt="Диплом нутрициолога"/>
+<img class="" src="{% static 'images/nutritionist.jpg' %}" alt="Диплом нутрициолога">
 <div class="item_fadder"></div>
 <div class="link_ico"><i class="fa fa-search"></i></div>
 </a>
@@ -156,7 +155,7 @@
 <div class="gallery_item animate-on-scroll delay-5">
 <div class="img_block hover_img">
 <a href="{% static 'images/docstarklab2.jpg' %}" class="prettyPhoto"  data-rel="prettyPhoto[about]">
-<img class="" src="{% static 'images/docstarklab.jpg' %}" alt="Повышение квалификации нутрициолога"/>
+<img class="" src="{% static 'images/docstarklab.jpg' %}" alt="Повышение квалификации нутрициолога">
 <div class="item_fadder"></div>
 <div class="link_ico"><i class="fa fa-search"></i></div>
 </a>
@@ -322,7 +321,7 @@ $('#calc form').submit(function(e) {
             <p class="center text-uppercase"><strong>{{ service.purpose_title }}</strong></p>
             <ul>
                 {% for item in service.get_purposes_list %}
-                <li class="justify">{{ item }}</li>
+                <li>{{ item }}</li>
                 {% endfor %}
             </ul>
         </div>
@@ -330,7 +329,7 @@ $('#calc form').submit(function(e) {
         <div class="green-block animate-on-scroll delay-4">
             <p class="center text-uppercase"><strong>{{ service.includes_title }}</strong></p>
             {% for item in service.get_included_items_list %}
-            <p class="justify"><i class="fa fa-check"></i> {{ item }}</p>
+            <p><i class="fa fa-check"></i> {{ item }}</p>
             {% endfor %}
         </div>
         <span class="center animate-on-scroll" >Цена: {{ service.price }} BYN</span>
@@ -352,7 +351,7 @@ $('#calc form').submit(function(e) {
                             <div class="blog_post">
                                 <div class="round_corners">
                                 	<div class="post_flex">
-                                        <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}"/>
+                                        <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}">
                                     </div>
                                 <h3><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
                                 <small>{{ post.created_on }}</small>

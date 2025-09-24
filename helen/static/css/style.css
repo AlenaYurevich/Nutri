@@ -269,8 +269,7 @@ iframe{width:100% !important;margin:0 !important;padding:0 !important;border:0 !
 .footer_bottom .socials li a{color:#fff;}
 .footer_bottom .socials li a:hover{color:#fff;}
 
-a.menu_toggler{display:none;}
-
+/*a.menu_toggler{display:none;}*/
 nav.mobile_header{display:none!important;}
 .navmenu ul li:last-child{margin-right:3px;}
 .dropdown-toggle::after {
@@ -541,12 +540,12 @@ thead{font-size:20px}
 .video iframe{height:180px !important;}
 }
 /*a.menu_toggler{display:none;}*/
-@media only screen and (max-width:990px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
+@media only screen and (max-width:1200px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
 #top header #logo{padding:5px 10px 5px 0;}
 #top header .container{position:relative;}
-a.menu_toggler{display:inline-block;float:right;margin:-17px 20px 0px 0;border:none;border-radius:0;box-shadow:2px 2px 2px rgba(0,0,0,.2);width:34px;height:34px;position:absolute;overflow:hidden;right:0;top:50%;background: linear-gradient(to bottom, #EEECE0 16%,#EAE6DB 9%, #CAC0A3 25%, #60584B 84%)}
+/*a.menu_toggler{display:inline-block;float:right;margin:-17px 20px 0px 0;border:none;border-radius:0;box-shadow:2px 2px 2px rgba(0,0,0,.2);width:34px;height:34px;position:absolute;overflow:hidden;right:0;top:50%;background: linear-gradient(to bottom, #EEECE0 16%,#EAE6DB 9%, #CAC0A3 25%, #60584B 84%)}*/
 a.menu_toggler:hover{background-color:#ffffff;}
-a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7px;width:20px;height:20px;background-repeat:no-repeat;background:url("../images/btn_menu.png") no-repeat 0 0; }
+/*a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7px;width:20px;height:20px;background-repeat:no-repeat;background:url("../images/btn_menu.png") no-repeat 0 0; }*/
 .fixed-menu,
 .fixed-menu:before,
 .fixed-menu:after{display:none!important;}
@@ -619,15 +618,16 @@ a.menu_toggler:before{background-image:url("../images/retina/btn_menu.png");back
     color: #A0A0A0 !important;
     opacity: 1 !important;
 }
-.card {
+/*.card {
   @extend .panel;
   @extend .panel-default;
 }
 .card-body {
   @extend .panel-body;
-}
+}*/
 /* И так далее для всех компонентов */
 .bmi-calc .mt-30 { margin-top: 30px; }
 .bmi-calc .p-20 { padding: 20px; }
 .bmi-calc .well { background: white; }
 .bmi-calc .h1 { font-size: 36px; }
+.panel-body .bmi-result {padding: 10px}
