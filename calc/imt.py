@@ -73,8 +73,13 @@ def energy(height, weight, age, gender, activity):
             energy_result = (9.99 * weight + 6.25 * height - 4.92 * age + 5) * activity
 
         # Округляем до целого числа
-        energy_rounded = round(energy_result)
+        energy_rounded = round(energy_result, -1)
+        energy_rounded_min = round(energy_result * 0.9, -1)
+        energy_rounded_max = round(energy_result * 1.1, -1)
 
-        return f'Ваша суточная энергопотребность {int(energy_rounded)} килокалорий'
+        return f'''Ваша суточная энергопотребность: {int(energy_rounded)} килокалорий,
+                Оптимальный дефицит (минус 10 процентов) {int(energy_rounded_min)},
+                Оптимальный профицит (плюс 10 процентов) {int(energy_rounded_max)}'''
+
     else:
         return f'Максимальный рост 210 см'

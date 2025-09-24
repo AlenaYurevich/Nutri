@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,22 @@
     {% endblock %}
     <!-- Favicon && Apple touch -->
 <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-<!--<link rel="shortcut icon" href="{% static 'images/logo5.png' %}" type="image/x-icon">-->
-<!--<link rel="apple-touch-icon" href="images/icons/apple_icons_57x57.png">-->
-<!--<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple_icons_72x72.png">-->
-<!--<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple_icons_114x114.png">-->
-<!--<link rel="apple-touch-icon" sizes="192x192" href="images/icons/apple_icons_192x192.png">-->
-    <link href="{% static 'css/first.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
-    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" /><!-- для галереи -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link rel="apple-touch-icon" href="{% static 'images/icons/apple_icons_57x57.png' %}">
+<link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/icons/apple_icons_72x72.png' %}">
+<link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/icons/apple_icons_114x114.png' %}">
+<link rel="apple-touch-icon" sizes="192x192" href="{% static 'images/icons/apple_icons_192x192.png' %}">
+    <link href="{% static 'css/first.css' %}?ver=5" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/bootstrap.css' %}?ver=5" rel="stylesheet">
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css"><!-- для галереи -->
+    <link href="{% static 'css/style.css' %}?ver=5" rel="stylesheet">
 <!--    <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" />-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
 <script src="{% static 'js/jquery.js' %}"></script>
+</head>
 <body class="animated single_page" data-animated="fadeIn">
 <div><!-- page -->
 <!-- header section -->
@@ -34,11 +33,11 @@
 <div class="container">
 <!-- logo -->
 <div id="logo">
-<a href="{% url 'home' %}" tille="Главная страница">
-    <img class="shadow2" src ="{% static 'images/logo5.png' %}"> </a>
+<a href="{% url 'home' %}" title="Главная страница">
+    <img class="shadow2" src ="{% static 'images/logo5.png' %}" alt="Нутрициолог Елена Мишута"> </a>
     <div class="vertical-group">
-        <span2 data-double="Елена Мишута">Елена Мишута</span2>
-        <span2 data-double="Нутрициолог">Нутрициолог</span2>
+        <span data-double="Елена Мишута">Елена Мишута</span>
+        <span data-double="Нутрициолог">Нутрициолог</span>
     </div>
 </div>
 <nav class="navmenu">
@@ -60,19 +59,19 @@
     {% block page_content %}
 
     {% endblock %}
-<section>
-<!-- section content -->
-<div class="content_section container empty_section">
-<a href="#contact" class="next_section"></a>
-</div>
-<!-- //section content -->
-</section>
+<!--<section>-->
+<!--&lt;!&ndash; section content &ndash;&gt;-->
+<!--<div class="content_section container empty_section">-->
+<!--<a href="#contact" class="next_section"></a>-->
+<!--</div>-->
+<!--&lt;!&ndash; //section content &ndash;&gt;-->
+<!--</section>-->
 <!-- Contact content -->
 <section class="contact" id="contact">
 <header class="text-center mb-5">
     <div class="container">
         <h2 class="animate-on-scroll delay-1">Записаться на консультацию</h2>
-        <p class="lead animate-on-scroll delay-2">Укажите желаемую дату и время, я вам перезвоню</p>
+        <p class="lead animate-on-scroll delay-2">Укажите желаемую дату и время, я с вами свяжусь</p>
     </div><!-- end .container -->
 </header>
 <div class="contact_form content_section">
@@ -106,7 +105,7 @@
 <div class="indent">
         {% if contact_success %}
 <div class="alert alert-success" role="alert">
-   Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.
+   Ваше сообщение успешно отправлено! Свяжусь с вами в ближайшее время
 </div>
         {% endif %}
 
@@ -126,7 +125,6 @@
         <p><a href="viber://chat?number=375333007892" rel="nofollow" target="_blank"><i class="fab fa-viber fa-fw me-2 text-viber"></i>Viber</a></p>
         <p><a href="https://t.me/+375333007892" rel="nofollow" target="_blank"><i class="fab fa-telegram fa-fw me-2"></i>Telegram</a></p>
         <p><a href="mailto:misutaelena02@gmail.com" rel="nofollow" target="_blank"><i class="far fa-envelope fa-fw me-2"></i>Email</a></p>
-        <small class="text-muted">* Среднее время ответа: 20 минут в рабочее время</small>
     </div>
 
         </div><!--row-->

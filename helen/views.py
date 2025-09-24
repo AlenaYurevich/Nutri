@@ -40,12 +40,13 @@ def handle_forms(request):
                     Сообщение: {contact_form.cleaned_data['message']}
                     """
                 # Проверяем, есть ли настройка email, иначе используем fallback
-                from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'noreply@yourdomain.com')
+                from_email = getattr(settings, 'DEFAULT_FROM_EMAIL')
                 send_mail(
                     subject,
                     body,
                     from_email,
                     ['yurevichei@mail.ru'],  # куда отправлять
+                    # ['yurevichei@mail.ru', 'misutaelena02@gmail.com'],
                     fail_silently=False,
                 )
                 context['contact_success'] = True
@@ -92,7 +93,10 @@ def services(request):
 
 
 def handler404(request, exception):
-    context = {'error_message': 'Страница не найдена'}
+    forms_context = handle_forms(request)
+    context = {'error_message': 'Страница не найдена',
+               **forms_context,
+               }
     return render(request, '404.html', context, status=404)
 
 

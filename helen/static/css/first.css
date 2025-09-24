@@ -31,7 +31,7 @@ header::before {
     bottom: 0;
     background: linear-gradient(to bottom,
         rgba(0, 0, 0, 0) 20%,
-        rgba(0, 0, 0, 0.7) 70%); /* Полупрозрачный черный цвет для затемнения */
+        rgba(0, 0, 0, 0.8) 80%); /* Полупрозрачный черный цвет для затемнения */
     z-index: 1; /* Убедитесь, что слой находится поверх изображения */
 }
 header > * {
@@ -47,7 +47,7 @@ header #logo img.logo_retina{display:none;}
 .blog header{color:#fff;width:100%;overflow:hidden;padding-top:150px;padding-bottom:60px;}
 #top header{height:73px;padding:0; background:#ffffff;border:none;position:absolute;left:0;top:0;width:100%!important;z-index:9999;box-shadow:0 2px 2px rgba(0, 0, 0, 0.06);}
 #logo {float:left;padding:3px 10px 0 0;vertical-align:top;  display: flex; /* Горизонтальное расположение */ align-items: flex-start; /* Ключевое свойство для выравнивания по верху */}
-.gold span2 {
+.gold span {
     font-family: "Oranienbaum", serif;
     color: #cfc09f;
     text-transform: uppercase;
@@ -61,16 +61,17 @@ header #logo img.logo_retina{display:none;}
     font-weight: 300;
     font-style: normal;
 }
-.gold span2 + span2 {
+.gold span + span {
     font-size: 16px;
     letter-spacing: 14px;
 }
-.gold span:before, .gold span2:before {
+.gold span:before {
     content: attr(data-double);
     left: 0;
     position: absolute;
     z-index: 1;
-    background: linear-gradient(to bottom, #EEECE0 45%,#EAE6DB 25%, #CAC0A3 25%, #60584B 84%);
+    /*background: linear-gradient(to bottom, #EEECE0 45%,#EAE6DB 25%, #CAC0A3 25%, #9b8a68 84%);*/
+    background: linear-gradient(to bottom, #e9e6dc 28%, #c2b99c 48%, #CAC0A3 84%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
@@ -116,20 +117,6 @@ header #logo img.logo_retina{display:none;}
     transform: translateY(0); /* Конечное положение*/
   }
 }
-/* Применяем анимацию к заголовкам */
-/*.page_section header div.container h1,
-.page_section header div.container h2
- {
-  font-family: "Oranienbaum", serif;
-  font-size: 100px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  padding: 0 0 10px 0;
-  margin: 0;
-  text-align: left;
-  color: #fff;
-  line-height: 90px;
-}*/
 .page_section header div.container h1,
 .page_section header div.container h2
  {
@@ -182,8 +169,9 @@ header #logo img.logo_retina{display:none;}
 
 .navmenu{margin:0;padding:20px 0 2px 0;float:right;}
 .navmenu ul li{display:inline-block;vertical-align:top;line-height:32px; }
-.navmenu ul li a{padding:5px;font-weight:400; color: #cfc09f;
-background: linear-gradient(to bottom, #EEECE0 55%,#EAE6DB 40%, #CAC0A3 25%, #60584B 84%);
+.navmenu ul li a{padding:4px;font-weight:400; color: #cfc09f;
+ background: linear-gradient(to bottom,  #e9e6dc 50%, #c2b99c 48%, #CAC0A3 84%);
+ /*background: linear-gradient(to bottom, #dfdacb 28%, #c2b99c 48%, #CAC0A3 64%);*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Roboto Condensed", sans-serif;
@@ -200,13 +188,13 @@ background: linear-gradient(to bottom, #EEECE0 55%,#EAE6DB 40%, #CAC0A3 25%, #60
 section header h1{font-size:65px !important;line-height:65px !important;}
 section header h3{font-size:22px !important;line-height:28px !important;}}
 
-@media only screen and (max-width:990px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
+@media only screen and (max-width:1200px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
 #top header{height:74px !important;position:relative;width:100%;z-index:999;padding:0;}
 #top header #logo{padding:5px 10px 5px 0;}
 #top header #logo img{height:54px !important;width:auto !important;margin-top:5px;}
 #top header .container{position:relative;}
 #home{margin-top:0;}
-a.menu_toggler{display:inline-block;float:right;margin:-17px 20px 0px 0;border:none;border-radius:0;box-shadow:none;width:34px;height:34px; position:absolute;overflow:hidden; right:0; top:50%; background: linear-gradient(to bottom, #EEECE0 16%,#EAE6DB 9%, #CAC0A3 25%, #60584B 84%);}
+a.menu_toggler{display:inline-block;float:right;margin:-17px 20px 0px 0;border:none;border-radius:0;box-shadow:none;width:34px;height:34px; position:absolute;overflow:hidden; right:0; top:50%; background: linear-gradient(to bottom, #e9e6dc 28%, #c2b99c 48%, #CAC0A3 84%);}
 a.menu_toggler:hover{background-color:#ffffff;}
 a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7px;width:20px;height:20px;background-repeat:no-repeat;background:url("../images/btn_menu.png") no-repeat 0 0;}
 .fixed-menu,
@@ -220,8 +208,8 @@ a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7p
 #top header nav{display:none!important;}
 }
 .container {
-padding-right: 15px;
-padding-left: 15px;
+padding-right: 5px;
+padding-left: 5px;
 margin-right: auto;
 margin-left: auto;
 }
