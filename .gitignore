@@ -11,3 +11,5 @@
 /helen/templates/404.html
 /helen/templates/500.html
 /calc/models.py
+/helen/templates/robots.txt
+/helen/templates/sitemap.xml

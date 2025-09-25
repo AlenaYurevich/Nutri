@@ -60,7 +60,6 @@ font-style: italic;
 }
 h1 {
 margin: .67em 0;
-font-size: 2em;
 }
 mark {
 color: #000;
@@ -366,24 +365,6 @@ h6 .small,
 font-weight: normal;
 line-height: 1;
 color: #999;
-}
-h1,
-.h1,
-h2,
-.h2,
-h1 small,
-.h1 small,
-h2 small,
-.h2 small,
-h3 small,
-.h3 small,
-h1 .small,
-.h1 .small,
-h2 .small,
-.h2 .small,
-h3 .small,
-.h3 .small {
-font-size: 65%;
 }
 h4,
 .h4,

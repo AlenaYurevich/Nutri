@@ -2,8 +2,8 @@
 {% load static %}
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block seo %}
     {% endblock %}
     <!-- Favicon && Apple touch -->
@@ -12,17 +12,17 @@
 <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/icons/apple_icons_72x72.png' %}">
 <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/icons/apple_icons_114x114.png' %}">
 <link rel="apple-touch-icon" sizes="192x192" href="{% static 'images/icons/apple_icons_192x192.png' %}">
-    <link href="{% static 'css/first.css' %}?ver=5" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/bootstrap.css' %}?ver=5" rel="stylesheet">
+    <link href="{% static 'css/first.css' %}?ver=07" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}?ver=07" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}?ver=07" rel="stylesheet">
     <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css"><!-- для галереи -->
-    <link href="{% static 'css/style.css' %}?ver=5" rel="stylesheet">
-<!--    <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" />-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/jquery-ui.min.js' %}"></script>
 </head>
 <body class="animated single_page" data-animated="fadeIn">
 <div><!-- page -->
@@ -34,7 +34,7 @@
 <!-- logo -->
 <div id="logo">
 <a href="{% url 'home' %}" title="Главная страница">
-    <img class="shadow2" src ="{% static 'images/logo5.png' %}" alt="Нутрициолог Елена Мишута"> </a>
+    <img class="shadow2" src ="{% static 'images/logo.png' %}" alt="Нутрициолог Елена Мишута"> </a>
     <div class="vertical-group">
         <span data-double="Елена Мишута">Елена Мишута</span>
         <span data-double="Нутрициолог">Нутрициолог</span>
@@ -59,13 +59,6 @@
     {% block page_content %}
 
     {% endblock %}
-<!--<section>-->
-<!--&lt;!&ndash; section content &ndash;&gt;-->
-<!--<div class="content_section container empty_section">-->
-<!--<a href="#contact" class="next_section"></a>-->
-<!--</div>-->
-<!--&lt;!&ndash; //section content &ndash;&gt;-->
-<!--</section>-->
 <!-- Contact content -->
 <section class="contact" id="contact">
 <header class="text-center mb-5">
@@ -178,7 +171,7 @@
 </div><!--//footer-->
 </div><!-- end #page1 -->
 
-    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+<!--    <script src="{% static 'js/jquery-ui.min.js' %}"></script>-->
         <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

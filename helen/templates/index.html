@@ -96,11 +96,11 @@
 <div class="content_section container">
     <h2 class="center animate-on-scroll delay-1">Обо мне</h2>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 mb-3">
     <img loading="lazy" class="animate-on-scroll delay-2" src="{% static 'images/elenamishuta.jpg' %}" alt="Консультация нутрициолога онлайн">
     </div>
 <div class="col-md-6 animate-on-scroll delay-3">
-    <ul>
+    <ul class="mb-1">
         <li>Дипломированный <strong>нутрициолог</strong> с высшим медицинским образованием</li>
         <li>Врач с европейским дипломом (обучение и защита диплома врача на базе медицинского факультета Миланского университета, Италия)</li>
         <li>Консультант по питанию и здоровому образу жизни</li>
@@ -122,7 +122,7 @@
 </div>
 
     <div class="row indent">
- <h2 class="center animate-on-scroll delay-1 indent">Профессиональное образование</h2>
+ <h3 class="center animate-on-scroll delay-1 indent">Профессиональное образование</h3>
          <p class="center animate-on-scroll delay-2 mb-3">Дипломы и сертификаты</p>
     <div class="gallery_block2">
 <div class="gallery_item animate-on-scroll delay-2">
@@ -184,7 +184,7 @@
               {% csrf_token %}
               <div class="form-group">
                 <label for="{{ bmi_form.height.id_for_label }}" class="col-sm-4 control-label">
-                  {{ bmi_form.height.label }} (в см)
+                  {{ bmi_form.height.label }}
                 </label>
                 <div class="col-sm-8">
                   {{ bmi_form.height }}
@@ -198,7 +198,7 @@
 
               <div class="form-group">
                 <label for="{{ bmi_form.weight.id_for_label }}" class="col-sm-4 control-label">
-                  {{ bmi_form.weight.label }} (в кг)
+                  {{ bmi_form.weight.label }}
                 </label>
                 <div class="col-sm-8">
                   {{ bmi_form.weight }}
@@ -220,7 +220,7 @@
               </div>
             </form>
             {% if bmi_result %}
-            <div class="bmi-result mt-30 p-20
+            <div class="bmi-result
                         {% if bmi_result.0.bmi < 18.5 %}bg-info
                         {% elif bmi_result.0.bmi >= 30 %}bg-danger
                         {% else %}bg-success{% endif %}">
@@ -258,7 +258,7 @@
     <div class="progress-bar progress-bar-warning" style="width: 8.5%">16-18.5</div>
     <div class="progress-bar progress-bar-success" style="width: 24.5%">18.5-25</div>
     <div class="progress-bar progress-bar-warning" style="width: 20%">25-30</div>
-    <div class="progress-bar progress-bar-danger" style="width: 31%">≥30</div>
+    <div class="progress-bar progress-bar-danger" style="width: 30.5%">≥30</div>
   </div>
         <div class="text-center small text-muted">
     Диапазоны ИМТ по классификации ВОЗ
@@ -312,7 +312,7 @@ $('#calc form').submit(function(e) {
             <p class="center text-uppercase"><strong>Кому:</strong></p>
             <ul>
                 {% for item in service.get_target_audience_list %}
-                <li class="justify">{{ item }}</li>
+                <li>&nbsp{{ item }}</li>
                 {% endfor %}
             </ul>
         </div>
@@ -321,7 +321,7 @@ $('#calc form').submit(function(e) {
             <p class="center text-uppercase"><strong>{{ service.purpose_title }}</strong></p>
             <ul>
                 {% for item in service.get_purposes_list %}
-                <li>{{ item }}</li>
+                <li>&nbsp{{ item }}</li>
                 {% endfor %}
             </ul>
         </div>
@@ -329,7 +329,7 @@ $('#calc form').submit(function(e) {
         <div class="green-block animate-on-scroll delay-4">
             <p class="center text-uppercase"><strong>{{ service.includes_title }}</strong></p>
             {% for item in service.get_included_items_list %}
-            <p><i class="fa fa-check"></i> {{ item }}</p>
+            <p><i class="fa fa-check"></i>&nbsp{{ item }}</p>
             {% endfor %}
         </div>
         <span class="center animate-on-scroll" >Цена: {{ service.price }} BYN</span>
@@ -353,7 +353,7 @@ $('#calc form').submit(function(e) {
                                 	<div class="post_flex">
                                         <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}">
                                     </div>
-                                <h3><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
+                                <h3><a class="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
                                 <small>{{ post.created_on }}</small>
                                 <p class="">{{ post.content | safe | slice:":170" }} <a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
                                 </div>

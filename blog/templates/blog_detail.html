@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block seo %}
-    <title>{{ post.title }}</title>
-    <meta name="description" content='{{ post.content | safe | slice:":150" }}'>
-    <meta name="keywords" content="Тарифы, рост тарифов, новые расчеты">
-    <link rel="canonical" href="{% url 'blog_detail' slug=post.slug %}"/>
-    <meta property="og:title" content="{{ post.title }}"/>
-    <meta property="og:image" content="{{ post.image }}"/>
-    <meta property="og:description" content='{{ post.content | safe | slice:":150" }}'/>
-    <meta property="og:type" content="article"/>
+<title>{{ post.title }} | Нутрициолог Елена Мишута</title>
+<meta name="description" content='{{ post.content | safe | slice:":160" }}'>
+<meta name="keywords" content="расчет калорий для женщин, норма калорий, нутрициология, питание, здоровье">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{% url 'blog_detail' slug=post.slug %}">
+<meta property="og:url" content="{% url 'blog_detail' slug=post.slug %}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ post.title }} | Нутрициолог Елена Мишута">
+<meta property="og:image" content="{{ post.image }}">
+<meta property="og:site_name" content="Нутрициолог Елена Мишута">
+<meta property="og:description" content='{{ post.content | safe | slice:":160" }}'>
+<meta property="article:published_time" content="{{ post.created_on }}">
+<meta property="article:author" content="Елена Мишута">
 {% endblock %}
 {% block page_content %}
  <section class="blog">
@@ -23,7 +28,7 @@
     <div class="col-md-3 order-md-1">
     </div>
     <div class="col-md-7 order-md-2">
-        <h2 class=""><a class ="" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a><span class="text-muted"></span></h2>
+        <h2><a href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a><span class="text-muted"></span></h2>
         <p>{{ post.created_on }} |
       {% for category in post.categories.all %}
       <a href="{% url 'blog_category' category.slug %}">
@@ -32,12 +37,13 @@
       {% endfor %}
         </p>
         <p>{{ post.content | safe }}</p>
-        <img class = "img-fluid" src = "{{ post.image.url}}" alt = "{{ post.alt }}"/>
+        <img class = "img-fluid" src = "{{ post.image.url}}" alt = "{{ post.alt }}">
     </div>
 
   </div>
         <div class="container">
      <a class="" href="{% url 'blog_index' %}">Все статьи >>></a>
          </div>
+     <div class="indent"></div>
   </section>
  {% endblock %}
