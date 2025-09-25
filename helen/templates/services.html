@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block seo %}
-    <title>Нутрициолог Елена Мишута онлайн</title>
-    <meta name="description" content="Запишись на консультацию нутрициолога онлайн ★ Расчет индекса массы тела ">
-    <meta name="keywords" content="Нутрициолог Минск Москва Брест Витебск Гомель Гродно Могилев расчет индекса массы тела онлайт">
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="#"/>
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Нутрициолог Елена Мишута">
-    <meta property="og:image" content="{% static 'images/lenamishuta.jpg' %}" />
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
+<title>Услуги нутрициолога: расчет калорий, программа питания, ИМТ | Елена Мишута</title>
+<meta name="description" content="Персональные услуги нутрициолога: онлайн расчет калорий для похудения, составление программы питания, расчет ИМТ. Консультации для женщин.">
+<meta name="keywords" content="услуги нутрициолога, расчет калорий, программа питания, расчет имт, расчет калорий для похудения, расчет калорий для женщин, консультация нутрициолога, персональный план питания, специализированное питание">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{% url 'services' %}">
+<meta property="og:url" content="https://mishuta-nutrition.pro/services">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Услуги нутрициолога Елены Мишуты: расчет калорий и программы питания">
+<meta property="og:image" content="{% static 'images/lenamishuta.jpg' %}">
+<meta property="og:site_name" content="Нутрициолог Елена Мишута">
+<meta property="og:description" content="★ Профессиональные услуги нутрициолога: расчет калорий онлайн, персональная программа питания, консультации для похудения и здоровья.">
 {% endblock %}
 {% block page_content %}
 <!-- section header -->
@@ -30,32 +30,32 @@
         <h4 class="center">{{ service.subtitle }}</h4>
         {% endif %}
 
-        <div class="green-block">
+        <div class="green-block animate-on-scroll delay-2">
             <p class="center text-uppercase"><strong>Кому:</strong></p>
             <ul>
                 {% for item in service.get_target_audience_list %}
-                <li class="justify">{{ item }}</li>
+                <li>&nbsp;{{ item }}</li>
                 {% endfor %}
             </ul>
         </div>
 
-        <div class="green-block">
+        <div class="green-block animate-on-scroll delay-3">
             <p class="center text-uppercase"><strong>{{ service.purpose_title }}</strong></p>
             <ul>
                 {% for item in service.get_purposes_list %}
-                <li class="justify">{{ item }}</li>
+                <li>&nbsp;{{ item }}</li>
                 {% endfor %}
             </ul>
         </div>
 
-        <div class="green-block">
+        <div class="green-block animate-on-scroll delay-4">
             <p class="center text-uppercase"><strong>{{ service.includes_title }}</strong></p>
             {% for item in service.get_included_items_list %}
-            <p class="justify"><i class="fa fa-check"></i> {{ item }}</p>
+            <p><i class="fa fa-check"></i>&nbsp;{{ item }}</p>
             {% endfor %}
         </div>
-        <span class="center">Цена: {{ service.price }} BYN</span>
-        <a class="btn btn-primary"  target="_blank" href="https://t.me/helenmishuta" rel="nofollow">Заказать</a>
+        <span class="center animate-on-scroll" >Цена: {{ service.price }} BYN</span>
+        <a class="btn btn-primary animate-on-scroll"  target="_blank" href="https://t.me/+375333007892" rel="nofollow">Заказать</a>
     </div>
 </div>
 {% endfor %}
@@ -63,4 +63,5 @@
         </div>
     </header>
 </section>
+<div class="indent"></div>
 {% endblock %}

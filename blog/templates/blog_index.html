@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block seo %}
-  <title>База знаний - Страница {{ page_obj.number }}</title>
-  <meta name="description" content="Полезная информация от нутрициолога. Страница {{ page_obj.number }}">
-  <meta name="keywords" content="Здоровье, питание, нутрициолог, программы питания">
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="#"/>
-  <meta property="og:url" content="">
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="База знаний"/>
-  <meta property="og:image" content="https://posttarif.by/apple-touch-icon.png"/>
-  <meta property="og:site_name" content=""/>
-  <meta property="og:description" content="Полезная информация от нутрициолога"/>
+<title>База знаний о питании и физиологии от нутрициолога Елены Мишуты - страница {{ page_obj.number }}</title>
+<meta name="description" content="Статьи о нутрициологии, диетологии и физиологии для вашего здоровья. Объясняем простым языком расчет калорий, нутриенты и основы специализированного питания. Страница {{ page_obj.number }}">
+<meta name="keywords" content="нутрициология, диетология, нутриенты, расчет калорий, специализированное питание, физиология питания, основы нутрициологии, статьи о питании">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{% url 'blog_index' %}">
+<meta property="og:url" content="https://mishuta-nutrition.pro/blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="База знаний о питании: статьи от нутрициолога Елены Мишуты">
+<meta property="og:image" content="{% static 'images/elenamishuta.jpg' %}">
+<meta property="og:site_name" content="Нутрициолог Елена Мишута">
+<meta property="og:description" content="★ Простые и понятные статьи о нутрициологии и физиологии. Узнайте все о расчете калорий, нутриентах и правильном питании для здоровья.">
  {% endblock %}
 {% block page_content %}
 <main>
@@ -33,16 +33,15 @@
                             <div class="blog_post">
                                 <div class="round_corners">
                                 	<div class="post_flex">
-                                        <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}"/>
+                                        <img src="{{ post.image_min.url }}" alt="{{ post.alt }}" width="494">
                                     </div>
-                                <h3><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
+                                <h2><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h2>
                                 <small>{{ post.created_on }}</small>
-                                <p class="">{{ post.content | safe | slice:":100" }} <a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
+                                <p>{{ post.content | safe | slice:":100" }} <a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
                                 </div>
                         </div><!--//blog_post-->
                         </div>
                         {% endfor %}
-
                     </div>
                 </div>
             </div>

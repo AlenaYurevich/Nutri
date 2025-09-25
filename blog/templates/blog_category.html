@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block seo %}
-  <title>Новости по категории {{ category.name | capfirst | default_if_none:"-" }}</title>
-  <meta name="description" content="Обновления на сайте, повышение тарифов на услуги по категории {{ category.name | capfirst }}">
-  <meta name="keywords" content="Тарифы, рост тарифов, новые расчеты">
-  <link rel="canonical" href="{% url 'blog_category' category.slug %}"/>
-  <meta property="og:title" content="Новости по категории {{ category.name | capfirst | default_if_none:'-' }}"/>
-  <meta property="og:image" content="https://posttarif.by/apple-touch-icon.png"/>
-  <meta property="og:description" content="Обновления на сайте, повышение тарифов на услуги по категории {{ category.name | capfirst }}"/>
-  <meta property="og:type" content="article"/>
+<title>Статьи по теме: {{ category.name | capfirst | default_if_none:"-" }} | Нутрициолог Елена Мишута</title>
+<meta name="description" content="Все статьи на тему {{ category.name }} от нутрициолога Елены Мишуты. Простые и понятные материалы о питании, расчете калорий и здоровом образе жизни.">
+<meta name="keywords" content="{{ category.name }}, статьи о питании, нутрициология, здоровое питание">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{% url 'blog_category' category.slug %}">
+<meta property="og:url" content="{% url 'blog_category' category.slug %}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Статьи по теме: {{ category.name | capfirst | default_if_none:'-' }} | Нутрициолог Елена Мишута">
+<meta property="og:image" content="{% static 'images/elenamishuta.jpg' %}">
+<meta property="og:site_name" content="Нутрициолог Елена Мишута">
+<meta property="og:description" content="Читайте все статьи на тему {{ category.name }} в блоге нутрициолога Елены Мишуты. Экспертные материалы о правильном питании.">
 {% endblock %}
 {% block page_content %}
  <section class="blog">
@@ -29,7 +32,7 @@
       <div class="blog_post">
           <div class="round_corners">
               <div class="post_flex">
-                  <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}"/>
+                  <img src = "{{ post.image_min.url }}" alt = "{{ post.alt }}">
               </div>
               <h3><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
               <small>{{ post.created_on }} |</small>

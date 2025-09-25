@@ -11,9 +11,9 @@ Activity = [(1.2, f'Минимальная активность'),
 
 
 class IdmtForm(forms.Form):
-    height = forms.IntegerField(label="Введите свой рост в сантиметрах", min_value=120, initial=170,
+    height = forms.IntegerField(label="Введите свой рост, см", min_value=120, initial=170,
                                 widget=forms.NumberInput(attrs={'class': "form-control", 'autofocus': 'autofocus'}))
-    weight = forms.DecimalField(label="Введите свой вес в кг", min_value=1, initial=60,
+    weight = forms.DecimalField(label="Введите свой вес, кг", min_value=1, initial=60,
                                 decimal_places=1, widget=forms.NumberInput(attrs={'class': "form-control"}))
     age = forms.IntegerField(label="Введите свой возраст, полных лет", min_value=10,
                              widget=forms.NumberInput(attrs={'class': "form-control"}))
