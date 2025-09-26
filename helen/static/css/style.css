@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth; /* Плавная прокрутка */
+  scroll-padding-top: 100px; /* Работает для всей страницы */
 }
 :root {
   /* Основные цвета */
@@ -18,8 +19,7 @@ ul{padding:0;margin:0;}
 li{padding:0;margin:6px;}
 .fleft {float:left;}
 .fright {float:right;}
-.shadow {text-shadow: 2px 1px 1px rgba(0,0,0,.4)}
-.shadow2 {filter: drop-shadow(2px 4px 2px rgba(0,0,0,.4));}
+.shadow {text-shadow: 1px 1px 1px rgba(0,0,0,.5)}
 h1, h2, h3 {
   font-family: "Oranienbaum", serif;
   text-transform: uppercase;
@@ -81,8 +81,6 @@ margin: 20px 0}
 .service:hover .service_icon{background-color:#EE19EE;}
 .service h3{padding-top:10px;font-weight:400;color: var(--main-color1); display:block;text-align:center; font-size:2em; margin: 0 0 0.4em;
 }
-/*.page_section h2{font-size: 50px}*/
-
 .green-block {
   background: var(--main-color1); /* Зеленый цвет */
   padding: 30px;
@@ -192,7 +190,7 @@ h3.title{font-style:normal;font-size:24px;font-weight:300;color:#000;padding:0;m
 .portfolio_item_wrapper{background:#ffffff;padding:14px;box-shadow:0 0 4px rgba(0, 0, 0, 0.13);border-radius:6px;}
 .portfolio_item_wrapper img,
 .portfolio_item_wrapper .item_fadder{border-radius:3px;}
-.blog_post{position:relative;padding:14px;background:#fff;box-shadow:0 0 4px rgba(0, 0, 0, 0.20);border-radius:15px;}
+.blog_post{position:relative;padding:14px; margin-bottom: 20px;background:#fff;box-shadow:0 0 4px rgba(0, 0, 0, 0.20);border-radius:15px;}
 .blog_post iframe{padding:0;margin:0;border:0;vertical-align:top;outline:none;font-size:0;}
 .blog_post h3{font-size:24px;line-height: 1;color:#919682;margin: 20px 0;text-align:center;text-transform: uppercase;}
 .blog_post h3 a{font-style:normal;font-size:1.5em;font-weight:300;color:var (--main-color1);line-height:1;}
@@ -281,8 +279,6 @@ nav.mobile_header{display:none!important;}
 }
 .full_slider{}
 .page_section{opacity:1;}
-
-#top header{background:#fff !important;top:0 !important;position:fixed;z-index:10000;}
 .main_content,
 .sidebar{margin-bottom:20px;}
 .breadcrumbs{color:#cecece;font-weight:400;text-align:center;font-size:13px;font-family:Arial;line-height:22px;padding:1px 20px 9px 20px;margin-bottom:0;}
@@ -442,7 +438,7 @@ a.shortcode_social_icon:hover i{color:#FFFFFF !important;}
 .modal{top:80px;}
 .fade{opacity:0;transition:opacity .15s linear;}
 #gallery header{background-image:url("../images/slide_bg/slide2_bg.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
-#blog header, #contact header{background-image:url("../images/slide_bg/08.png");padding-top:50px;padding-bottom:70px;background-position: top center;
+#blog header, #contact header{background-image:url("../images/slide_bg/08.png");padding-top:90px;padding-bottom:90px;background-position: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -460,8 +456,7 @@ a.shortcode_social_icon:hover i{color:#FFFFFF !important;}
 .promo_text_block h1, .promo_text_block h2{font-size:40px;}
 }
 thead{font-size:20px}
-@media (max-width:767px){#top header,
-#top header{background:#ffffff !important;top:0 !important;height:74px!important;}
+@media (max-width:767px){
 .footer_sidebar{padding-left:20px;padding-right:20px;width:auto !important;}
 .full_slider_caption{font-size:16px;line-height:18px;}
  body{padding-right:0;padding-left:0;}
