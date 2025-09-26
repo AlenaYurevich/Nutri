@@ -12,8 +12,8 @@
 <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/icons/apple_icons_72x72.png' %}">
 <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/icons/apple_icons_114x114.png' %}">
 <link rel="apple-touch-icon" sizes="192x192" href="{% static 'images/icons/apple_icons_192x192.png' %}">
-    <link href="{% static 'css/first.css' %}?ver=07" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/style.css' %}?ver=07" rel="stylesheet">
+    <link href="{% static 'css/first.css' %}?ver=08" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}?ver=08" rel="stylesheet">
     <link href="{% static 'css/bootstrap.css' %}?ver=07" rel="stylesheet">
     <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css"><!-- для галереи -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,7 +25,7 @@
 <script src="{% static 'js/jquery-ui.min.js' %}"></script>
 </head>
 <body class="animated single_page" data-animated="fadeIn">
-<div><!-- page -->
+<div id="page1"><!-- page -->
 <!-- header section -->
 <div id="top">
 <header>
@@ -47,8 +47,8 @@
         <li class="scrollable"><a href="{% url 'home' %}#calc">Калькулятор ИМТ</a></li>
         <li class="scrollable"><a href="{% url 'services' %}">Услуги</a></li>
         <li class="scrollable"><a href="{% url 'blog_index' %}">База знаний</a></li>
-        <li class="scrollable"><a href="{% url 'home' %}#contact">Контакты</a></li>
         <li class="scrollable"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdMdz7JXCR6U87NAHGegoLDIdxBFd1YH5iwBEUSxBBWnZTQ4A/viewform?fbclid=PAZXh0bgNhZW0CMTEAAaeKIUbiEkyMpPrDUNtXuLwzqusF3V7HdczB5Ua7zHI0shoSNhyDcfd0c9DgDQ_aem_3LWt-9R9hSlO_4_HX3yKhw" target="_blank" rel="nofollow">Анкета</a></li>
+        <li class="scrollable"><a href="{% url 'home' %}#contact">Контакты</a></li>
     </ul>
 </nav>
 <div class="clear"></div>
@@ -60,14 +60,14 @@
 
     {% endblock %}
 <!-- Contact content -->
-<section class="contact" id="contact">
+<section class="contact" id="contact" >
 <header class="text-center mb-5">
     <div class="container">
         <h2 class="animate-on-scroll delay-1">Записаться на консультацию</h2>
         <p class="lead animate-on-scroll delay-2">Укажите желаемую дату и время, я с вами свяжусь</p>
     </div><!-- end .container -->
 </header>
-<div class="contact_form content_section">
+<div class="contact_form ">
     <div class="container">
         <div class="row">
 <div class="col-md-7">
@@ -150,12 +150,12 @@
 <div class="col-md-4 indent">
 <div class="socials indent">
 <ul class="socials_list">
-<li><a title="Instagram" href="https://www.instagram.com/mishuta_nutrition_lab/" target="_blank" rel="nofollow">
+<li><a title="Instagram" href="https://www.instagram.com/mishuta_nutrition_lab/" target="_blank">
 <i class="fab fa-instagram"></i></a></li>
-<li><a title="Telegram" href="https://t.me/Mishuta_Nutrition" target="_blank" rel="nofollow">
+<li><a title="Telegram" href="https://t.me/Mishuta_Nutrition" target="_blank">
 <i class="fab fa-telegram"></i></a></li>
-<li><a title="YouTube" href="{% url 'calc' %}" target="_blank">
-<i class="fab fa-youtube"></i></a></li>
+<li><a title="Email" href="mailto:misutaelena02@gmail.com" rel="nofollow" target="_blank">
+<i class="fa fa-envelope"></i></a></li>
 </ul>
 </div>
 <div class="clear"></div>
@@ -171,7 +171,6 @@
 </div><!--//footer-->
 </div><!-- end #page1 -->
 
-<!--    <script src="{% static 'js/jquery-ui.min.js' %}"></script>-->
         <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
