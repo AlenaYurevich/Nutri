@@ -1,9 +1,9 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  background: #faeeee;
+  background: #fff2ea;
   padding: 0;
-  margin: 0;
+  margin-top: 0;
   overflow-x: hidden;
   font-size: 1.2em;
   line-height: 1.5;
@@ -18,7 +18,7 @@ body {
 .page_section header,
 .page_section header #contact {background-image:url("../images/slide_bg/13.jpg");background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;
 position: relative; /* Добавляем относительное позиционирование */
-    overflow: hidden; /* Скрываем все, что выходит за пределы блока */}
+overflow: hidden; /* Скрываем все, что выходит за пределы блока */}
 
 header {background-position:top center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;
 position: relative; /* Добавляем относительное позиционирование */
@@ -185,19 +185,25 @@ header #logo img.logo_retina{display:none;}
      }
 .navmenu ul li{list-style:none;margin:0; position:relative;}
 
-@media (max-width:767px){#top header,
+@media (max-width:767px){
+#page1 {padding-top:0; margin-top:0}
 #top header{background:#ffffff !important;top:0 !important;height:74px!important;}
+.page_section header {padding-top: 350px;padding-bottom:20px;}
 section header h1{font-size:2.5em !important;line-height:1em !important;}
-section header h3{font-size:1em}}
+section header h3{font-size:1em}
+.blog header {
+    background-image: url("../images/slide_bg/08.png");
+}
+}
 
 @media only screen and (max-width:1200px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
-#page1 {padding-top:0}
-#top header{height:74px !important;position:relative;z-index:999;padding:0;}
+#page1 {padding-top:0; margin-top:0}
+#top header{height:74px !important;position:relative;z-index:999;padding:0; margin:0}
 #top header #logo{padding:5px 10px 5px 0;}
 #top header #logo img{height:54px !important;width:auto !important;margin-top:5px;}
 #top header .container{position:relative;}
 #home{margin-top:0;}
-a.menu_toggler{display:inline-block;float:right;margin:-17px 20px 0px 0;border:none;border-radius:0;box-shadow:none;width:34px;height:34px; position:absolute;overflow:hidden; right:0; top:50%; background: linear-gradient(to bottom, #e9e6dc 28%, #c2b99c 48%, #CAC0A3 84%);}
+a.menu_toggler{display:inline-block;float:right;margin:-17px 20px 0px 0;border:none;border-radius:0;box-shadow:1px 1px 1px rgba(0,0,0,.5);width:34px;height:34px; position:absolute;overflow:hidden; right:0; top:50%; background: linear-gradient(to bottom, #e9e6dc 28%, #c2b99c 48%, #CAC0A3 84%);}
 a.menu_toggler:hover{background-color:#ffffff;}
 a.menu_toggler:before{content:'';display:block;position:absolute;left:7px;top:7px;width:20px;height:20px;background-repeat:no-repeat;background:url("../images/btn_menu.png") no-repeat 0 0;}
 .fixed-menu,
