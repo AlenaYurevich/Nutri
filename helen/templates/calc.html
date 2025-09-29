@@ -57,34 +57,35 @@
          <p>{{ result_idmt }}</p>
          </div>
          {% endif %}
-          {% if result_bmi %}
-            <div class="bmi-result mt-30 p-20
-                        {% if result_bmi.0.bmi < 18.5 %}bg-info
-                        {% elif result_bmi.0.bmi >= 30 %}bg-danger
+          {% if bmi_result %}
+            <div class="green-block animate-on-scroll {% if bmi_result.0.bmi < 18.5 %}bg-info
+                        {% elif bmi_result.0.bmi >= 30 %}bg-danger
                         {% else %}bg-success{% endif %}">
 
-              <div class="green-block animate-on-scroll delay-1">
-                <p class="">
-                  <strong>{{ result_bmi.0.description }}:</strong>
-                  <strong>{{ result_bmi.0.bmi }}</strong>
+
+              <div>
+                   <h3>Результаты расчета</h3>
+                <p>
+                  <strong>{{ bmi_result.0.description }}:</strong>
+                  <strong>{{ bmi_result.0.bmi }}</strong>
                 </p>
 
                 <p class="h4">
                   <i class="fa
-                    {% if result_bmi.0.bmi < 18.5 %}fa-exclamation
-                    {% elif result_bmi.0.bmi >= 25 %}fa-exclamation
+                    {% if result.0.bmi < 18.5 %}fa-exclamation
+                    {% elif result.0.bmi >= 25 %}fa-exclamation
                     {% else %}fa-check{% endif %}"></i>
-                  {{ result_bmi.0.classification }}
+                  {{ bmi_result.0.classification }}
                 </p>
 
                 <div class="alert
-                            {% if result_bmi.0.bmi < 18.5 %}alert-info
-                            {% elif result_bmi.0.bmi >= 25 %}alert-warning
+                            {% if bmi_result.0.bmi < 18.5 %}alert-info
+                            {% elif bmi_result.0.bmi >= 25 %}alert-warning
                             {% else %}alert-success{% endif %}">
-                  {{ result_bmi.0.advice }}
+                  {{ bmi_result.0.advice }}
                 </div>
 <div class="bmi-scale">
-    <div class="row small">
+    <div class="row text-muted small">
         <div class="col-xs-3 text-left">Дефицит</div>
         <div class="col-xs-3 text-center">Норма</div>
         <div class="col-xs-3 text-center">Избыток</div>
@@ -95,18 +96,18 @@
     <div class="progress-bar progress-bar-warning" style="width: 8.5%">16-18.5</div>
     <div class="progress-bar progress-bar-success" style="width: 24.5%">18.5-25</div>
     <div class="progress-bar progress-bar-warning" style="width: 20%">25-30</div>
-    <div class="progress-bar progress-bar-danger" style="width: 31%">≥30</div>
+    <div class="progress-bar progress-bar-danger" style="width: 29%">≥30</div>
   </div>
-        <div class="text-center small">
+        <div class="text-center small text-muted">
     Диапазоны ИМТ по классификации ВОЗ
   </div>
-</div>
-              </div>
-            </div>
+    </div>
+        </div>
+   </div>
             {% endif %}
      {% if result_energy %}
-     <div class="green-block animate-on-scroll delay-1">
-         <p>{{ result_energy }}</p>
+     <div class="green-block animate-on-scroll delay-3">
+         <p>{{ result_energy }}
      </div>
      {% endif %}
 

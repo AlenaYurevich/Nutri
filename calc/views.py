@@ -13,9 +13,9 @@ def idmt_view(request):
             age = int(request.POST.get('age'))
             activity = float(request.POST.get('activity'))
             result_idmt = idmt(height, gender)
-            result_bmi = calculate_bmi(height, weight)
+            bmi_result = calculate_bmi(height, weight)
             result_energy = energy(height, weight, age, gender, activity)
-            context = {'form': form, 'result_idmt': result_idmt, 'result_bmi': result_bmi,
+            context = {'form': form, 'result_idmt': result_idmt, 'bmi_result': bmi_result,
                        'result_energy': result_energy,
                        }
             return render(request, 'calc.html', context)

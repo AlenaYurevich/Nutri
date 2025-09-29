@@ -8,7 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'order', 'created_on')
+    list_display = ('title', 'description', 'order', 'created_on')
     list_editable = ('order',)  # Позволяет редактировать порядок прямо в списке
     ordering = ('order',)
 

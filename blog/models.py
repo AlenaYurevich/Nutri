@@ -18,6 +18,13 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=250)
+    description = models.CharField(
+        max_length=160,
+        blank=True,  # Разрешаем пустое значение
+        default='',  # Значение по умолчанию
+        verbose_name='Описание (до 160 символов)',
+        help_text='Краткое описание для SEO и превью в соцсетях'
+    )
     content = RichTextField(config_name='awesome_ckeditor')
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)

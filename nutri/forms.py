@@ -5,7 +5,7 @@ class BMIForm(forms.Form):
     height = forms.DecimalField(label="Введите свой рост, см", min_value=50, max_value=250, initial=170,
                                 widget=forms.NumberInput(attrs={'class': "form-control"}))
     weight = forms.DecimalField(label="Введите свой вес, кг", min_value=10, initial=60,
-                                decimal_places=1, widget=forms.NumberInput(attrs={'class': "form-control"}))
+                                widget=forms.NumberInput(attrs={'class': "form-control"}))
 
 
 class ContactForm(forms.Form):

@@ -82,12 +82,14 @@ margin: 20px 0}
 .service h3{padding-top:10px;font-weight:400;color: var(--main-color1); display:block;text-align:center; font-size:2em; margin: 0 0 0.4em;
 }
 .green-block {
-  background: var(--main-color1); /* Зеленый цвет */
+  background: var(--main-color1)!important; /* Зеленый цвет */
   padding: 30px;
   border-radius: 15px;
   margin: 20px 0;
   color: white; /* Белый текст для контраста */
 }
+.green-block h3{
+color: #fff}
 .text-uppercase{text-transform: uppercase;}
 #gallery{}
 #gallery header{background-image:url("../images/slide_bg/slide2_bg_min.jpg");background-position:center center;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;}
@@ -537,7 +539,7 @@ a.menu_toggler:hover{background-color:#ffffff;}
 .fixed-menu,
 .fixed-menu:before,
 .fixed-menu:after{display:none!important;}
-.fixed-menu{display:none!important}
+/*.fixed-menu{display:none!important}*/
 #top header nav{display:none!important;}
 }
 @media only screen and {header #logo img.logo_def{display:none!important;}

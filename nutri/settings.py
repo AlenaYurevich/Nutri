@@ -51,8 +51,8 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_CONFIGS = {
     'awesome_ckeditor': {
         'toolbar': 'full',
-        'height': 300,
-        'width': 300,
+        'height': 500,
+        'width': 500,
     },
 }
 
@@ -120,12 +120,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
 
 
