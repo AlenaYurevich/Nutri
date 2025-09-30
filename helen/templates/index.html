@@ -301,10 +301,10 @@ $('#calc form').submit(function(e) {
                 <h2 class="center shadow animate-on-scroll delay-1">Услуги нутрициолога</h2>
 {% for service in services %}
 <div class="col-md-6">
-    <div class="service animate-on-scroll delay-{{ forloop.counter }}">
-        <h3>{{ service.title }}</h3>
+    <div class="consult animate-on-scroll delay-{{ forloop.counter }}">
+        <h3 class="shadow">{{ service.title }}</h3>
         {% if service.subtitle %}
-        <h4 class="center">{{ service.subtitle }}</h4>
+        <span class="center animate-on-scroll">{{ service.subtitle }}</span>
         {% endif %}
 
         <div class="green-block animate-on-scroll delay-2">
@@ -316,7 +316,7 @@ $('#calc form').submit(function(e) {
             </ul>
         </div>
 
-        <div class="green-block animate-on-scroll delay-3">
+        <div class="green-block animate-on-scroll delay-2">
             <p class="center text-uppercase"><strong>{{ service.purpose_title }}</strong></p>
             <ul>
                 {% for item in service.get_purposes_list %}
@@ -340,7 +340,6 @@ $('#calc form').submit(function(e) {
         </div>
     </header>
 </section>
-
 <section>
     <div class="content_section container">
     <div class="row mb-3">
@@ -360,7 +359,9 @@ $('#calc form').submit(function(e) {
                         </div>
         {% endfor %}
     </div>
+         <div class="element col-md-4">
         <a href="{% url 'blog_index' %}">Все статьи >>></a>
+         </div>
     </div>
 </section>
 {% endblock %}
