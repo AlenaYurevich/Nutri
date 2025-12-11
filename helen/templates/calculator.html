@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+<title>Калькулятор ИМТ и нормы калорий онлайн | Расчёт для похудения | Елена Мишута</title>
+<meta name="description" content="Бесплатный точный калькулятор ИМТ, суточной нормы калорий и дефицита для похудения. Рассчитайте онлайн за 30 секунд. Получите расшифровку от профессионального нутрициолога.">
+<meta name="keywords" content="имт калькулятор, расчет калорий, калькулятор калорий онлайн, расчет дефицита калорий, калькулятор имт для женщин, нутрициолог онлайн">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{% url 'calculator' %}">
+<meta property="og:url" content="https://mishuta-nutrition.pro/calculator">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Калькулятор ИМТ и нормы калорий онлайн | Расчёт для похудения | Елена Мишута">
+<meta property="og:image" content="{% static 'images/elenamishuta.jpg' %}">
+<meta property="og:site_name" content="Нутрициолог Елена Мишута, Минск">
+<meta property="og:description" content="Бесплатный точный калькулятор ИМТ, суточной нормы калорий и дефицита для похудения. Рассчитайте онлайн за 30 секунд. Получите расшифровку от профессионального нутрициолога.">
+{% endblock %}
+{% block page_content %}
+<!-- section header -->
+
+<section id="calc" class="bmi-calc">
+  <div class="content_section container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="text-center animate-on-scroll delay-1">
+          Калькулятор индекса массы тела (ИМТ)
+        </h1>
+          <h2 class="center animate-on-scroll delay-2">Рассчитайте свои показатели онлайн</h2>
+        <div class="panel panel-default animate-on-scroll delay-3 mb-5">
+          <div class="panel-body">
+            <form method="POST" class="form-horizontal" action="#">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="{{ bmi_form.height.id_for_label }}" class="col-sm-4 control-label">
+                  {{ bmi_form.height.label }}
+                </label>
+                <div class="col-sm-8">
+                  {{ bmi_form.height }}
+                  {% if bmi_form.height.errors %}
+                  <span class="help-block text-danger">
+                    {{ bmi_form.height.errors|first }}
+                  </span>
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="{{ bmi_form.weight.id_for_label }}" class="col-sm-4 control-label">
+                  {{ bmi_form.weight.label }}
+                </label>
+                <div class="col-sm-8">
+                  {{ bmi_form.weight }}
+                  {% if bmi_form.weight.errors %}
+                  <span class="help-block text-danger">
+                    {{ bmi_form.weight.errors|first }}
+                  </span>
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-8">
+                     <button type="submit" name="bmi_submit" class="btn btn-primary btn-lg" id="bmi-calculate-btn">
+                    <i class="fa fa-calculator"></i>
+                    Рассчитать ИМТ
+                    </button>
+                </div>
+              </div>
+            </form>
+            {% if bmi_result %}
+            <div class="panel {% if bmi_result.0.bmi < 18.5 %}bg-info
+                        {% elif bmi_result.0.bmi >= 30 %}bg-danger
+                        {% else %}bg-success{% endif %}">
+              <h3 class="text-center">Результаты расчета</h3>
+
+              <div class="well">
+                <p class="">
+                  <strong>{{ bmi_result.0.description }}:</strong>
+                  <strong>{{ bmi_result.0.bmi }}</strong>
+                </p>
+
+                <p class="h4">
+                  <i class="fa
+                    {% if result.0.bmi < 18.5 %}fa-exclamation
+                    {% elif result.0.bmi > 25 %}fa-exclamation
+                    {% else %}fa-check{% endif %}"></i>
+                  {{ bmi_result.0.classification }}
+                </p>
+
+                <div class="alert
+                            {% if bmi_result.0.bmi < 18.5 %}alert-info
+                            {% elif bmi_result.0.bmi > 25 %}alert-warning
+                            {% else %}alert-success{% endif %}">
+                  {{ bmi_result.0.advice }}
+                </div>
+<div class="bmi-scale">
+    <div class="row text-muted small">
+        <div class="col-xs-3 text-left">Дефицит</div>
+        <div class="col-xs-3 text-center">Норма</div>
+        <div class="col-xs-3 text-center">Избыток</div>
+        <div class="col-xs-3 text-right">Ожирение</div>
+      </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-danger" style="width: 16%">≤16</div>
+    <div class="progress-bar progress-bar-warning" style="width: 8.5%">16-18.5</div>
+    <div class="progress-bar progress-bar-success" style="width: 24.5%">18.5-25</div>
+    <div class="progress-bar progress-bar-warning" style="width: 20%">25-30</div>
+    <div class="progress-bar progress-bar-danger" style="width: 30%">≥30</div>
+  </div>
+        <div class="text-center small text-muted">
+    Диапазоны ИМТ по классификации ВОЗ
+  </div>
+</div>
+              </div>
+            </div>
+            {% endif %}
+
+          </div>
+        </div>
+        </div>
+    </div>
+
+ <div class="row">
+            <div class="posts_block">
+
+                <div class="element col-md-6">
+                    <div class="blog_post">
+                        <div class="round_corners">
+                        <h3 class="text-center animate-on-scroll">Как интерпретировать индекс массы тела (ИМТ)?</h3>
+                        <p>Индекс массы тела (ИМТ) — это полезный ориентир, но не окончательный диагноз! Он помогает оценить, соответствует
+ли ваш вес росту. Значения в пределах 18,5–25,0 считаются нормой.</p><p> Однако помните, что ИМТ не учитывает состав тела
+(при том, что мышцы тяжелее жира), возраст и индивидуальные особенности. Поэтому если цифры вас смущают — это повод не для
+тревоги, а для глубокого анализа.</p><p> Я помогу вам разобраться в ваших реальных потребностях и
+составить персональный план питания.</p>
+                        </div>
+                </div><!--//blog_post-->
+                </div>
+
+                <div class="element col-md-6">
+                    <div class="blog_post">
+                        <div class="round_corners">
+                        <h3 class="text-center animate-on-scroll">Как рассчитать свою суточную норму калорий?</h3>
+                        <p>Вы можете найти формулу расчёта суточной нормы калорий в интернете, но она даст лишь
+усреднённый ориентир. Почему? Потому что она не учитывает ваш тип метаболизма, уровень
+стресса, качество сна и тонкие нюансы здоровья.</p>
+<p>На персональной консультации я, как нутрициолог, проведу детальный анализ именно вашего
+случая. Мы рассчитаем не просто нужное число, а точную норму для именно вашего самочувствия, активности
+и пожеланий — будь то энергия, ощущение легкости или рекомпозиция тела.</p><p> Это будет вашим первым шагом к осознанному питанию.</p>
+                        </div>
+                </div><!--//blog_post-->
+                </div>
+                <div class="element col-md-6">
+                    <div class="blog_post">
+                        <div class="round_corners">
+                        <h3 class="text-center animate-on-scroll">Что такое дефицит калорий и как его создать?</h3>
+                        <p>Дефицит калорий — это когда вы потребляете меньше энергии, чем тратите. Именно так организм
+начинает использовать свои запасы. Но ключ к снижению веса и уменьшению объемов не в жёстких ограничениях!</p><p> Слишком большой дефицит
+замедляет метаболизм, вызывает усталость и потерю мышечной массы.
+Безопасный и эффективный вариант дефицита калорой всегда индивидуален.</p><p> На консультации я рассчитаю вашу личную норму с учётом
+образа жизни, здоровья и целей. Мы создадим дефицит через сбалансированный рацион, а не голод, чтобы вы теряли вес с
+                            энергией и хорошим самочувствием.</p>
+                        </div>
+                </div><!--//blog_post-->
+                </div>
+
+                <div class="element col-md-6">
+                    <div class="blog_post">
+                        <div class="round_corners">
+                        <h3 class="text-center animate-on-scroll">Получите персональную программу питания от нутрициолога</h3>
+                        <p>
+Цифры на калькуляторе — это только начало пути к вашему идеальному самочувствию. Персональная программа питания —
+это ваша индивидуальная «карта», которая учитывает не только расчёты, но и ваши вкусы, образ жизни и цели.</p>
+<p>Я, как нутрициолог, стану вашим проводником: помогу мягко скорректировать рацион, чтобы питание приносило радость,
+энергию и желаемый результат. </p>
+                        </div>
+                </div><!--//blog_post-->
+                </div>
+
+            </div>
+        </div>
+
+
+</div>
+</section>
+
+{% endblock %}

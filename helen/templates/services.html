@@ -1,27 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block seo %}
-<title>Услуги нутрициолога: расчет калорий, программа питания, ИМТ | Елена Мишута</title>
-<meta name="description" content="Персональные услуги нутрициолога: онлайн расчет калорий для похудения, составление программы питания, расчет ИМТ. Консультации для женщин.">
-<meta name="keywords" content="услуги нутрициолога, расчет калорий, программа питания, расчет имт, расчет калорий для похудения, расчет калорий для женщин, консультация нутрициолога, персональный план питания, специализированное питание">
+<title>Услуги нутрициолога: консультация и программа питания | Цены онлайн | Елена Мишута</title>
+<meta name="description" content="Закажите персональную консультацию нутрициолога онлайн. Составление индивидуальной программы питания, расчёт рациона, сопровождение. Стоимость услуг">
+<meta name="keywords" content="услуги нутрициолога, консультация нутрициолога цена, нутрициолог минск консультация, сколько стоит консультация нутрициолога">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{% url 'services' %}">
 <meta property="og:url" content="https://mishuta-nutrition.pro/services">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Услуги нутрициолога Елены Мишуты: расчет калорий и программы питания">
+<meta property="og:title" content="Услуги нутрициолога: консультация и программа питания | Цены онлайн | Елена Мишута">
 <meta property="og:image" content="{% static 'images/lenamishuta.jpg' %}">
 <meta property="og:site_name" content="Нутрициолог Елена Мишута">
-<meta property="og:description" content="★ Профессиональные услуги нутрициолога: расчет калорий онлайн, персональная программа питания, консультации для похудения и здоровья.">
+<meta property="og:description" content="Закажите персональную консультацию нутрициолога онлайн. Составление индивидуальной программы питания, расчёт рациона, сопровождение. Стоимость услуг.">
 {% endblock %}
 {% block page_content %}
 <!-- section header -->
-
  <!-- Pricing Section -->
 <section id="services" class="services">
     <header>
         <div class="content_section container">
             <div class="row indent">
-                <h2 class="center shadow animate-on-scroll delay-1">Услуги нутрициолога</h2>
+                <h1 class="center shadow animate-on-scroll delay-1">Услуги профессионального нутрициолога</h1>
+                <h2 class="center shadow animate-on-scroll delay-2">Форматы онлайн-консультаций и сопровождения</h2>
+
 {% for service in services %}
 <div class="col-md-6">
     <div class="service animate-on-scroll delay-{{ forloop.counter }}">

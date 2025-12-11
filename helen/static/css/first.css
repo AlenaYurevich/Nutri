@@ -116,8 +116,7 @@ header #logo img.logo_retina{display:none;}
     transform: translateY(0); /* Конечное положение*/
   }
 }
-.page_section header div.container h1,
-.page_section header div.container h2
+.page_section header div.container h1
  {
   font-family: "Oranienbaum", serif;
   font-size: 96px;
@@ -129,7 +128,7 @@ header #logo img.logo_retina{display:none;}
   color: #fff;
   line-height: 96px;
 }
-.page_section header div.container h3
+.page_section header div.container h2
  {
   font-family: "Roboto", sans-serif;
   letter-spacing: 2px;
@@ -137,6 +136,14 @@ header #logo img.logo_retina{display:none;}
   margin: 0;
   text-align: left;
   color: #fff;
+ }
+ #about h2, #calc h2
+ {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  padding: 0 0 40px 0;
+  margin: 0;
+  color:var(--main-color1)
  }
 
   @keyframes fadeInUp {
@@ -186,11 +193,12 @@ header #logo img.logo_retina{display:none;}
 #page1 {padding-top:0; margin-top:0}
 #top header{background:#ffffff !important;top:0 !important;height:74px!important;}
 .page_section header {padding-top: 350px;padding-bottom:20px;}
-section header h1{font-size:2.5em !important;line-height:1em !important;}
-section header h3{font-size:1em}
+section header h1{font-size:2.4em !important;line-height:1em !important;}
+h3{font-size:1.8em!important}
 .blog header {
     background-image: url("../images/slide_bg/08.png");
 }
+.blog_post h3 a{font-size: 1em!important}
 }
 @media only screen and (max-width:1200px){.filter_navigation ul li ul li{margin-bottom:5px !important;}
 #page1 {padding-top:0; margin-top:0}
