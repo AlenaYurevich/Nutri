@@ -8,7 +8,7 @@
 <link rel="canonical" href="{% url 'blog_category' category.slug %}">
 <meta property="og:url" content="{% url 'blog_category' category.slug %}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Статьи по теме: {{ category.name | capfirst | default_if_none:'-' }} | Нутрициолог Елена Мишута">
+<meta property="og:title" content="Статьи на тему: {{ category.name | capfirst | default_if_none:'-' }} | Нутрициолог Елена Мишута">
 <meta property="og:image" content="{% static 'images/elenamishuta.jpg' %}">
 <meta property="og:site_name" content="Нутрициолог Елена Мишута">
 <meta property="og:description" content="Читайте все статьи на тему {{ category.name }} в блоге нутрициолога Елены Мишуты. Экспертные материалы о правильном питании.">
@@ -41,7 +41,7 @@
                 {{ category.name | capfirst }} |&nbsp
                 </a>
               {% endfor %}
-              <p class="">{{ post.content | safe  }} </p>
+              <p>{{ post.content | safe  }} </p>
           </div>
       </div><!--//blog_post-->
   </div>

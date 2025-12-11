@@ -19,13 +19,14 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import index, about, services
+from .views import index, about, services, calculator
 
 
 urlpatterns = [
     path('', index, name='home'),
     path('about/', about, name='about'),
     path('services/', services, name='services'),
+    path('calculator/', calculator, name='calculator'),
     path('calc/', include('calc.urls')),
     path('blog/', include('blog.urls')),
     path('sitemap.xml', TemplateView.as_view(template_name='sitemap.xml', content_type='application/xml')),

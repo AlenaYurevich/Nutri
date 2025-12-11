@@ -92,6 +92,14 @@ def services(request):
     return render(request, 'services.html', context)
 
 
+def calculator(request):
+    forms_context = handle_forms(request)
+    context = {
+        **forms_context,
+    }
+    return render(request, 'calculator.html', context)
+
+
 def handler404(request, exception):
     forms_context = handle_forms(request)
     context = {'error_message': 'Страница не найдена',

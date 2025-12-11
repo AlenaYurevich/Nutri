@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block seo %}
-<title>{{ post.title }} | Нутрициолог Елена Мишута</title>
+<title>{{ post.title }} | Нутрициолог в Минске Елена Мишута</title>
 <meta name="description" content='{{ post.description }}'>
 <meta name="keywords" content="расчет калорий для женщин, норма калорий, нутрициология, питание, здоровье">
 <meta name="robots" content="index, follow">
@@ -9,7 +9,7 @@
 <meta property="og:url" content="{% url 'blog_detail' slug=post.slug %}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{ post.title }} | Нутрициолог Елена Мишута">
-<meta property="og:image" content="{{ post.image }}">
+<meta property="og:image" content="{{ post.image.url}}">
 <meta property="og:site_name" content="Нутрициолог Елена Мишута">
 <meta property="og:description" content='{{ post.description }}'>
 <meta property="article:published_time" content="{{ post.created_on }}">
