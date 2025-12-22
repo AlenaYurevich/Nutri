@@ -136,6 +136,7 @@ header #logo img.logo_retina{display:none;}
   margin: 0;
   text-align: left;
   color: #fff;
+  font-size: 1.2em;
  }
  #about h2, #calc h2
  {
@@ -192,7 +193,7 @@ header #logo img.logo_retina{display:none;}
 @media (max-width:767px){
 #page1 {padding-top:0; margin-top:0}
 #top header{background:#ffffff !important;top:0 !important;height:74px!important;}
-.page_section header {padding-top: 350px;padding-bottom:20px;}
+.page_section header {padding-top: 260px;padding-bottom:20px;}
 section header h1{font-size:2.4em !important;line-height:1em !important;}
 h3{font-size:1.8em!important}
 .blog header {
