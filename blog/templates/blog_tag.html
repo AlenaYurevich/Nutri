@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+<title>{{ tag.name | capfirst | default_if_none:"-" }} {{ page_obj.number }}| Пошив одежды на заказ в Минске</title>
+<meta name="description" content="Все статьи по теме {{ tag.name }} {{ page_obj.number }}. Не масс-маркет, а искусство безупречного кроя. Каждый проект — любимая одежда, воплощение вашего стиля без компромиссов.">
+<meta name="keywords" content="{{ tag.name }} капсульныйгардероб эксклюзивныйгардероб#индивидуальныйпошив брюкиназаказ авторскаяодежда шитьеназаказ">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{% url 'posts_by_tag' tag.slug %}">
+<meta property="og:url" content="{% url 'posts_by_tag' tag.slug %}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ tag.name | capfirst | default_if_none:'-'}} {{ page_obj.number }}| Пошив одежды на заказ в Минске">
+<meta property="og:image" content="{% static 'img/Natalia Pokryshko.jpg' %}">
+<meta property="og:site_name" content="Пошив одежды на заказ в Минске">
+<meta property="og:description" content="Все статьи на тему {{ tag.name }} {{ page_obj.number }}. Не масс-маркет, а искусство безупречного кроя. Каждый проект — любимая одежда, воплощение вашего стиля без компромиссов.">
+{% endblock %}
+{% block breadcrumb_header %}
+    {% include "breadcrumb_header.html" %}
+{% endblock %}
+{% block page_content %}
+      <!-- Blog Start -->
+        <div class="container-fluid blog py-5">
+            <div class="container py-5">
+<h1 class="text-center mb-5 wow fadeInDown" data-wow-delay="0.1s">
+            Посты с тегом: <span class="text-secondary">{{ tag.name }}</span>
+        </h1>
+                <div class="row g-4">
+                     {% for post in posts %}
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="{% url 'blog_detail' slug=post.slug %}">
+                                    <img src="{{ post.image_thumbnail.url }}" class="img-fluid w-100 rounded-top" alt="{{ post.alt }}" width="400" height="800">
+                                </a>
+                                <div class="blog-category py-2 px-4">{% for category in post.categories.all %}
+                    {{ category.name }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}</div>
+                                <div class="blog-date"><i class="fas fa-clock me-2"></i>{{ post.created_on }}</div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <a href="{% url 'blog_detail' slug=post.slug %}" class="h4 d-inline-block mb-4">{{ post.title }}</a>
+                                <p class="mb-4">{{ post.description }} </p>
+                                <a href="{% url 'blog_detail' slug=post.slug %}" class="btn btn-primary rounded-pill py-2 px-4">Читать дальше <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                     {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+ {% endblock %}
