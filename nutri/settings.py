@@ -44,15 +44,17 @@ INSTALLED_APPS = [
     'blog',
     'ckeditor',
     'ckeditor_uploader',
+    'imagekit',
 
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_CONFIGS = {
     'awesome_ckeditor': {
         'toolbar': 'full',
         'height': 500,
-        'width': 500,
+        'width': '100%',
     },
 }
 
@@ -79,6 +81,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'blog.context_processors.recent_posts',
+                'blog.context_processors.all_tags',
+                'blog.context_processors.all_categories',
             ],
         },
     },
@@ -137,12 +142,12 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # Ваши собственные статические файлы
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Путь для сбора статики
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # или smtp.yandex.ru,  smtp.mail.ru
@@ -151,3 +156,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv('EMAIL')  # полный email
 EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = os.getenv('EMAIL')
+IMAGEKIT_CACHEFILE_DIR = 'CACHE/images'
+IMAGEKIT_DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+IMAGEKIT_DEFAULT_IMAGE_CACHE_BACKEND = 'imagekit.imagecache.NonValidatingImageCacheBackend'

@@ -351,7 +351,7 @@
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/static/img/palazzo.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/static/images/slide_bg/08.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -825,6 +825,7 @@ section, .section {
     font-weight: 500;
     padding: 0;
     margin: 0 0 20px 0;
+    font-family: "Roboto", sans-serif;
 }
 .widget-item {
     margin-bottom: 40px;
@@ -861,7 +862,7 @@ section, .section {
     bottom: 0;
     border: 0;
     font-size: 16px;
-    padding: 0 15px;
+    padding: 0 16px;
     margin: -1px;
     transition: 0.3s;
     border-radius: 0 4px 4px 0;
@@ -875,7 +876,7 @@ section, .section {
 }
 .categories-widget ul a span {
     padding-left: 5px;
-    color: color-mix(in srgb, var(--bs-gray), transparent 50%);
+    color: var(--bs-gray);
     font-size: 14px;
 }
 .recent-posts-widget .post-item h4 {
@@ -885,6 +886,7 @@ section, .section {
 .recent-posts-widget .post-item h4 a {
     color: var(--bs-gray);
     transition: 0.3s;
+    font-family: "Roboto", sans-serif;
 }
 .recent-posts-widget .post-item h4 a:hover {
     color: var(--bs-secondary);
@@ -901,7 +903,7 @@ section, .section {
     display: block;
     font-style: italic;
     font-size: 14px;
-    color: color-mix(in srgb, var(--bs-gray), transparent 50%);
+    color: var(--bs-gray);
 }
 .tags-widget ul {
     list-style: none;
@@ -1141,7 +1143,7 @@ section, .section {
 
 /*** Footer Start ***/
 .footer {
-    background: var(--bs-dark);
+    background: linear-gradient(to top, var(--bs-green), var(--bs-gray));
 }
 
 .footer .footer-item {
@@ -1150,12 +1152,14 @@ section, .section {
 }
 
 .footer .footer-item a {
+    font-family: "Oranienbaum", serif;
     line-height: 35px;
-    color: var(--bs-body);
+    color: var(--bs-white);
     transition: 0.5s;
 }
 
 .footer .footer-item p {
+    font-family: "Oranienbaum", serif;
     line-height: 35px;
 }
 
@@ -1185,12 +1189,13 @@ section, .section {
     align-items: center;
     line-height: 35px;
 }
+
 /*** Footer End ***/
 
 /*** copyright Start ***/
 .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: var(--bs-dark);
+    background: var(--bs-green);
 }
 /*** copyright end ***/
 
