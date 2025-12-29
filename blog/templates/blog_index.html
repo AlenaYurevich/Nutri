@@ -33,7 +33,7 @@
                             <div class="blog_post">
                                 <div class="round_corners">
                                 	<div class="post_flex">
-                                        <img src="{{ post.image_min.url }}" alt="{{ post.alt }}" width="494">
+                                        <img src="{{ post.image.url }}" alt="{{ post.alt }}" width="494">
                                     </div>
                                 <h2><a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h2>
                                 <small>{{ post.created_on }}</small>

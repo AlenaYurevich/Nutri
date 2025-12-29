@@ -12,6 +12,7 @@ def blog_index(request):
     forms_context = handle_forms(request)
     context = {
         "page_obj": page_obj,
+        "breadcrumb_title": "Блог",
         **forms_context,
     }
     return render(request, 'blog_index.html', context)
@@ -22,6 +23,9 @@ def blog_detail(request, slug):
     forms_context = handle_forms(request)
     context = {
         "post": post,
+        'breadcrumb_title': post.title,
+        'breadcrumb_parent': 'База знаний',
+        'breadcrumb_parent_url': '/blog',
         **forms_context,
     }
     return render(request, 'blog_detail.html', context)
@@ -37,6 +41,8 @@ def blog_category(request, category_slug):
     context = {
         'category': category,
         'posts': posts,  # здесь выводим посты Posts,
+        'breadcrumb_parent': 'База знаний',
+        'breadcrumb_parent_url': '/blog',
         ** forms_context,
     }
     return render(request, 'blog_category.html', context)
@@ -80,3 +86,17 @@ def search_posts(request):
         'query': query,
         'results_count': posts.count()
     })
+
+
+def posts_by_tag(request, tag_slug):
+    tag = get_object_or_404(Tag, slug=tag_slug)
+    posts = Post.objects.filter(tags=tag).order_by('-created_on')
+
+    context = {
+        'tag': tag,
+        'posts': posts,
+        'breadcrumb_title': f'Тег: {tag.name}',
+        'breadcrumb_parent': 'Блог',
+        'breadcrumb_parent_url': reverse('blog_index'),
+    }
+    return render(request, 'blog_tag.html', context)
