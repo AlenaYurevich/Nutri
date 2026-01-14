@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Category
+from .models import Post, Category, Tag
 from django.core.paginator import Paginator
 from helen.views import handle_forms
+from django.db.models import Q
 
 
 def blog_index(request):
@@ -12,7 +13,7 @@ def blog_index(request):
     forms_context = handle_forms(request)
     context = {
         "page_obj": page_obj,
-        "breadcrumb_title": "Блог",
+        "breadcrumb_title": "База знаний",
         **forms_context,
     }
     return render(request, 'blog_index.html', context)
@@ -84,19 +85,22 @@ def search_posts(request):
     return render(request, 'search_results.html', {
         'page_obj': page_obj,
         'query': query,
-        'results_count': posts.count()
+        'results_count': posts.count(),
+        'breadcrumb_parent': 'База знаний',
+        'breadcrumb_parent_url': '/blog',
     })
 
 
 def posts_by_tag(request, tag_slug):
-    tag = get_object_or_404(Tag, slug=tag_slug)
+    tag = Tag.objects.get(slug=tag_slug)
     posts = Post.objects.filter(tags=tag).order_by('-created_on')
-
+    forms_context = handle_forms(request)
     context = {
         'tag': tag,
         'posts': posts,
         'breadcrumb_title': f'Тег: {tag.name}',
-        'breadcrumb_parent': 'Блог',
-        'breadcrumb_parent_url': reverse('blog_index'),
+        'breadcrumb_parent': 'База знаний',
+        'breadcrumb_parent_url': '/blog',
+        **forms_context,
     }
     return render(request, 'blog_tag.html', context)
