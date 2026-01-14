@@ -15,7 +15,6 @@
 <link rel="apple-touch-icon" sizes="114x114" href="https://mishuta-nutrition.pro/apple_icons_114x114.png">
 <link rel="apple-touch-icon" sizes="144x144" href="https://mishuta-nutrition.pro/apple_icons_144x144.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://mishuta-nutrition.pro/apple_icons_180x180.png">
-<link rel="manifest" href="https://mishuta-nutrition.pro/site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +46,7 @@
         <!-- Spinner End -->
 
         <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar sticky-top px-4 py-2 py-lg-0">
+        <div class="container-fluid nav-bar sticky-top py-2 py-lg-0">
             <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="{% url 'home' %}" class="navbar-brand p-0 d-flex align-items-center" title="Главная страница">
@@ -56,9 +55,9 @@
         <span data-double="Елена Мишута">Елена Мишута</span>
         <span data-double="Нутрициолог">Нутрициолог</span>
     </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
+        <button class="navbar-toggler bs-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <i class="fa fa-bars"></i>
+        </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                        <a href="{% url 'home' %}">Главная</a>
@@ -79,25 +78,77 @@
   {% block breadcrumb_header %}{% endblock %}
   {% block page_content %}
   {% endblock %}
-
+<section class="contact" id="contact" >
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" >
+            <h4 class="text-white display-4 mb-4 fadeInDown" data-wow-delay="0.1s">Записаться на консультацию</h4>
+            <p class="text-white d-flex justify-content-center fadeInDown" data-wow-delay="0.3s">
+                Укажите желаемую дату и время, я с вами свяжусь
+            </p>
+        </div>
+    </div>
+</section><!-- //section content -->
+<section id="comment-form" class="comment-form section">
+            <div class="container">
+            <div class="col-lg-7">
+              <form name="sentMessage" method = "POST" action="#contact" id="contactForm" novalidate>
+                {% csrf_token %}
+                <h4 class="text-uppercase">Контакт-форма</h4>
+                <p>Обязательные поля отмечены *</p>
+                <div class="row">
+                  <div class="form-group">
+                    {{contact_form.name}}
+                    <p class="help-block"> {{ contact_form.name.errors }}</p>
+                   </div>
+                  <div class="form-group">
+                    {{contact_form.phone}}
+                    <p class="help-block2">{{ contact_form.phone.errors }}</p>
+                  </div>
+                  <div class="form-group">
+                    {{contact_form.email}}
+                    <p class="help-block">{{ contact_form.email.errors }}</p>
+                  </div>
+                  <div class="form-group">
+                      {{contact_form.message}}
+                  </div>
+                </div>
+                <div class="py-1">
+<!--                    <input class="send_btn" name="contact_submit" type="submit" value="Отправить">-->
+                  <button type="submit" name="contact_submit" class="send_btn">Отправить</button>
+                </div>
+<div class="py-3">
+    {% if contact_success %}
+<div class="alert alert-success" role="alert">
+   Ваше сообщение успешно отправлено! Свяжусь с вами в ближайшее время
+</div>
+    {% endif %}
+    {% if contact_errors %}
+<div class="alert alert-danger" role="alert">
+    {{ contact_errors }}
+</div>
+{% endif %}
+</div>
+              </form>
+            </div>
+      </div>
+</section><!-- /Comment Form Section -->
    <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="footer-item">
-                            <a href="index.html" class="p-0">
-                                <h4 class="text-primary text-uppercase mb-4">Елена Мишута</h4>
-                                <!-- <img src="img/logo.png" alt="Logo"> -->
+                            <a href="{% url 'home' %}" class="mb-4">
+                                <span data-double="Елена Мишута">Елена Мишута</span>
                             </a>
-                            <p class=" text-white mb-2">Консультация нутрициолога в Минске | Индивидуальная консультация | Услуги нутрициолога | Специалист по питанию | Онлайн-консультация</p>
+                            <p class="text-white mb-2">Консультация нутрициолога в Минске | Индивидуальная консультация | Услуги нутрициолога | Специалист по питанию | Онлайн-консультация</p>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-map-marker-alt text-primary me-3"></i>
                                 <p class="text-white mb-0">г. Минск</p>
                             </div>
                             <div class="d-flex align-items-center">
                                 <i class="fa fa-phone-alt text-primary me-3"></i>
-                                <p class="text-white mb-0"><a href="tel:+375295679137" rel="nofollow" target="_blank">+375 29 </a></p>
+                                <p class="text-white mb-0"><a href="tel:+375296986875" rel="nofollow" target="_blank">+375 29 698 68 75</a></p>
                             </div>
                         </div>
                     </div>
@@ -117,41 +168,37 @@
                     <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="footer-item">
                             <h4 class="text-white mb-4">Время работы</h4>
-                            <div class="opening-date mb-3 pb-3  text-white">
+                            <div class="opening-date mb-3 pb-3 text-white">
                                 <div class="opening-clock flex-shrink-0">
                                     <p class="mb-0 me-auto">Понедельник - Пятница:</p>
-                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i>10:00 - 19:00</p>
+                                    <p class="mb-0"><i class="far fa-clock text-primary me-2"></i>10:00 - 19:00</p>
                                 </div>
                                 <div class="opening-clock flex-shrink-0">
                                     <p class="mb-0 me-auto">Суббота - Воскресенье:</p>
-                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i>09:00 - 17:00</p>
+                                    <p class="mb-0"><i class="far fa-clock text-primary me-2"></i>09:00 - 17:00</p>
                                 </div>
                                 <div class="opening-clock flex-shrink-0">
                                     <p class="text-white mb-0 me-auto">Праздничные дни:</p>
-                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i>09:00 - 15:00</p>
+                                    <p class="mb-0"><i class="far fa-clock text-primary me-2"></i>09:00 - 15:00</p>
                                 </div>
                             </div>
                              <div class="team-icon d-none d-xl-flex me-3">
                         <a class="btn btn-square btn-light rounded-circle mx-2" href="https://www.instagram.com/mishuta_nutrition_lab/" target="_blank"><i class="fab fa-instagram text-secondary" title="Подпишись на мой Instagram"></i></a>
                         <a class="btn btn-square btn-light rounded-circle mx-2" href="https://t.me/Mishuta_Nutrition" target="_blank"><i class="fab fa-telegram text-secondary" title="Подпишись на Telegram"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle mx-2" href="https://t.me/Mishuta_Nutrition" rel="nofollow" target="_blank"><i class="fa fa-envelope text-secondary"></i></a></li>
-
+                        <a class="btn btn-square btn-light rounded-circle mx-2" href="https://t.me/Mishuta_Nutrition" rel="nofollow" target="_blank"><i class="far fa-envelope text-secondary"></i></a>
                     </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer End -->
-
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="{% url 'home' %}" class="text-white">2025 <i class="fas fa-copyright text-light me-2"></i>mishuta-nutrition.pro</a></span>
+                        <span class="text-body"><a href="{% url 'home' %}" class="text-white">2026 <i class="far fa-copyright text-light me-2"></i>mishuta-nutrition.pro</a></span>
                     </div>
                     <div class="col-md-6 text-center text-md-end text-body">
                     </div>
@@ -167,9 +214,6 @@
     <script src="{% static 'lib/wow/wow.min.js' %}"></script>
     <script src="{% static 'lib/easing/easing.min.js' %}"></script>
     <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-<!--    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>-->
-<!--    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>-->
-<!--    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>-->
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
     </body>
