@@ -28,12 +28,12 @@
  <article class="article">
 
                 <div class="post-img">
-                  <img class="img-fluid" src="{{ post.image.url }}" alt="{{ post.alt }}">
+                  <img class="img-fluid" src="{{ post.image.url }}" alt="{{ post.alt }}" width="800" height="800">
                 </div>
                 <h2><a class="title text-uppercase" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h2>
                 <div class="meta-top">
        <ul>
-           <li class="d-flex align-items-center"><i class="bi bi-clock"></i>
+           <li class="d-flex align-items-center"><i class="far fa-clock"></i>
                {{ post.created_on|date:"d E Y" }}</li>
        </ul>
                 </div><!-- End meta top -->
@@ -45,9 +45,10 @@
                 <div class="meta-bottom">
                   <i class="far fa-folder"></i>
                   <ul class="cats">
-                <li>
                 {% for category in post.categories.all %}
-                <a href="{% url 'blog_category' category.slug %}"> {{ category.name | capfirst }} </a>
+                <li>
+                <a href="{% url 'blog_category' category.slug %}" title="Все статьи категории {{ category.name | capfirst }}"> {{ category.name | capfirst }}
+                </a>
                 {% endfor %}
                 </li>
                   </ul>
@@ -99,7 +100,7 @@
     {% for post in recent_posts %}
     <div class="post-item">
         {% if post.image %}
-            <img src="{{ post.image_thumbnail.url }}" alt="{{ post.alt }}" class="flex-shrink-0">
+            <img src="{{ post.image_thumbnail.url }}" alt="{{ post.alt }}" class="flex-shrink-0" width="100" height="100">
         {% endif %}
         <div>
             <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
