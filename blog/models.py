@@ -55,7 +55,7 @@ class Post(models.Model):
     image_thumbnail = ImageSpecField(
         source='image',
         # processors=[ResizeToFill(400, 500)],  # Обрезаем до точных размеров
-        processors=[ResizeToFill(80, 100)],  # Обрезаем до точных размеров
+        processors=[ResizeToFill(100, 100)],  # Обрезаем до точных размеров
         format='JPEG',
         options={'quality': 85}
     )
