@@ -65,10 +65,26 @@
 }
 .back-to-top {
     position: fixed;
-    right: 30px;
+    right: 15px;
     bottom: 30px;
-    transition: 0.5s;
+    transition: all 0.5s ease;
     z-index: 99;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #A29166, #FDFAD9, #A29166);
+    border-image-slice: 1;
+    background: transparent;
+}
+.back-to-top:hover {
+    color: #A29166 !important; /* Меняем цвет иконки на золотой */
+    border-image: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
+    border-image-slice: 1;
+    background: rgba(253, 250, 217, 0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+.back-to-top:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(162, 145, 102, 0.3);
 }
 /*** Button Start ***/
 .btn {
@@ -234,14 +250,21 @@
         border-image: linear-gradient(to bottom, #A29166, #FDFAD9, #A29166);
         border-image-slice: 1;
         color: #CFC09F;
+        padding: 6px;
+        transition: all 0.3s ease;
     }
-    .navbar span {
-        font-size: 20px;
-        letter-spacing: 2px;
+    .navbar.navbar-expand-lg .navbar-toggler:hover {
+        border-image: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
+        border-image-slice: 1;
+        box-shadow: 0 0 10px rgba(162, 145, 102, 0.5);
+}
+        .navbar span {
+        font-size: 28px;
+        letter-spacing: 3px;
     }
     .navbar span + span {
-        font-size: 14px;
-        letter-spacing: 7px;
+        font-size: 16px;
+        letter-spacing: 12px;
 }
     .sticky-top .navbar-light .navbar-nav .nav-link {
         padding: 12px 0;
@@ -296,7 +319,7 @@
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(/static/images/slide_bg/08.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/slide_bg/08.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -704,12 +727,42 @@ section, .section {
     z-index: 2;
 }
 
-.team .team-item .team-content .team-icon {
-    background: var(--bs-light);
-    border-radius: 10px;
-    display: flex;
-    display: inline-flex;
+.team-icon a {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
+    border-image-slice: 1;
+    background: transparent;
+    padding: 6px;
+    color: #CFC09F!important;
+    transition: all 0.3s ease;
+    letter-spacing: 0px;
+    line-height:0!important;
 }
+
+.team-icon a:hover {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
+    border-image-slice: 1;
+    transform: translateY(-1px);
+}
+
+/* Цвет иконки при наведении - золотой (без градиента, но эффектно) */
+.team-icon a:hover i {
+    background: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    color: transparent;
+}
+
+.team-icon a i {
+    /*color: var(--bs-white);*/
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
 
 .team .team-item .team-content h4,
 .team .team-item .team-content p {
@@ -787,7 +840,7 @@ h4 {
     font-family: "Oranienbaum", serif;
     line-height: 35px;
 }
-.footer .footer-item a:hover {
+.footer a:hover {
     color: var(--bs-primary);
 }
 .footer .footer-item .footer-btn a,
