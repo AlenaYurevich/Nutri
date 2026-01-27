@@ -264,11 +264,14 @@
     }
     .navbar span + span {
         font-size: 16px;
-        letter-spacing: 12px;
+        letter-spacing: 11px;
 }
     .sticky-top .navbar-light .navbar-nav .nav-link {
         padding: 12px 0;
     }
+    .footer .footer-item p {
+    font-size: 1rem;
+}
 }
 /*** Navbar End ***/
 
@@ -505,6 +508,7 @@ section, .section {
     font-weight: 300;
     padding: 0;
     margin: 30px 0;
+    letter-spacing:2px;
 }
 .blog-details .post-img {
     margin:20px 0;
