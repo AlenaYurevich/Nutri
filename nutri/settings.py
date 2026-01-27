@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'imagekit',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',  # важно для sitemap
 
 ]
 
@@ -57,6 +59,8 @@ CKEDITOR_CONFIGS = {
         'width': '100%',
     },
 }
+SITE_ID = 1
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -148,7 +152,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+DOMAIN = "mishuta-nutrition.pro"  # Ваш домен
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # или smtp.yandex.ru,  smtp.mail.ru
 EMAIL_PORT = 587
