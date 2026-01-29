@@ -1749,7 +1749,7 @@ text-align: center;
 .has-success .checkbox,
 .has-success .radio-inline,
 .has-success .checkbox-inline {
-color: #3c763d;
+color: #525252;
 }
 .has-success .form-control {
 border-color: #3c763d;
@@ -1824,7 +1824,7 @@ margin-bottom: 0;
 display: block;
 margin-top: 5px;
 margin-bottom: 10px;
-color: #737373;
+color: #525252;
 }
 @media (min-width: 768px) {
 .form-inline .form-group {

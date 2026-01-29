@@ -246,7 +246,7 @@
                                     </div>
                                 <h3><a class="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
                                 <small>{{ post.created_on }}</small>
-                                <p>{{ post.description }}<a class ="text-info text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}">   читать дальше ...</a></p>
+                                <p>{{ post.description }}<a class ="text-decoration-none" href="{% url 'blog_detail' slug=post.slug %}" aria-label="{{ post.title }}" title="{{ post.title }}"> читать дальше ...</a></p>
                                 </div>
                             </div><!--//blog_post-->
                         </div>
