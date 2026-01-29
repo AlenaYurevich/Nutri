@@ -40,7 +40,7 @@ h6{margin:0 0 9px 0;font-weight:400;font-size:14px;line-height:16px;}
 .justify{text-align:justify;}
 ::selection{background:var(--main-color2);color:#ffffff;}
 a,
-a:focus{color: var(--main-color1);text-decoration:none !important;}
+a:focus{color: #3F5F4E;text-decoration:none !important;}
 a:hover{color:var(--main-color2)}
 a.btn-primary{background: linear-gradient(to top, var(--main-color3), var(--main-color5));
 border-radius:50px;display:table;margin:auto;font-size:20px;color:#fff;text-align:center;padding: 1.5em 0;width:280px;font-weight:bold;
