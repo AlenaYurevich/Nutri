@@ -322,7 +322,7 @@
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/slide_bg/08.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/slide_bg/08.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -701,92 +701,6 @@ section, .section {
 }
 /*** Blog End ***/
 
-/*** Team Start ***/
-.team .team-item {
-    position: relative;
-    background: var(--bs-primary);
-    border-radius: 10px;
-}
-
-.team .team-item::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    background: var(--bs-dark);
-    transition: 0.5s;
-    z-index: 1;
-}
-
-.team .team-item:hover:after {
-    height: 100%;
-}
-
-.team .team-item .team-content {
-    position: relative;
-    text-align: center;
-    z-index: 2;
-}
-
-.team-icon a {
-    border: 2px solid transparent;
-    border-image: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
-    border-image-slice: 1;
-    background: transparent;
-    padding: 6px;
-    color: #CFC09F!important;
-    transition: all 0.3s ease;
-    letter-spacing: 0px;
-    line-height:0!important;
-}
-
-.team-icon a:hover {
-    border: 2px solid transparent;
-    border-image: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
-    border-image-slice: 1;
-    transform: translateY(-1px);
-}
-
-/* Цвет иконки при наведении - золотой (без градиента, но эффектно) */
-.team-icon a:hover i {
-    background: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    color: transparent;
-}
-
-.team-icon a i {
-    /*color: var(--bs-white);*/
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-
-
-.team .team-item .team-content h4,
-.team .team-item .team-content p {
-    transition: 0.5s;
-}
-
-.team .team-item:hover .team-content h4 {
-    color: var(--bs-primary);
-}
-
-.team .team-item .team-content p {
-    color: var(--bs-white);
-    transition: 0.5s;
-}
-
-.team .team-item:hover .team-content p {
-    color: var(--bs-body);
-}
-/*** Team End ***/
-
 .comment-form {
     padding-top: 10px;
 }
@@ -828,7 +742,7 @@ h4 {
     box-shadow: none;}
 /*** Footer Start ***/
 .footer {
-    background: linear-gradient(to top, var(--bs-green), var(--bs-gray));
+    background: var(--bs-green);
 }
 .footer .footer-item {
     display: flex;
@@ -836,6 +750,8 @@ h4 {
 }
 .footer .footer-item a {
     font-family: "Oranienbaum", serif;
+
+
     line-height: 35px;
     color: var(--bs-white);
     transition: 0.5s;
@@ -864,6 +780,23 @@ h4 {
     display: flex;
     align-items: center;
     line-height: 35px;
+}
+.team-icon a {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
+    border-image-slice: 1;
+    background: transparent;
+    padding: 6px;
+    color: #CFC09F !important;
+    transition: all 0.3s ease;
+    letter-spacing: 0px;
+    line-height: 0 !important;
+}
+.team-icon a:hover {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #FDFAD9, #A29166, #FDFAD9);
+    border-image-slice: 1;
+    transform: translateY(-1px);
 }
 /*** Footer End ***/
 

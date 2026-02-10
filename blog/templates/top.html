@@ -27,9 +27,9 @@
         <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
 
         <!-- Customized Bootstrap Stylesheet -->
-        <link href="{% static 'css/bootstrap1.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap1.min.css' %}?ver=16" rel="stylesheet">
         <!-- Template Stylesheet -->
-        <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style1.css' %}?ver=16" rel="stylesheet">
     </head>
     <body>
         <!-- Spinner Start -->
@@ -151,13 +151,13 @@
                     <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="footer-item">
                             <h4 class="text-white mb-4">Страницы</h4>
-                            <a href="{% url 'home' %}"><i class="fas fa-angle-right me-2"></i>Главная</a>
-                            <a href="{% url 'about' %}"><i class="fas fa-angle-right me-2"></i>Обо мне</a>
-                            <a href="{% url 'services' %}"><i class="fas fa-angle-right me-2"></i>Услуги</a>
-                            <a href="{% url 'calculator' %}"><i class="fas fa-angle-right me-2"></i>Расчет ИМТ</a>
-                            <a href="{% url 'blog_index' %}"><i class="fas fa-angle-right me-2"></i>База знаний</a>
-                            <a href="https://clck.ru/3RHaAr" target="_blank" rel="nofollow"><i class="fas fa-angle-right me-2"></i>Анкета</a>
-                            <a href="{% url 'home' %}#contact"><i class="fas fa-angle-right me-2"></i>Контакты</a>
+                            <a href="{% url 'home' %}"><i class="fas fa-angle-right me-2 text-primary"></i>Главная</a>
+                            <a href="{% url 'about' %}"><i class="fas fa-angle-right me-2 text-primary"></i>Обо мне</a>
+                            <a href="{% url 'services' %}"><i class="fas fa-angle-right me-2 text-primary"></i>Услуги</a>
+                            <a href="{% url 'calculator' %}"><i class="fas fa-angle-right me-2 text-primary"></i>Расчет ИМТ</a>
+                            <a href="{% url 'blog_index' %}"><i class="fas fa-angle-right me-2 text-primary"></i>База знаний</a>
+                            <a href="https://clck.ru/3RHaAr" target="_blank" rel="nofollow"><i class="fas fa-angle-right me-2 text-primary"></i>Анкета</a>
+                            <a href="{% url 'home' %}#contact"><i class="fas fa-angle-right me-2 text-primary"></i>Контакты</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-4">
@@ -202,7 +202,6 @@
         </div>
         <!-- Copyright End -->
         <!-- Back to Top -->
-<!--        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>-->
         <a href="#" class="back-to-top btn-square"><i class="fa fa-arrow-up"></i></a>
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
