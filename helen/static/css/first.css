@@ -93,7 +93,7 @@ header #logo img.logo_retina{display:none;}
     padding-bottom:100px
 }
 .blog header {
-    background-image: url("../images/slide_bg/08.png");
+    background-image: url("../images/slide_bg/08.webp");
     padding-top:140px;padding-bottom:60px;
     background-position: top center;
     background-attachment: fixed;
@@ -196,7 +196,7 @@ header #logo img.logo_retina{display:none;}
 section header h1{font-size:2.4em !important;line-height:1em !important;}
 h3{font-size:1.8em!important}
 .blog header {
-    background-image: url("../images/slide_bg/08.png");
+    background-image: url("../images/slide_bg/08.webp");
 }
 .blog_post h3 a{font-size: 1em!important}
 }
