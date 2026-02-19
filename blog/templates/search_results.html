@@ -12,7 +12,6 @@
 <meta property="og:image" content="{% static 'images/elenamishuta.jpg' %}">
 <meta property="og:site_name" content="Консультация нутрициолога в Минске">
 <meta property="og:description" content='Статьи на тему {{ query }} {{ page_obj.number }} от нутрициолога Елены Мишуты. Помощь в коррекции питания и образа жизни для улучшения здоровья, снижения веса, повышения энергии или устранения дефицитов'>
-
 <meta property="article:author" content="Елена Мишута">
 {% endblock %}
 {% block breadcrumb_header %}
@@ -20,7 +19,7 @@
 {% endblock %}
 {% block page_content %}
 <div class="container">
-      <div class="row">
+   <div class="row">
      <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
           <h2 class="display-5 mb-4 mt-5">Результат поиска по статьям</h2>
                 {% if query %}
@@ -46,12 +45,12 @@
             <div class="container">
  <article class="article">
                 <div class="post-img">
-                  <img class="img-fluid" src="{{ post.image.url}}" alt="{{ post.alt }}">
+                  <img class="img-fluid" src="{{ post.image.url}}" alt="{{ post.alt }} ">
                 </div>
                 <h2><a class="title text-uppercase" href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h2>
                 <div class="meta-top">
        <ul>
-           <li class="d-flex align-items-center"><i class="bi bi-clock"></i>
+           <li class="d-flex align-items-center"><i class="lni lni-calendar-days"></i>
                {{ post.created_on|date:"d E Y" }}</li>
        </ul>
                 </div><!-- End meta top -->
@@ -61,7 +60,7 @@
                 </div><!-- End post content -->
 
                 <div class="meta-bottom">
-                  <i class="far fa-folder"></i>
+                  <i class="lni lni-folder-1"></i>
                   <ul class="cats">
                 <li>
                 {% for category in post.categories.all %}
@@ -69,7 +68,7 @@
                 {% endfor %}
                 </li>
                   </ul>
-                  <i class="fa fa-tags"></i>
+                  <i class="lni lni-bookmark-1"></i>
 {% if post.tags.all %}
     <ul class="tags">
         {% for tag in post.tags.all %}
